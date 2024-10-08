@@ -4,8 +4,6 @@ tags: event
 priority: -1
 view-if: year = 1928
 on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48;
-#set-jump: post_election_1928
-
 on-arrival:  {!
 Q.dove_electoral = 0;
 Q.democrat_electoral = 0;
