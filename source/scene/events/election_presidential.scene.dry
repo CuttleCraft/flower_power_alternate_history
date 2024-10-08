@@ -49,7 +49,9 @@ for (var state of Q.states) {
 
     for (var_state of Q.states) {
         Q[winning_party + '_electoral'] += Q[state + '_electoral']
+    }
 }
+
 
 !}
 
