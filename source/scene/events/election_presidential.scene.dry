@@ -1,0 +1,61 @@
+title: Presidential Election
+new-page: true
+tags: event
+priority: -1
+view-if: year = 1928
+on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48;
+#set-jump: post_election_1928
+
+on-arrival:  {!
+Q.dove_electoral = 0;
+Q.democrat_electoral = 0;
+Q.republican_electoral = 0;
+Q.independent_electoral = 0;
+
+for (var state of Q.states) {
+    var total_support = 0; // Initialize total support for the state
+    var party_supports = {}; // Object to hold support for each party
+
+    // Initialize party supports
+    for (var party of Q.parties) {
+        party_supports[party] = 0; // Set initial support for each party to 0
+    }
+
+    // Loop through each demographic class
+    for (var c of Q.classes) {
+        // Get the percentage demographic for this class in the current state
+        var demographic_percentage = Q[state + '_' + c]; // e.g., 0.25 for 25%
+
+        // Calculate party support based on this class
+        for (var party of Q.parties) {
+            var normalized_support = Q[c + '_' + party + '_normalized']; // e.g., 0.50 for 50%
+            var support_from_class = normalized_support * demographic_percentage; // Calculate effective support
+
+            // Accumulate this party's support for the state
+            party_supports[party] += support_from_class;
+        }
+    }
+
+    // Determine the party with the highest support in this state
+    var winning_party = null;
+    var highest_support = 0;
+
+    for (var party in party_supports) {
+        if (party_supports[party] > highest_support) {
+            highest_support = party_supports[party];
+            winning_party = party; // Update winning party
+            }
+        }
+
+    for (var_state of Q.states) {
+        Q[winning_party + '_electoral'] += Q[state + '_electoral']
+}
+
+!}
+
+= Presidential Elections
+
+Dove Party: [+ dove_electoral +]
+Democratic Party: [+ democrat_electoral +]
+Republican Party: [+ republican_electoral +]
+American Independent Party: [+ independent_electoral +]

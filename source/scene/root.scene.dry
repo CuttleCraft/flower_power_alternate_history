@@ -119,8 +119,8 @@ Q.hindenburg_relation = 25;
 
 
 // Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
+Q.dove_prussia = 1;
+// Options: dove, z, dnvp, papen, nsdap
 Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
@@ -192,13 +192,13 @@ Q.budget = 5;
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
 Q.workers = 48; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
+Q.youth = 13; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
+Q.consumer = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 8.6;
-Q.catholics = 30;
+Q.black = 30;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
@@ -213,105 +213,402 @@ Q.inflation = 2.9;
 Q.workers_qol = 100;
 Q.rural_qol = 100;
 Q.unemployed_qol = 100;
-Q.old_middle_qol = 100;
-Q.new_middle_qol = 100;
+Q.youth_qol = 100;
+Q.consumer_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.classes = ['workers', 'youth', 'consumer', 'rural', 'southern', 'black', 'unemployed'];
+Q.parties = ['dove', 'democrat', 'republican', 'independent'];
+Q.states = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'new_hampshire', 'new_jersey', 'new_mexico', 'new_york', 'north_carolina', 'north dakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhode_island', 'south_carolina', 'south_dakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'west_virginia', 'wisconsin', 'wyoming']
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
+Q.unemployed = 3.7;
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.workers_dove = 20;
+Q.workers_democrat = 30;
+Q.workers_republican = 30;
+Q.workers_independent = 20;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.youth_dove = 50;
+Q.youth_democrat = 20;
+Q.youth_republican = 20;
+Q.youth_independent = 10;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.consumer_dove = 5;
+Q.consumer_democrat = 30;
+Q.consumer_republican = 40;
+Q.consumer_independent = 15;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
-Q.rural_other = 10;
+Q.rural_dove = 0;
+Q.rural_democrat = 30;
+Q.rural_republican = 50;
+Q.rural_independent = 20;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.southern_dove = 0;
+Q.southern_democrat = 20;
+Q.rural_republican = 40;
+Q.southern_independent = 40;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 12;
+Q.black_dove = 20;
+Q.black_democrat = 50;
+Q.black_republican = 30;
+Q.black_independent = 0;
+
+// state demographics
+Q.alabama_workers =  20;
+Q.alabama_youth = 18;
+Q.alabama_consumer = 25;
+Q.alabama_rural = 30;
+Q.alabama_southern = 40;
+Q.alabama_black = 25;
+
+Q.alaska_workers = 10;
+Q.alaska_youth = 20;
+Q.alaska_consumer = 30;
+Q.alaska_rural = 20;
+Q.alaska_southern = 5;
+Q.alaska_black = 1;
+
+Q.arizona_workers = 15;
+Q.arizona_youth = 22;
+Q.arizona_consumer = 28;
+Q.arizona_rural = 18;
+Q.arizona_southern = 10;
+Q.arizona_black = 3;
+
+Q.arkansas_workers = 20;
+Q.arkansas_youth = 15;
+Q.arkansas_consumer = 20;
+Q.arkansas_rural = 35;
+Q.arkansas_southern = 35;
+Q.arkansas_black = 15;
+
+Q.california_workers = 25;
+Q.california_youth = 35;
+Q.california_consumer = 40;
+Q.california_rural = 10;
+Q.california_southern = 5;
+Q.california_black = 7;
+
+Q.colorado_workers = 20;
+Q.colorado_youth = 25;
+Q.colorado_consumer = 35;
+Q.colorado_rural = 20;
+Q.colorado_southern = 5;
+Q.colorado_black = 4;
+
+Q.connecticut_workers = 25;
+Q.connecticut_youth = 15;
+Q.connecticut_consumer = 40;
+Q.connecticut_rural = 10;
+Q.connecticut_southern = 5;
+Q.connecticut_black = 4;
+
+Q.delaware_workers = 20;
+Q.delaware_youth = 15;
+Q.delaware_consumer = 35;
+Q.delaware_rural = 15;
+Q.delaware_southern = 5;
+Q.delaware_black = 10;
+
+Q.florida_workers = 20;
+Q.florida_youth = 25;
+Q.florida_consumer = 35;
+Q.florida_rural = 10;
+Q.florida_southern = 15;
+Q.florida_black = 15;
+
+Q.georgia_workers = 20;
+Q.georgia_youth = 15;
+Q.georgia_consumer = 25;
+Q.georgia_rural = 30;
+Q.georgia_southern = 50;
+Q.georgia_black = 30;
+
+Q.hawaii_workers = 15;
+Q.hawaii_youth = 30;
+Q.hawaii_consumer = 35;
+Q.hawaii_rural = 10;
+Q.hawaii_southern = 5;
+Q.hawaii_black = 1;
+
+Q.idaho_workers = 25;
+Q.idaho_youth = 10;
+Q.idaho_consumer = 25;
+Q.idaho_rural = 30;
+Q.idaho_southern = 5;
+Q.idaho_black = 1;
+
+Q.illinois_workers = 30;
+Q.illinois_youth = 20;
+Q.illinois_consumer = 35;
+Q.illinois_rural = 15;
+Q.illinois_southern = 5;
+Q.illinois_black = 15;
+
+Q.indiana_workers = 30;
+Q.indiana_youth = 15;
+Q.indiana_consumer = 30;
+Q.indiana_rural = 20;
+Q.indiana_southern = 5;
+Q.indiana_black = 5;
+
+Q.iowa_workers = 25;
+Q.iowa_youth = 10;
+Q.iowa_consumer = 30;
+Q.iowa_rural = 25;
+Q.iowa_southern = 5;
+Q.iowa_black = 2;
+
+Q.kansas_workers = 25;
+Q.kansas_youth = 10;
+Q.kansas_consumer = 30;
+Q.kansas_rural = 30;
+Q.kansas_southern = 5;
+Q.kansas_black = 2;
+
+Q.kentucky_workers = 25;
+Q.kentucky_youth = 12;
+Q.kentucky_consumer = 30;
+Q.kentucky_rural = 25;
+Q.kentucky_southern = 20;
+Q.kentucky_black = 5;
+
+Q.louisiana_workers = 25;
+Q.louisiana_youth = 15;
+Q.louisiana_consumer = 25;
+Q.louisiana_rural = 35;
+Q.louisiana_southern = 50;
+Q.louisiana_black = 30;
+
+Q.maine_workers = 20;
+Q.maine_youth = 10;
+Q.maine_consumer = 30;
+Q.maine_rural = 35;
+Q.maine_southern = 5;
+Q.maine_black = 1;
+
+Q.maryland_workers = 25;
+Q.maryland_youth = 18;
+Q.maryland_consumer = 35;
+Q.maryland_rural = 15;
+Q.maryland_southern = 5;
+Q.maryland_black = 25;
+
+Q.massachusetts_workers = 30;
+Q.massachusetts_youth = 25;
+Q.massachusetts_consumer = 40;
+Q.massachusetts_rural = 5;
+Q.massachusetts_southern = 5;
+Q.massachusetts_black = 5;
+
+Q.michigan_workers = 35;
+Q.michigan_youth = 20;
+Q.michigan_consumer = 30;
+Q.michigan_rural = 10;
+Q.michigan_southern = 5;
+Q.michigan_black = 15;
+
+Q.minnesota_workers = 30;
+Q.minnesota_youth = 20;
+Q.minnesota_consumer = 30;
+Q.minnesota_rural = 15;
+Q.minnesota_southern = 5;
+Q.minnesota_black = 5;
+
+Q.mississippi_workers = 20;
+Q.mississippi_youth = 10;
+Q.mississippi_consumer = 20;
+Q.mississippi_rural = 40;
+Q.mississippi_southern = 60;
+Q.mississippi_black = 40;
+
+Q.missouri_workers = 25;
+Q.missouri_youth = 15;
+Q.missouri_consumer = 30;
+Q.missouri_rural = 30;
+Q.missouri_southern = 10;
+Q.missouri_black = 10;
+
+Q.montana_workers = 20;
+Q.montana_youth = 10;
+Q.montana_consumer = 25;
+Q.montana_rural = 40;
+Q.montana_southern = 5;
+Q.montana_black = 1;
+
+Q.nebraska_workers = 25;
+Q.nebraska_youth = 10;
+Q.nebraska_consumer = 30;
+Q.nebraska_rural = 35;
+Q.nebraska_southern = 5;
+Q.nebraska_black = 2;
+
+Q.nevada_workers = 15;
+Q.nevada_youth = 25;
+Q.nevada_consumer = 35;
+Q.nevada_rural = 15;
+Q.nevada_southern = 5;
+Q.nevada_black = 5;
+
+Q.new_hampshire_workers = 20;
+Q.new_hampshire_youth = 15;
+Q.new_hampshire_consumer = 35;
+Q.new_hampshire_rural = 30;
+Q.new_hampshire_southern = 5;
+Q.new_hampshire_black = 1;
+
+Q.new_jersey_workers = 30;
+Q.new_jersey_youth = 20;
+Q.new_jersey_consumer = 40;
+Q.new_jersey_rural = 10;
+Q.new_jersey_southern = 5;
+Q.new_jersey_black = 15;
+
+Q.new_mexico_workers = 20;
+Q.new_mexico_youth = 25;
+Q.new_mexico_consumer = 30;
+Q.new_mexico_rural = 20;
+Q.new_mexico_southern = 10;
+Q.new_mexico_black = 10;
+
+Q.new_york_workers = 30;
+Q.new_york_youth = 30;
+Q.new_york_consumer = 40;
+Q.new_york_rural = 5;
+Q.new_york_southern = 5;
+Q.new_york_black = 15;
+
+Q.north_carolina_workers = 25;
+Q.north_carolina_youth = 20;
+Q.north_carolina_consumer = 30;
+Q.north_carolina_rural = 25;
+Q.north_carolina_southern = 50;
+Q.north_carolina_black = 30;
+
+Q.north_dakota_workers = 25;
+Q.north_dakota_youth = 8;
+Q.north_dakota_consumer = 30;
+Q.north_dakota_rural = 35;
+Q.north_dakota_southern = 5;
+Q.north_dakota_black = 2;
+
+Q.ohio_workers = 30;
+Q.ohio_youth = 20;
+Q.ohio_consumer = 35;
+Q.ohio_rural = 15;
+Q.ohio_southern = 5;
+Q.ohio_black = 10;
+
+Q.oklahoma_workers = 20;
+Q.oklahoma_youth = 10;
+Q.oklahoma_consumer = 25;
+Q.oklahoma_rural = 35;
+Q.oklahoma_southern = 15;
+Q.oklahoma_black = 7;
+
+Q.oregon_workers = 25;
+Q.oregon_youth = 25;
+Q.oregon_consumer = 30;
+Q.oregon_rural = 10;
+Q.oregon_southern = 5;
+Q.oregon_black = 4;
+
+Q.pennsylvania_workers = 30;
+Q.pennsylvania_youth = 15;
+Q.pennsylvania_consumer = 35;
+Q.pennsylvania_rural = 20;
+Q.pennsylvania_southern = 5;
+Q.pennsylvania_black = 15;
+
+Q.rhode_island_workers = 30;
+Q.rhode_island_youth = 20;
+Q.rhode_island_consumer = 40;
+Q.rhode_island_rural = 5;
+Q.rhode_island_southern = 5;
+Q.rhode_island_black = 10;
+
+Q.south_carolina_workers = 25;
+Q.south_carolina_youth = 15;
+Q.south_carolina_consumer = 25;
+Q.south_carolina_rural = 35;
+Q.south_carolina_southern = 60;
+Q.south_carolina_black = 30;
+
+Q.south_dakota_workers = 25;
+Q.south_dakota_youth = 8;
+Q.south_dakota_consumer = 30;
+Q.south_dakota_rural = 35;
+Q.south_dakota_southern = 5;
+Q.south_dakota_black = 2;
+
+Q.tennessee_workers = 25;
+Q.tennessee_youth = 20;
+Q.tennessee_consumer = 30;
+Q.tennessee_rural = 25;
+Q.tennessee_southern = 40;
+Q.tennessee_black = 20;
+
+Q.texas_workers = 30;
+Q.texas_youth = 20;
+Q.texas_consumer = 30;
+Q.texas_rural = 20;
+Q.texas_southern = 30;
+Q.texas_black = 20;
+
+Q.utah_workers = 20;
+Q.utah_youth = 25;
+Q.utah_consumer = 30;
+Q.utah_rural = 20;
+Q.utah_southern = 5;
+Q.utah_black = 1;
+
+Q.vermont_workers = 25;
+Q.vermont_youth = 12;
+Q.vermont_consumer = 35;
+Q.vermont_rural = 20;
+Q.vermont_southern = 5;
+Q.vermont_black = 1;
+
+Q.virginia_workers = 25;
+Q.virginia_youth = 15;
+Q.virginia_consumer = 30;
+Q.virginia_rural = 25;
+Q.virginia_southern = 25;
+Q.virginia_black = 20;
+
+Q.washington_workers = 30;
+Q.washington_youth = 30;
+Q.washington_consumer = 40;
+Q.washington_rural = 10;
+Q.washington_southern = 5;
+Q.washington_black = 5;
+
+Q.west_virginia_workers = 20;
+Q.west_virginia_youth = 10;
+Q.west_virginia_consumer = 25;
+Q.west_virginia_rural = 45;
+Q.west_virginia_southern = 15;
+Q.west_virginia_black = 10;
+
+Q.wisconsin_workers = 30;
+Q.wisconsin_youth = 15;
+Q.wisconsin_consumer = 30;
+Q.wisconsin_rural = 25;
+Q.wisconsin_southern = 5;
+Q.wisconsin_black = 4;
+
+Q.wyoming_workers = 20;
+Q.wyoming_youth = 10;
+Q.wyoming_consumer = 25;
+Q.wyoming_rural = 45;
+Q.wyoming_southern = 5;
+Q.wyoming_black = 1;
 
 
-// Current Reichstag composition
-// % of Reichstag in Jan 1928
-// source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
-Q.nsdap_r = 3;
-Q.other_r = 9;
-
-// diff from prev
-Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 9;
-
-// sapd isn't formed yet, but it may be formed
-Q.sapd_r = 0;
-Q.old_sapd_r = 0;
-
-// for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
-
-// array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
+// array of objects of the form {date: Date(), dove: 10, kpd: 12, ...} for each election
 Q.election_records = [];
 // party support records for every month
 Q.party_support_records = [];
@@ -320,46 +617,7 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
-// starting chancellor: Wilhelm Marx
-Q.chancellor = "Marx";
-Q.chancellor_party = 'Z';
-Q.spd_in_government = 0;
-Q.z_in_government = 1;
-Q.ddp_in_government = 0;
-Q.dvp_in_government = 1;
-Q.dnvp_in_government = 1;
-Q.kpd_in_government = 0;
-Q.nsdap_in_government = 0;
-
-Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
-Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
-Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
-Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
-Q.in_left_front = 0;
-// emergency government containing the SPD: only president Braun can do this.
-Q.in_emergency_government = 0;
-Q.in_spd_majority = 0;
-Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a minority government
-Q.in_minority_government = 0;
-// national unity governmet
-
-// if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
-Q.coalition_dissent = 0;
-// dissent from the KPD, in a popular front or left front government
-Q.kpd_coalition_dissent = 0;
-
-// does the SPD tolerate the government even if it is not a participant?
-Q.spd_toleration = 0;
-
-// is the current government a presidential minority government?
-Q.minority_government = 0;
+Q.president = "LBJ";
 
 // ministries - which parties control the ministries?
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
@@ -430,9 +688,9 @@ Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SPD vote against the previous government in a vote of no confidence?
-Q.spd_no_confidence = 0;
+Q.dove_no_confidence = 0;
 // was the last SPD government taken down in a vote of no confidence by right-wing coalition partners?
-Q.no_confidence_against_spd = 0;
+Q.no_confidence_against_dove = 0;
 
 // Advisors/Leaders
 Q.n_advisors = 3;

@@ -9,7 +9,7 @@ Q.game_over = 1;
 this.achieve('game_completed');
 
 // Roter Zar von Preußen - At the end of the game, Otto Braun is president, chancellor, and minister-president of prussia at the same time.
-if (Q.president == 'Braun' && Q.chancellor == 'Braun' && Q.spd_prussia) {
+if (Q.president == 'Braun' && Q.chancellor == 'Braun' && Q.dove_prussia) {
     this.achieve('red_tzar_of_prussia');
 }
 // Bürgerkrieg - enter a long civil war.
@@ -72,21 +72,21 @@ for (var c of Q.classes) {
 // Die Rote Fahne - join the KPD in the May Day march.
 // Mehrheitspartei - form an SPD majority government in the Reichstag.
 // Panik im Mittelstand - have over 50% of New Middle Class support.
-if (Q.new_middle_spd_normalized && Q.new_middle_spd_normalized >= 50) {
+if (Q.consumer_dove_normalized && Q.consumer_dove_normalized >= 50) {
     this.achieve('panik_im_mittelstand');
 }
 // Bauernrevolution - have over 50% rural support.
-if (Q.rural_spd_normalized && Q.rural_spd_normalized >= 50) {
+if (Q.rural_dove_normalized && Q.rural_dove_normalized >= 50) {
     this.achieve('bauernrevolution');
 }
-if (Q.catholics_spd_normalized && Q.catholics_spd_normalized >= 50) {
+if (Q.black_dove_normalized && Q.black_dove_normalized >= 50) {
     this.achieve('katholischer_sozialismus');
 }
-if (Q.workers_spd_normalized >= 80 && Q.new_middle_spd_normalized <= 10 && Q.old_middle_spd_normalized <= 10) {
+if (Q.workers_dove_normalized >= 80 && Q.consumer_dove_normalized <= 10 && Q.youth_dove_normalized <= 10) {
     this.achieve('klassenkampf');
 }
 // Räterepublik - begin the transformation to a socialist economy.
-if (Q.spd_in_government && ((Q.nationalization_progress >= 2 && Q.economic_democracy >= 3) || (Q.nationalization_progress >= 1 && Q.economic_democracy >= 4))) {
+if (Q.dove_in_government && ((Q.nationalization_progress >= 2 && Q.economic_democracy >= 3) || (Q.nationalization_progress >= 1 && Q.economic_democracy >= 4))) {
     this.achieve('raterepublik');
 }
 // Polykrise - survive both a fascist coup and a capital strike.
@@ -193,9 +193,9 @@ go-to: eg_menu
 
 Otto Braun has been elected as President of Germany. He had never desired to be the most powerful man in Germany, but now he is. 
 
-@spd_victorious
+@dove_victorious
 title: SPD still in government
-view-if: spd_in_government == 1 and chancellor_party == "SPD" and total_defeat == 0 and long_war == 0
+view-if: dove_in_government == 1 and chancellor_party == "SPD" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
