@@ -2,7 +2,7 @@ title: Hoover Moratorium
 subtitle: Owing to the economic crisis, our debt payments have been paused...
 new-page: true
 view-if: banking_crisis_seen = 1 and ((year == 1931 and month >= 6) or (year == 1932)) and reparations >= 0 and unemployed > 15
-on-arrival: budget += 1; reparations_negotiation += 2; hoover_moratorium_seen = 1; workers_dvp += 3 if foreign_minister_party == "DVP"; consumer_dvp += 3 if foreign_minister_party == "DVP"; youth_dvp += 3 if foreign_minister_party == "DVP"; rural_dvp += 3 if foreign_minister_party == "DVP"; workers_z += 3 if foreign_minister_party == "Z"; consumer_z += 3 if foreign_minister_party == "Z"; youth_z += 3 if foreign_minister_party == "Z"; rural_z += 3 if foreign_minister_party == "Z"; workers_dove += 3 if foreign_minister_party == "SPD"; consumer_dove += 3 if foreign_minister_party == "SPD"; youth_dove += 3 if foreign_minister_party == "SPD"; rural_dove += 3 if foreign_minister_party == "SPD";
+on-arrival: budget += 1; reparations_negotiation += 2; hoover_moratorium_seen = 1; workers_republican += 3 if foreign_minister_party == "DVP"; consumer_republican += 3 if foreign_minister_party == "DVP"; youth_republican += 3 if foreign_minister_party == "DVP"; rural_republican += 3 if foreign_minister_party == "DVP"; workers_z += 3 if foreign_minister_party == "Z"; consumer_z += 3 if foreign_minister_party == "Z"; youth_z += 3 if foreign_minister_party == "Z"; rural_z += 3 if foreign_minister_party == "Z"; workers_dove += 3 if foreign_minister_party == "SPD"; consumer_dove += 3 if foreign_minister_party == "SPD"; youth_dove += 3 if foreign_minister_party == "SPD"; rural_dove += 3 if foreign_minister_party == "SPD";
 tags: event
 max-visits: 1
 

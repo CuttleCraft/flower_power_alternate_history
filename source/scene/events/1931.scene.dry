@@ -14,33 +14,33 @@ if (Q.works_program && Q.works_program > 1) {
     Q.inflation += 2;
 }
 Q.black_z += 5;
-Q.rural_dvp -= 5;
-Q.youth_dvp -= 5;
-Q.consumer_dvp -= 5;
-Q.youth_ddp -= 10;
-Q.consumer_ddp -= 10;
+Q.rural_republican -= 5;
+Q.youth_republican -= 5;
+Q.consumer_republican -= 5;
+Q.youth_democrat -= 10;
+Q.consumer_democrat -= 10;
 Q.sa_strength += 50;
 Q.sh_strength += 50;
 Q.sa_militancy += 0.1;
-Q.youth_nsdap += 5;
-Q.rural_nsdap += 5;
+Q.youth_independent += 5;
+Q.rural_independent += 5;
 // TODO: economic policies should reduce NSDAP rurals
 if (!Q.works_program) {
     Q.workers -= 5;
-    Q.unemployed_nsdap += 8;
-    Q.rural_nsdap += 10; 
-    Q.consumer_nsdap += 10; 
-    Q.youth_nsdap += 10;
-    Q.workers_nsdap += 5;
+    Q.unemployed_independent += 8;
+    Q.rural_independent += 10; 
+    Q.consumer_independent += 10; 
+    Q.youth_independent += 10;
+    Q.workers_independent += 5;
     Q.workers_kpd += 5;
     Q.sa_strength += 100;
     Q.sh_strength += 50;
     Q.crisis_urgency += 1;
 } else if (Q.unemployed > 15) {
-    Q.unemployed_nsdap += 4;
-    Q.youth_nsdap += 4;
-    Q.consumer_nsdap += 4;
-    Q.rural_nsdap += 4;
+    Q.unemployed_independent += 4;
+    Q.youth_independent += 4;
+    Q.consumer_independent += 4;
+    Q.rural_independent += 4;
 }
 !}
 tags: event

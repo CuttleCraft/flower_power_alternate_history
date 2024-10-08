@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['dove', 'kpd', 'ddp', 'z', 'dvp', 'dnvp', 'nsdap', 'other'];
+        parties = ['dove', 'kpd', 'democrat', 'z', 'republican', 'dnvp', 'independent', 'other'];
     }
     if (!partyColors) {
-        partyColors = {'dove': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0'};
+        partyColors = {'dove': '#E3000F', 'kpd': '#8B0000', 'democrat': '#DCCA4A', 'z': '#000', 'republican': '#D5AC27', 'dnvp': '#3f7bc1', 'independent': '#954B00', 'other': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'dove': 'SPD', 'kpd': 'KPD', 'ddp': 'DDP', 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others'};
+        partyNames = {'dove': 'SPD', 'kpd': 'KPD', 'democrat': 'DDP', 'z': 'Z + BVP', 'republican': 'DVP', 'dnvp': 'DNVP', 'independent': 'NSDAP', 'other': 'Others'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
@@ -60,7 +60,7 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
       // Declare the y (vertical position) scale.
       if (!dataMax) {
           const maxSPD = d3.max(data, d => d.dove);
-          const maxNSDAP = d3.max(data, d => d.nsdap);
+          const maxNSDAP = d3.max(data, d => d.independent);
           dataMax = maxSPD >= maxNSDAP ? maxSPD + 10 : maxNSDAP + 10;
           dataMin = 0;
       }

@@ -39,8 +39,8 @@ if (Q.z_relation > 30) {
 if (Q.kpd_relation > 50 && Q.kpd_normalized >= 0.1) {
     Q.reform_support += Q.kpd_normalized;
 }
-if (Q.nsdap_normalized >= 0.2 ) {
-    Q.reform_support += Q.nsdap_normalized;
+if (Q.independent_normalized >= 0.2 ) {
+    Q.reform_support += Q.independent_normalized;
 }
 !}
 view-if: electoral_threshold = 0
@@ -49,7 +49,7 @@ view-if: electoral_threshold = 0
 
 Some political thinkers believe that the proliferation of minor parties is responsible for the instability of the republic. They believe that a higher electoral threshold will reduce the influence of small radical parties. Parties that win a plurality in a constituency will maintain their representation, a gift to regional parties such as the BVP. 
 
-The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform, while their BVP partners oppose it. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if nsdap_normalized >= 0.2 : The NSDAP supports this reform, as they believe they have something to gain. ?]
+The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform, while their BVP partners oppose it. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if independent_normalized >= 0.2 : The NSDAP supports this reform, as they believe they have something to gain. ?]
 
 The SPD Left opposes this change, as they believe it to be anti-democratic.
 
@@ -60,10 +60,10 @@ The SPD Left opposes this change, as they believe it to be anti-democratic.
 @vote_threshold_2
 choose-if: reform_support >= pass_threshold
 unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if z_relation <= 30 : The Center Party does not trust us enough to support this policy. ?]
-on-arrival: constitutional_reform += 1; electoral_threshold = 5; ddp_relation -= 25; dvp_relation -= 25; left_dissent += 20; workers_other *= 0.1; consumer_other *= 0.1; youth_other *= 0.1; rural_other *= 0.2; unemployed_other *= 0.2; black_other *= 0.1;
+on-arrival: constitutional_reform += 1; electoral_threshold = 5; democrat_relation -= 25; republican_relation -= 25; left_dissent += 20; workers_other *= 0.1; consumer_other *= 0.1; youth_other *= 0.1; rural_other *= 0.2; unemployed_other *= 0.2; black_other *= 0.1;
 achievement: verfassungsreform
 
-# this should result in a redistribution of votes - other parties should not get so many votes anymore. maybe ddp and dvp get a recovery of middle-class votes? or maybe they flow to the others.
+# this should result in a redistribution of votes - other parties should not get so many votes anymore. maybe democrat and republican get a recovery of middle-class votes? or maybe they flow to the others.
 
 We have passed a constitutional amendment to increase the electoral threshold to 5%. This is likely to benefit the larger parties and harm the smaller ones.
 
@@ -72,12 +72,12 @@ We have passed a constitutional amendment to increase the electoral threshold to
 @constructive_vonc
 subtitle: Votes of no confidence can only be called if an alternative plan for government formation can be passed, greatly reducing their incidence.
 on-arrival: {!
-Q.reform_support = Q.dove_normalized + Q.ddp_normalized;
+Q.reform_support = Q.dove_normalized + Q.democrat_normalized;
 if (Q.z_relation >= 30) {
     Q.reform_support += Q.z_normalized - 0.03;
 }
 if (!Q.stresemann_dead) {
-    Q.reform_support += Q.dvp_normalized;
+    Q.reform_support += Q.republican_normalized;
 }
 !}
 view-if: constructive_vonc = 0
@@ -98,7 +98,7 @@ We have successfully passed a constitutional amendment to ban votes of no confid
 @presidential_powers
 subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexekution* on state governments.
 on-arrival: {!
-Q.reform_support = Q.dove_normalized + Q.ddp_normalized + Q.kpd_normalized;
+Q.reform_support = Q.dove_normalized + Q.democrat_normalized + Q.kpd_normalized;
 if (Q.z_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener")) {
     Q.reform_support += Q.z_normalized;
 } else if (Q.president == "Braun") {

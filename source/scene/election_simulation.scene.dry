@@ -18,62 +18,62 @@ Q.unemployed = 8.6;
 Q.black = 30;
 
 Q.classes = ['workers', 'youth', 'consumer', 'rural', 'unemployed', 'black'];
-Q.parties = ['dove', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['dove', 'kpd', 'z', 'democrat', 'republican', 'dnvp', 'independent', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_dove = 65;
 Q.workers_kpd = 20;
 Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
+Q.workers_democrat = 0;
+Q.workers_republican = 0;
 Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
+Q.workers_independent = 0;
 Q.workers_other = 10;
 
 Q.youth_dove = 5;
 Q.youth_kpd = 0;
 Q.youth_z = 5;
-Q.youth_ddp= 10;
-Q.youth_dvp = 25;
+Q.youth_democrat= 10;
+Q.youth_republican = 25;
 Q.youth_dnvp = 25;
-Q.youth_nsdap = 10;
+Q.youth_independent = 10;
 Q.youth_other = 10;
 
 Q.consumer_dove = 5;
 Q.consumer_kpd = 0;
 Q.consumer_z = 10;
-Q.consumer_ddp= 25;
-Q.consumer_dvp = 25;
+Q.consumer_democrat= 25;
+Q.consumer_republican = 25;
 Q.consumer_dnvp = 10;
-Q.consumer_nsdap = 5;
+Q.consumer_independent = 5;
 Q.consumer_other = 15;
 
 Q.rural_dove = 10;
 Q.rural_kpd = 0;
 Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
+Q.rural_democrat= 5;
+Q.rural_republican = 15;
 Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
+Q.rural_independent = 5;
 Q.rural_other = 10;
 
 Q.unemployed_dove = 25;
 Q.unemployed_kpd = 55;
 Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
+Q.unemployed_democrat = 0;
+Q.unemployed_republican = 0;
 Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
+Q.unemployed_independent = 15;
 Q.unemployed_other = 9;
 
 Q.black_dove = 15;
 Q.black_kpd = 5;
 Q.black_z = 50;
-Q.black_ddp = 0;
-Q.black_dvp = 5;
+Q.black_democrat = 0;
+Q.black_republican = 5;
 Q.black_dnvp = 5;
-Q.black_nsdap = 0;
+Q.black_independent = 0;
 Q.black_other = 10;
 !}
 go-to: election_algorithm
@@ -91,71 +91,71 @@ Q.unemployed = 20;
 Q.black = 30;
 
 Q.classes = ['workers', 'youth', 'consumer', 'rural', 'unemployed', 'black'];
-Q.parties = ['dove', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['dove', 'kpd', 'z', 'democrat', 'republican', 'dnvp', 'independent', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_dove = 60;
 Q.workers_kpd = 20;
 Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
+Q.workers_democrat = 0;
+Q.workers_republican = 0;
 Q.workers_dnvp = 0;
-Q.workers_nsdap = 10;
+Q.workers_independent = 10;
 Q.workers_other = 15;
 
 Q.youth_dove = 5;
 Q.youth_kpd = 0;
 Q.youth_z = 5;
-Q.youth_ddp= 5;
-Q.youth_dvp = 10;
+Q.youth_democrat= 5;
+Q.youth_republican = 10;
 Q.youth_dnvp = 20;
-Q.youth_nsdap = 30;
+Q.youth_independent = 30;
 Q.youth_other = 15;
 
 Q.consumer_dove = 5;
 Q.consumer_kpd = 0;
 Q.consumer_z = 5;
-Q.consumer_ddp = 10;
-Q.consumer_dvp = 20;
+Q.consumer_democrat = 10;
+Q.consumer_republican = 20;
 Q.consumer_dnvp = 10;
-Q.consumer_nsdap = 25;
+Q.consumer_independent = 25;
 Q.consumer_other = 15;
 
 Q.rural_dove = 5;
 Q.rural_kpd = 0;
 Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 10;
+Q.rural_democrat= 5;
+Q.rural_republican = 10;
 Q.rural_dnvp = 20;
-Q.rural_nsdap = 25;
+Q.rural_independent = 25;
 Q.rural_other = 15;
 
 Q.unemployed_dove = 20;
 Q.unemployed_kpd = 50;
 Q.unemployed_z = 0;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
+Q.unemployed_democrat = 0;
+Q.unemployed_republican = 0;
 Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 25;
+Q.unemployed_independent = 25;
 Q.unemployed_other = 5;
 
 Q.black_dove = 10;
 Q.black_kpd = 5;
 Q.black_z = 50;
-Q.black_ddp = 0;
-Q.black_dvp = 5;
+Q.black_democrat = 0;
+Q.black_republican = 5;
 Q.black_dnvp = 5;
-Q.black_nsdap = 10;
+Q.black_independent = 10;
 Q.black_other = 5;
 
 Q.dove_r = 25;
 Q.kpd_r = 10;
 Q.z_r = 15;
-Q.ddp_r = 10;
-Q.dvp_r = 10;
+Q.democrat_r = 10;
+Q.republican_r = 10;
 Q.dnvp_r = 14;
-Q.nsdap_r = 10;
+Q.independent_r = 10;
 Q.other_r = 5;
 !}
 go-to: election_algorithm
@@ -173,71 +173,71 @@ Q.unemployed = 33;
 Q.black = 30;
 
 Q.classes = ['workers', 'youth', 'consumer', 'rural', 'unemployed', 'black'];
-Q.parties = ['dove', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['dove', 'kpd', 'z', 'democrat', 'republican', 'dnvp', 'independent', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_dove = 55;
 Q.workers_kpd = 20;
 Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
+Q.workers_democrat = 0;
+Q.workers_republican = 0;
 Q.workers_dnvp = 0;
-Q.workers_nsdap = 15;
+Q.workers_independent = 15;
 Q.workers_other = 5;
 
 Q.youth_dove = 0;
 Q.youth_kpd = 0;
 Q.youth_z = 5;
-Q.youth_ddp = 4;
-Q.youth_dvp = 4;
+Q.youth_democrat = 4;
+Q.youth_republican = 4;
 Q.youth_dnvp = 15;
-Q.youth_nsdap = 70;
+Q.youth_independent = 70;
 Q.youth_other = 5;
 
 Q.consumer_dove = 5;
 Q.consumer_kpd = 0;
 Q.consumer_z = 5;
-Q.consumer_ddp = 10;
-Q.consumer_dvp = 10;
+Q.consumer_democrat = 10;
+Q.consumer_republican = 10;
 Q.consumer_dnvp = 10;
-Q.consumer_nsdap = 60;
+Q.consumer_independent = 60;
 Q.consumer_other = 5;
 
 Q.rural_dove = 0;
 Q.rural_kpd = 0;
 Q.rural_z = 5;
-Q.rural_ddp = 0;
-Q.rural_dvp = 5;
+Q.rural_democrat = 0;
+Q.rural_republican = 5;
 Q.rural_dnvp = 15;
-Q.rural_nsdap = 65;
+Q.rural_independent = 65;
 Q.rural_other = 5;
 
 Q.unemployed_dove = 20;
 Q.unemployed_kpd = 40;
 Q.unemployed_z = 0;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
+Q.unemployed_democrat = 0;
+Q.unemployed_republican = 0;
 Q.unemployed_dnvp = 0;
-Q.unemployed_nsdap = 50;
+Q.unemployed_independent = 50;
 Q.unemployed_other = 5;
 
 Q.black_dove = 10;
 Q.black_kpd = 5;
 Q.black_z = 60;
-Q.black_ddp = 0;
-Q.black_dvp = 5;
+Q.black_democrat = 0;
+Q.black_republican = 5;
 Q.black_dnvp = 5;
-Q.black_nsdap = 10;
+Q.black_independent = 10;
 Q.black_other = 5;
 
 Q.dove_r = 25;
 Q.kpd_r = 10;
 Q.z_r = 15;
-Q.ddp_r = 10;
-Q.dvp_r = 10;
+Q.democrat_r = 10;
+Q.republican_r = 10;
 Q.dnvp_r = 14;
-Q.nsdap_r = 10;
+Q.independent_r = 10;
 Q.other_r = 5;
 !}
 go-to: election_algorithm
@@ -249,34 +249,34 @@ on-arrival: {!
 Q.dove_r = Q.dove_votes;
 Q.z_r = Q.z_votes;
 Q.kpd_r = Q.kpd_votes;
-Q.ddp_r = Q.ddp_votes;
-Q.dvp_r = Q.dvp_votes;
+Q.democrat_r = Q.democrat_votes;
+Q.republican_r = Q.republican_votes;
 Q.dnvp_r = Q.dnvp_votes;
-Q.nsdap_r = Q.nsdap_votes;
+Q.independent_r = Q.independent_votes;
 Q.other_r = Q.other_votes;
 
 // The largest party can only be the NSDAP or the SPD.
 Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.dove_r && Q.nsdap_r >= Q.kpd_r) {
+if (Q.independent_r >= Q.dove_r && Q.independent_r >= Q.kpd_r) {
     Q.largest_party = 'NSDAP';
 }
-if (Q.kpd_r >= Q.dove_r && Q.kpd_r >= Q.nsdap_r) {
+if (Q.kpd_r >= Q.dove_r && Q.kpd_r >= Q.independent_r) {
     Q.largest_party = 'KPD';
 }
 
 // coalitions
-Q.weimar_coalition = Q.dove_r + Q.ddp_r + Q.z_r - 3;
-Q.grand_coalition = Q.dove_r + Q.ddp_r + Q.z_r + Q.dvp_r;
-Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
+Q.weimar_coalition = Q.dove_r + Q.democrat_r + Q.z_r - 3;
+Q.grand_coalition = Q.dove_r + Q.democrat_r + Q.z_r + Q.republican_r;
+Q.bourgeois_coalition = Q.democrat_r + Q.z_r + Q.republican_r + Q.other_r;
+Q.center_right_coalition = Q.z_r + Q.democrat_r + Q.republican_r + Q.other_r + Q.dnvp_r;
+Q.right_coalition = Q.z_r + Q.republican_r + Q.other_r + Q.dnvp_r;
+Q.far_right_coalition = Q.dnvp_r + Q.independent_r;
 Q.left_coalition = Q.dove_r + Q.kpd_r;
 // this is an absurd concept lol
-Q.united_front_coalition = Q.dove_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3;
-Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r;
+Q.united_front_coalition = Q.dove_r + Q.kpd_r + Q.z_r + Q.democrat_r - 3;
+Q.anti_democratic_coalition = Q.kpd_r + Q.independent_r;
 // aka everyone except nazi, kpd, dnvp
-Q.neo_weimar_coalition = Q.dove_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
+Q.neo_weimar_coalition = Q.dove_r + Q.democrat_r + Q.z_r + Q.republican_r + Q.other_r;
 !}
 
 The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
@@ -293,16 +293,16 @@ Z + BVP: [+ z_r +]
 KPD: [+ kpd_r +]
 
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]
+DDP: [+ democrat_r +]
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]
+DVP: [+ republican_r +]
 
 # 1928: 14, 1930: 7
 DNVP: [+ dnvp_r +]
 
 # 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]
+NSDAP: [+ independent_r +]
 
 # 1928: 9, 1930: 10
 Other: [+ other_r +]

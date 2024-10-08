@@ -527,7 +527,7 @@ table {
     stroke: #000;
     stroke-width: 1.5px;
 }
-.seat.ddp {
+.seat.democrat {
     fill: #DCCA4A;
 }
 .seat.z {
@@ -536,7 +536,7 @@ table {
 .seat.bvp {
     fill: #69A2BE;
 }
-.seat.dvp {
+.seat.republican {
     fill: #D5AC27;
 }
 .seat.other {
@@ -545,7 +545,7 @@ table {
 .seat.dnvp {
     fill: #3F7BC1;
 }
-.seat.nsdap {
+.seat.independent {
     fill: #954B00;
 }
 .seat.sapd {

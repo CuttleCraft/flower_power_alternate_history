@@ -149,7 +149,7 @@ Hitler does not yet control Germany. [? if chancellor == "Papen" : However, Chan
 
 [? if hitler_deported == 1 : We have deported Hitler back to Austria. Hopefully he will never return. ?]
 
-@nsdap_win
+@independent_win
 view-if: chancellor == "Goebbels" or president == "Göring"
 title: Despite the deportation of Hitler, the Nazis have still taken power...
 tags: endings

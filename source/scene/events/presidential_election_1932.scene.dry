@@ -4,7 +4,7 @@ view-if: year = 1932 and (month = 4 or month = 5) and presidential_election_seen
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: braun_campaign = 0; hitler_support_hindenburg = 0; presidential_election_seen = 1; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring";
+on-arrival: braun_campaign = 0; hitler_support_hindenburg = 0; presidential_election_seen = 1; independent_candidate = "Hitler" if hitler_deported == 0 else independent_candidate = "Göring";
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
@@ -15,7 +15,7 @@ face-image: img/hindenburg_election.jpg
 The presidential election is coming up soon. [? if dove_in_government = 0 : While the position of Chancellor is typically more important, recent governments have depended on the president's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the KPD will run Thälmann. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Germany. Meanwhile, the KPD will run Ernst Thälmann. ?]
 [? if sapd_formed: The SAPD, our former leftists, are supporting Thälmann of the KPD, and will likely share an endorsement with the Communists. ?]
 
-# if hitler is deported, who would nsdap run? Duesterberg? or Goering?
+# if hitler is deported, who would independent run? Duesterberg? or Goering?
 # Goering runs, essentially as a proxy for Hitler, who is now stateless.
 
 Many are calling for us to support the incumbent Hindenburg, despite his well-known reactionary tendencies. Is he truly the best bulwark against Hitler's ascension? On the other hand, many in our party are calling for Otto Braun to run again, but he is reluctant.
@@ -57,7 +57,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @support_hindenburg: Support Hindenburg instead.
 
 @support_thalmann_2
-on-arrival: dove_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; black_dove -= 5; workers_dove -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15
+on-arrival: dove_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; black_dove -= 5; workers_dove -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; republican_relation -= 15
 
 Fine. We have thrown our support to Chairman Thälmann of the KPD.
 
@@ -147,18 +147,18 @@ The KPD now endorses Braun in the presidential election! We ask them to keep the
 
 @convince_liberals
 max-visits: 1
-go-to: convince_liberals_success if dvp_relation >= 50; convince_liberals_fail if dvp_relation < 50
+go-to: convince_liberals_success if republican_relation >= 50; convince_liberals_fail if republican_relation < 50
 
 The liberal vote (DDP and DVP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the DDP is already willing to support Braun.
 
 @convince_liberals_success
-on-arrival: dvp_support_braun = 1
+on-arrival: republican_support_braun = 1
 go-to: braun_campaign
 
 Thanks to our good relations, the DVP has promised to support Braun in the election.
 
 @convince_liberals_fail
-on-arrival: dvp_support_braun = 0
+on-arrival: republican_support_braun = 0
 go-to: braun_campaign
 
 We failed to convince the DVP to support Braun.
@@ -179,13 +179,13 @@ Q.hitler_votes = 0;
 Q.thalmann_votes = 0;
 
 // initial phase:
-Q.hitler_votes += Q.nsdap_normalized;
+Q.hitler_votes += Q.independent_normalized;
 Q.hindenburg_votes += Q.other_normalized;
 Q.hindenburg_votes += Q.dnvp_normalized;
 
 if (Q.braun_campaign) {
     Q.braun_votes += Q.dove_normalized;
-    Q.braun_votes += Q.ddp_normalized;
+    Q.braun_votes += Q.democrat_normalized;
     if (Q.z_support_braun && Q.z_support_braun == 1) {
         Q.braun_votes += Q.z_normalized;
     } else {
@@ -202,27 +202,27 @@ if (Q.braun_campaign) {
             Q.thalmann_votes += Q.sapd_normalized;
         }
     }
-    if (Q.dvp_support_braun) {
-        Q.braun_votes += Q.dvp_normalized;
+    if (Q.republican_support_braun) {
+        Q.braun_votes += Q.republican_normalized;
     } else {
-        Q.hindenburg_votes += Q.dvp_normalized;
+        Q.hindenburg_votes += Q.republican_normalized;
     }
 } else if (Q.dove_support_thalmann) {
     Q.thalmann_votes += Q.kpd_normalized;
     Q.thalmann_votes += Q.dove_normalized;
     Q.hindenburg_votes += Q.z_normalized;
-    Q.hindenburg_votes += Q.ddp_normalized;
-    Q.hindenburg_votes += Q.dvp_normalized;
+    Q.hindenburg_votes += Q.democrat_normalized;
+    Q.hindenburg_votes += Q.republican_normalized;
 } else {
     Q.hindenburg_votes += Q.dove_normalized;
     Q.hindenburg_votes += Q.z_normalized;
-    Q.hindenburg_votes += Q.ddp_normalized;
-    Q.hindenburg_votes += Q.dvp_normalized;
+    Q.hindenburg_votes += Q.democrat_normalized;
+    Q.hindenburg_votes += Q.republican_normalized;
     Q.thalmann_votes += Q.kpd_normalized;
 }
 if (Q.hitler_support_hindenburg) {
-    Q.hitler_votes -= Q.nsdap_normalized;
-    Q.hindenburg_votes += Q.nsdap_normalized;
+    Q.hitler_votes -= Q.independent_normalized;
+    Q.hindenburg_votes += Q.independent_normalized;
 }
 
 if (Q.hindenburg_to_braun_bonus) {
@@ -260,7 +260,7 @@ Results:
 
 Hindenburg - [+ hindenburg_votes +]%
 
-[+ nsdap_candidate +] - [+ hitler_votes +]%
+[+ independent_candidate +] - [+ hitler_votes +]%
 
 [? if kpd_support_braun == 0 : Thälmann - [+ thalmann_votes +]% ?]
 
@@ -272,7 +272,7 @@ go-to: round2_menu
 
 There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
 
-[? if braun_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ nsdap_candidate +] is no longer running in the second round, and has switched his endorsement to Hindenburg. ?]
+[? if braun_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ independent_candidate +] is no longer running in the second round, and has switched his endorsement to Hindenburg. ?]
 
 
 @round2_menu
@@ -380,7 +380,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: braun_campaign = 0; dove_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; black_dove -= 5; workers_dove -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15
+on-arrival: braun_campaign = 0; dove_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; black_dove -= 5; workers_dove -= 3; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; republican_relation -= 15
 on-departure: z_support_braun = 0; kpd_support_braun = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the KPD.
@@ -418,10 +418,10 @@ Ernst Thälmann of the KPD has won the presidency. Immediately, the far-right la
 - @civil_war: This is civil war.
 
 @hitler_wins
-on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party = "NSDAP"
+on-arrival: president = independent_candidate; chancellor = "Hitler"; chancellor_party = "NSDAP"
 
-[? if nsdap_candidate == "Hitler" : Adolf Hitler of the NSDAP has won the presidency. He wastes no time in consolidating power. ?]
-[? if nsdap_candidate != "Hitler" : The NSDAP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
+[? if independent_candidate == "Hitler" : Adolf Hitler of the NSDAP has won the presidency. He wastes no time in consolidating power. ?]
+[? if independent_candidate != "Hitler" : The NSDAP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
 
 - @hitler_takes_power: What do we do now?
 

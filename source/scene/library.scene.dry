@@ -79,13 +79,13 @@ Z + BVP: [+ z_r +]%
 # 1928: 10, 1930: 13
 KPD: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]%
+DDP: [+ democrat_r +]%
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
+DVP: [+ republican_r +]%
 # 1928: 14, 1930: 7
 DNVP: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]%
+NSDAP: [+ independent_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
@@ -173,33 +173,33 @@ Z + BVP: [+ z_votes +]%
 KPD: [+ kpd_votes +]%
 
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_votes +]%
+DDP: [+ democrat_votes +]%
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_votes +]%
+DVP: [+ republican_votes +]%
 
 # 1928: 14, 1930: 7
 DNVP: [+ dnvp_votes +]%
 
 # 1928: 3, 1930: 18
-NSDAP: [+ nsdap_votes +]%
+NSDAP: [+ independent_votes +]%
 
 # 1928: 9, 1930: 10
 Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_dove_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, DDP: [+ workers_ddp_normalized +]%, DVP: [+ workers_dvp_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]% [? if sapd_formed: SAPD: [+ workers_sapd_normalized +]% ?]
+Workers: SPD: [+ workers_dove_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, DDP: [+ workers_democrat_normalized +]%, DVP: [+ workers_republican_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_independent_normalized +]%, Others: [+ workers_other_normalized +]% [? if sapd_formed: SAPD: [+ workers_sapd_normalized +]% ?]
 
-New Middle Class: SPD: [+ consumer_dove_normalized +]%, Z: [+ consumer_z_normalized +]%, KPD: [+ consumer_kpd_normalized +]%, DDP: [+ consumer_ddp_normalized +]%, DVP: [+ consumer_dvp_normalized +]%; DNVP: [+ consumer_dnvp_normalized +]%, NSDAP: [+ consumer_nsdap_normalized +]%, Others: [+ consumer_other_normalized +]% [? if sapd_formed: SAPD: [+ consumer_sapd_normalized +]% ?]
+New Middle Class: SPD: [+ consumer_dove_normalized +]%, Z: [+ consumer_z_normalized +]%, KPD: [+ consumer_kpd_normalized +]%, DDP: [+ consumer_democrat_normalized +]%, DVP: [+ consumer_republican_normalized +]%; DNVP: [+ consumer_dnvp_normalized +]%, NSDAP: [+ consumer_independent_normalized +]%, Others: [+ consumer_other_normalized +]% [? if sapd_formed: SAPD: [+ consumer_sapd_normalized +]% ?]
 
-Old Middle Class: SPD: [+ youth_dove_normalized +]%, Z: [+ youth_z_normalized +]%, KPD: [+ youth_kpd_normalized +]%, DDP: [+ youth_ddp_normalized +]%, DVP: [+ youth_dvp_normalized +]%; DNVP: [+ youth_dnvp_normalized +]%, NSDAP: [+ youth_nsdap_normalized +]%, Others: [+ youth_other_normalized +]% [? if sapd_formed: SAPD: [+ youth_sapd_normalized +]% ?]
+Old Middle Class: SPD: [+ youth_dove_normalized +]%, Z: [+ youth_z_normalized +]%, KPD: [+ youth_kpd_normalized +]%, DDP: [+ youth_democrat_normalized +]%, DVP: [+ youth_republican_normalized +]%; DNVP: [+ youth_dnvp_normalized +]%, NSDAP: [+ youth_independent_normalized +]%, Others: [+ youth_other_normalized +]% [? if sapd_formed: SAPD: [+ youth_sapd_normalized +]% ?]
 
-Rural: SPD: [+ rural_dove_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, DDP: [+ rural_ddp_normalized +]%, DVP: [+ rural_dvp_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]% [? if sapd_formed: SAPD: [+ rural_sapd_normalized +]% ?]
+Rural: SPD: [+ rural_dove_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, DDP: [+ rural_democrat_normalized +]%, DVP: [+ rural_republican_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_independent_normalized +]%, Others: [+ rural_other_normalized +]% [? if sapd_formed: SAPD: [+ rural_sapd_normalized +]% ?]
 
-Unemployed: SPD: [+ unemployed_dove_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, DDP: [+ unemployed_ddp_normalized +]%, DVP: [+ unemployed_dvp_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_nsdap_normalized +]%, Others: [+ unemployed_other_normalized +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_normalized +]% ?]
+Unemployed: SPD: [+ unemployed_dove_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, DDP: [+ unemployed_democrat_normalized +]%, DVP: [+ unemployed_republican_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_independent_normalized +]%, Others: [+ unemployed_other_normalized +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_normalized +]% ?]
 
-black: SPD: [+ black_dove_normalized +]%, Z: [+ black_z_normalized +]%, KPD: [+ black_kpd_normalized +]%, DDP: [+ black_ddp_normalized +]%, DVP: [+ black_dvp_normalized +]%; DNVP: [+ black_dnvp_normalized +]%, NSDAP: [+ black_nsdap_normalized +]%, Others: [+ black_other_normalized +]% [? if sapd_formed: SAPD: [+ black_sapd_normalized +]% ?]
+black: SPD: [+ black_dove_normalized +]%, Z: [+ black_z_normalized +]%, KPD: [+ black_kpd_normalized +]%, DDP: [+ black_democrat_normalized +]%, DVP: [+ black_republican_normalized +]%; DNVP: [+ black_dnvp_normalized +]%, NSDAP: [+ black_independent_normalized +]%, Others: [+ black_other_normalized +]% [? if sapd_formed: SAPD: [+ black_sapd_normalized +]% ?]
 
 @parties
 go-to: menu
@@ -213,11 +213,11 @@ Current relations: [+ z_relation : relationships +]
 # TODO: replace this with the german state party after 1930
 **DDP** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently renamed themselves the German State Party. ?]
 
-Current relations: [+ ddp_relation : relationships +]
+Current relations: [+ democrat_relation : relationships +]
 
 **DVP** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
 
-Current relations: [+ dvp_relation : relationships +]
+Current relations: [+ republican_relation : relationships +]
 
 **DNVP** - *Deutschnationale Volkspartei* (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
 
@@ -231,7 +231,7 @@ Current relations: [+ kpd_relation : relationships +]
 
 **NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
 
-Current relations: [+ nsdap_relation : relationships +]
+Current relations: [+ independent_relation : relationships +]
 
 **Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and DNVP. 
 
@@ -360,10 +360,10 @@ data = data.concat([
         "seats": Q.dove_r*5,
     },
     {
-        "id": "ddp",
+        "id": "democrat",
         "legend": "DDP",
         "name": "DDP",
-        "seats": Q.ddp_r*5,
+        "seats": Q.democrat_r*5,
     },
     {
         "id": "z",
@@ -378,10 +378,10 @@ data = data.concat([
         "seats": 3*5,
     },
     {
-        "id": "dvp",
+        "id": "republican",
         "legend": "DVP",
         "name": "DVP",
-        "seats": Q.dvp_r*5,
+        "seats": Q.republican_r*5,
     },
     {
         "id": "other",
@@ -396,10 +396,10 @@ data = data.concat([
         "seats": Q.dnvp_r*5,
     },
     {
-        "id": "nsdap",
+        "id": "independent",
         "legend": "NSDAP",
         "name": "NSDAP",
-        "seats": Q.nsdap_r*5,
+        "seats": Q.independent_r*5,
     },
 ]);
 if (d3 && window) {
@@ -420,8 +420,8 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'dove': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'dove': 'SPD', 'kpd': 'KPD', 'ddp': 'DDP', 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'dove': '#E3000F', 'kpd': '#8B0000', 'democrat': '#DCCA4A', 'z': '#000', 'republican': '#D5AC27', 'dnvp': '#3f7bc1', 'independent': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'dove': 'SPD', 'kpd': 'KPD', 'democrat': 'DDP', 'z': 'Z + BVP', 'republican': 'DVP', 'dnvp': 'DNVP', 'independent': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     d3.select("#election_history").datum(Q.election_records).call(lines);
@@ -431,8 +431,8 @@ if (d3 && window) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'dove': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'dove': 'SPD', 'kpd': 'KPD', 'ddp': 'DDP', 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'dove': '#E3000F', 'kpd': '#8B0000', 'democrat': '#DCCA4A', 'z': '#000', 'republican': '#D5AC27', 'dnvp': '#3f7bc1', 'independent': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'dove': 'SPD', 'kpd': 'KPD', 'democrat': 'DDP', 'z': 'Z + BVP', 'republican': 'DVP', 'dnvp': 'DNVP', 'independent': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -460,19 +460,19 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}KPD: {!</td><td>!} [+ kpd_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} DDP: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} DDP: {!</td><td>!} [+ democrat_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} BVP: {!</td><td>!} 3% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ republican_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} NSDAP: {!</td><td>!} [+ independent_r +]% {!</td></tr>!}
 {!</table>!}
 
 = Election history
