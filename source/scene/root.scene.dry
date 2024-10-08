@@ -189,17 +189,6 @@ Q.capital_strike_progress = 0;
 
 Q.budget = 5;
 
-// Proportion of different social groups
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
-Q.workers = 48; // industry and trade
-Q.youth = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.consumer = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
-Q.black = 30;
-
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
 // income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
@@ -305,6 +294,13 @@ Q.connecticut_consumer = 40;
 Q.connecticut_rural = 10;
 Q.connecticut_southern = 5;
 Q.connecticut_black = 4;
+
+Q.dc_workers = 20;
+Q.dc_youth = 25;
+Q.dc_consumer = 40;
+Q.dc_rural = 5;
+Q.dc_southern = 3;
+Q.dc_black = 50;
 
 Q.delaware_workers = 20;
 Q.delaware_youth = 15;
@@ -606,6 +602,60 @@ Q.wyoming_consumer = 25;
 Q.wyoming_rural = 45;
 Q.wyoming_southern = 5;
 Q.wyoming_black = 1;
+
+// electoral votes
+
+Q.alabama_electoral = 10;
+Q.alaska_electoral = 3;
+Q.arizona_electoral = 5;
+Q.arkansas_electoral = 6;
+Q.california_electoral = 40;
+Q.colorado_electoral = 6;
+Q.connecticut_electoral = 8;
+Q.delaware_electoral = 3;
+Q.dc_electoral = 3;
+Q.florida_electoral = 14;
+Q.georgia_electoral = 12;
+Q.hawaii_electoral = 4;
+Q.idaho_electoral = 4;
+Q.illinois_electoral = 26;
+Q.indiana_electoral = 13;
+Q.iowa_electoral = 9;
+Q.kansas_electoral = 7;
+Q.kentucky_electoral = 9;
+Q.louisiana_electoral = 10;
+Q.maine_electoral = 4;
+Q.maryland_electoral = 10;
+Q.massachusetts_electoral = 14;
+Q.michigan_electoral = 21;
+Q.minnesota_electoral = 10;
+Q.mississippi_electoral = 7;
+Q.missouri_electoral = 12;
+Q.montana_electoral = 4;
+Q.nebraska_electoral = 5;
+Q.nevada_electoral = 3;
+Q.new_hampshire_electoral = 4;
+Q.new_jersey_electoral = 17;
+Q.new_mexico_electoral = 4;
+Q.new_york_electoral = 43;
+Q.north_carolina_electoral = 14;
+Q.north_dakota_electoral = 4;
+Q.ohio_electoral = 26;
+Q.oklahoma_electoral = 8;
+Q.oregon_electoral = 6;
+Q.pennsylvania_electoral = 29;
+Q.rhode_island_electoral = 4;
+Q.south_carolina_electoral = 8;
+Q.south_dakota_electoral = 4;
+Q.tennessee_electoral = 11;
+Q.texas_electoral = 25;
+Q.utah_electoral = 4;
+Q.vermont_electoral = 3;
+Q.virginia_electoral = 12;
+Q.washington_electoral = 9;
+Q.west_virginia_electoral = 7;
+Q.wisconsin_electoral = 12;
+Q.wyoming_electoral = 3;
 
 
 // array of objects of the form {date: Date(), dove: 10, kpd: 12, ...} for each election
