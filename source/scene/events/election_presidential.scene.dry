@@ -10,45 +10,47 @@ Q.democrat_electoral = 0;
 Q.republican_electoral = 0;
 Q.independent_electoral = 0;
 
-for (var state of Q.states) {
-    var total_support = 0; // Initialize total support for the state
-    var party_supports = {}; // Object to hold support for each party
-
-    // Initialize party supports
-    for (var party of Q.parties) {
-        party_supports[party] = 0; // Set initial support for each party to 0
-    }
-
-    // Loop through each demographic class
-    for (var c of Q.classes) {
-        // Get the percentage demographic for this class in the current state
-        var demographic_percentage = Q[state + '_' + c]; // e.g., 0.25 for 25%
-
-        // Calculate party support based on this class
+for (var c of Q.classes) {
+            var class_votes = 0;
         for (var party of Q.parties) {
-            var normalized_support = Q[c + '_' + party + '_normalized']; // e.g., 0.50 for 50%
-            var support_from_class = normalized_support * demographic_percentage; // Calculate effective support
-
-            // Accumulate this party's support for the state
-            party_supports[party] += support_from_class;
+            if (Q[c+'_'+party] < 0) {
+                Q[c+'_'+party] = 0;
+            }
+            class_votes += Q[c+'_'+party];
+        for (var party of Q.parties) {
+            Q[c + '_' + party + '_normalized'] = Math.round(100*Q[c+'_'+party]/class_votes);
+            }
         }
+}
+
+for (var state of Q.states) {
+    var total_support = 0;
+    for (var party of Q.parties) {
+        var party_support = 0;
+        for (var c of Q.classes) {
+            party_support += Q[state+'_'+c]*Q[c+'_'+party+'_normalized'];
+            }
+        }
+        Q[state + '_' + party + '_support'] = party_support;
+        total_support += party_support;
     }
-
-    // Determine the party with the highest support in this state
-    var winning_party = null;
+    for (var party of Q.parties) {
+        Q[state+'_'+party+'_normalized'] = Q[party + '_support']/total_support;
+        Q[state+'_'+party+'_votes_dec'] = Math.round(Q[party+'_normalized']*1000)/10;
+        Q[state+'_'+party+'_votes'] = Math.round(Q[party+'_normalized']*100);
+    }
     var highest_support = 0;
-
-    for (var party in party_supports) {
-        if (party_supports[party] > highest_support) {
-            highest_support = party_supports[party];
+    for (var party in Q.parties) {
+        Q['winning_party_'+state] = null;
+        if (Q[state+'_'+party+'_votes'] > highest_support) {
+            highest_support = Q[state+'_'+party+'_votes'];
             winning_party = party; // Update winning party
             }
         }
-
     for (var_state of Q.states) {
         Q[winning_party + '_electoral'] += Q[state + '_electoral']
     }
-}
+console.log(JSON.stringify(Q))     
 !}
 
 = Presidential Elections
