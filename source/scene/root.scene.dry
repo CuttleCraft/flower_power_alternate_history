@@ -237,7 +237,7 @@ Q.rural_independent = 20;
 
 Q.southern_dove = 0;
 Q.southern_democrat = 20;
-Q.rural_republican = 40;
+Q.southern_republican = 40;
 Q.southern_independent = 40;
 
 Q.black_dove = 20;
