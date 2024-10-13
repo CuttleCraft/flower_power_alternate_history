@@ -10,6 +10,9 @@ Q.democrat_electoral = 0;
 Q.republican_electoral = 0;
 Q.independent_electoral = 0;
 
+for (var state of Q.states) {
+    Q[state + '_unemployed'] = Q.unemployed
+}
 for (var c of Q.classes) {
             var class_votes = 0;
         for (var party of Q.parties) {

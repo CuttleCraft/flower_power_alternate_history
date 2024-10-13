@@ -246,6 +246,11 @@ Q.black_democrat = 50;
 Q.black_republican = 30;
 Q.black_independent = 0;
 
+Q.unemployed_dove = 15;
+Q.unemployed_democrat = 50;
+Q.unemployed_republican = 20;
+Q.unemployed_independent = 5;
+
 // state demographics
 Q.alabama_workers =  20;
 Q.alabama_youth = 18;
