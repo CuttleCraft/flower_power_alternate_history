@@ -55,7 +55,7 @@ console.log(JSON.stringify(Q))
 
 = Presidential Elections
 
-Dove Party: [+ dove_electoral +]
-Democratic Party: [+ democrat_electoral +]
-Republican Party: [+ republican_electoral +]
-American Independent Party: [+ independent_electoral +]
+Eugene McCarthy (Peace and Freedom): [+ dove_electoral +]
+Hubert Humphrey (Democrat): [+ democrat_electoral +]
+Richard Nixon (Republican): [+ republican_electoral +]
+George Wallace (American Independent): [+ independent_electoral +]
