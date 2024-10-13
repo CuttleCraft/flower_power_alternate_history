@@ -44,10 +44,11 @@ for (var state of Q.states) {
         Q['winning_party_'+state] = null;
         if (Q[state+'_'+party+'_votes'] > highest_support) {
             highest_support = Q[state+'_'+party+'_votes'];
-            winning_party = party; // Update winning party
+            Q['winning_party_'+state] = party; // Update winning party
             }
         }
     for (var_state of Q.states) {
+        Q.winning_party = Q['winning_party_'+state]
         Q[winning_party + '_electoral'] += Q[state + '_electoral']
     }
 console.log(JSON.stringify(Q))     
