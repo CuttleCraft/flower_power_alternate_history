@@ -15,7 +15,7 @@ for (var state of Q.states) {
 }
 
 for (var c of Q.classes) {
-            var class_votes = 0;
+        var class_votes = 0;
         for (var party of Q.parties) {
             if (Q[c+'_'+party] < 0) {
                 Q[c+'_'+party] = 0;
@@ -39,8 +39,8 @@ for (var state of Q.states) {
     }
     for (var party of Q.parties) {
         Q[state+'_'+party+'_normalized'] = Q[state + '_' + party + '_support']/total_support;
-        Q[state+'_'+party+'_votes_dec'] = Math.round(Q[party+'_normalized']*1000)/10;
-        Q[state+'_'+party+'_votes'] = Math.round(Q[party+'_normalized']*100);
+        Q[state+'_'+party+'_votes_dec'] = Math.round(Q[state+'_'+party+'_normalized']*1000)/10;
+        Q[state+'_'+party+'_votes'] = Math.round(Q[state+'_'+party+'_normalized']*100);
     }
     var highest_support = 0;
     Q['winning_party_'+state] = null;
