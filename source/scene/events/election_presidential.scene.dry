@@ -10,50 +10,92 @@ Q.democrat_electoral = 0;
 Q.republican_electoral = 0;
 Q.independent_electoral = 0;
 
+console.log("Initial electoral votes:", {
+    dove: Q.dove_electoral,
+    democrat: Q.democrat_electoral,
+    republican: Q.republican_electoral,
+    independent: Q.independent_electoral
+});
+
+// Loop to initialize unemployed for each state
 for (var state of Q.states) {
-    Q[state + '_unemployed'] = Q.unemployed
+    Q[state + '_unemployed'] = Q.unemployed;
+    console.log(`Unemployed initialized for state ${state}:`, Q[state + '_unemployed']);
 }
 
+// Loop through classes and parties to calculate class votes and normalized values
 for (var c of Q.classes) {
-        var class_votes = 0;
-        for (var party of Q.parties) {
-            if (Q[c+'_'+party] < 0) {
-                Q[c+'_'+party] = 0;
-            }
-            class_votes += Q[c+'_'+party];
-        for (var party of Q.parties) {
-            Q[c + '_' + party + '_normalized'] = Math.round(100*Q[c+'_'+party]/class_votes);
-            }
+    var class_votes = 0;
+    for (var party of Q.parties) {
+        if (Q[c + '_' + party] < 0) {
+            Q[c + '_' + party] = 0;
+            console.log(`Negative votes corrected for class ${c}, party ${party}:`, Q[c + '_' + party]);
         }
+        class_votes += Q[c + '_' + party];
+    }
+    console.log(`Total votes for class ${c}:`, class_votes);
+
+    // Normalize class votes for each party
+    for (var party of Q.parties) {
+        Q[c + '_' + party + '_normalized'] = Math.round(100 * Q[c + '_' + party] / class_votes);
+        console.log(`Normalized votes for class ${c}, party ${party}:`, Q[c + '_' + party + '_normalized']);
+    }
 }
+
+// Loop through states to calculate support for each party
 for (var state of Q.states) {
     var total_support = 0;
+
     for (var party of Q.parties) {
         var party_support = 0;
+        
         for (var c of Q.classes) {
-            party_support += Q[state+'_'+c]*Q[c+'_'+party+'_normalized'];
-            }
+            party_support += Q[state + '_' + c] * Q[c + '_' + party + '_normalized'];
         }
+
         Q[state + '_' + party + '_support'] = party_support;
         total_support += party_support;
+        console.log(`Support for state ${state}, party ${party}:`, party_support);
     }
+
+    console.log(`Total support for state ${state}:`, total_support);
+
+    // Normalize support for each party and calculate votes
     for (var party of Q.parties) {
-        Q[state+'_'+party+'_normalized'] = Q[state + '_' + party + '_support']/total_support;
-        Q[state+'_'+party+'_votes_dec'] = Math.round(Q[state+'_'+party+'_normalized']*1000)/10;
-        Q[state+'_'+party+'_votes'] = Math.round(Q[state+'_'+party+'_normalized']*100);
+        Q[state + '_' + party + '_normalized'] = Q[state + '_' + party + '_support'] / total_support;
+        Q[state + '_' + party + '_votes_dec'] = Math.round(Q[state + '_' + party + '_normalized'] * 1000) / 10;
+        Q[state + '_' + party + '_votes'] = Math.round(Q[state + '_' + party + '_normalized'] * 100);
+
+        console.log(`Normalized support for state ${state}, party ${party}:`, Q[state + '_' + party + '_normalized']);
+        console.log(`Decimal votes for state ${state}, party ${party}:`, Q[state + '_' + party + '_votes_dec']);
+        console.log(`Rounded votes for state ${state}, party ${party}:`, Q[state + '_' + party + '_votes']);
     }
+
+    // Determine the winning party for each state
     var highest_support = 0;
-    Q['winning_party_'+state] = null;
-    for (var party in Q.parties) {
-        if (Q[state+'_'+party+'_votes'] > highest_support) {
-            highest_support = Q[state+'_'+party+'_votes'];
-            Q['winning_party_'+state] = party; // Update winning party
-            }
+    Q['winning_party_' + state] = null;
+    for (var party of Q.parties) {
+        if (Q[state + '_' + party + '_votes'] > highest_support) {
+            highest_support = Q[state + '_' + party + '_votes'];
+            Q['winning_party_' + state] = party;
         }
-    for (var state of Q.states) {
-        var winning_party = Q['winning_party_'+state]
-        Q[winning_party + '_electoral'] += Q[state + '_electoral']
-    }    
+    }
+    console.log(`Winning party for state ${state}:`, Q['winning_party_' + state]);
+}
+
+// Add electoral votes for each winning party
+for (var state of Q.states) {
+    var winning_party = Q['winning_party_' + state];
+    Q[winning_party + '_electoral'] += Q[state + '_electoral'];
+    console.log(`Electoral votes updated for winning party ${winning_party} in state ${state}:`, Q[winning_party + '_electoral']);
+}
+
+console.log("Final electoral votes:", {
+    dove: Q.dove_electoral,
+    democrat: Q.democrat_electoral,
+    republican: Q.republican_electoral,
+    independent: Q.independent_electoral
+});
 !}
 
 = Presidential Elections
