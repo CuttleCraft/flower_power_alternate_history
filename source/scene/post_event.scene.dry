@@ -34,7 +34,44 @@ for (var c of Q.classes) {
         Q[c + '_' + party + '_normalized'] = Math.round(100*Q[c+'_'+party]/class_votes);
     }
 }
-// calculate support for each of the parties
+// calculate popular support for each of the parties
+function calculatePopularVote() {
+  // Initialize popular vote for each party as 0
+  parties.forEach(party => {
+    Q[party + '_popular_vote'] = 0;
+  });
+
+  // Loop through each state
+  states.forEach(state => {
+    // Calculate state weight based on electoral votes
+    let stateWeight = Q[state + '_electoral'] / 538;
+
+    // Loop through each demographic
+    demographics.forEach(demographic => {
+      // Retrieve demographic weight in the state
+      let demographicStateWeight = Q[demographic + '_' + state + '_normalized'] / 100;
+
+      // Loop through each party to calculate weighted support
+      parties.forEach(party => {
+        // Retrieve demographic support for the party
+        let demographicPartySupport = Q[demographic + '_' + party + '_normalized'];
+
+        // Calculate weighted contribution to the party's popular vote
+        let weightedSupport = demographicPartySupport * demographicStateWeight * stateWeight;
+
+        // Add to the party's popular vote total
+        Q[party + '_popular_vote'] += weightedSupport;
+      });
+    });
+  });
+
+  // Optional: Convert to percentage format if needed (multiply by 100)
+  parties.forEach(party => {
+    Q[party + '_popular_vote'] *= 100;
+  });
+}
+
+
 var total_support = 0; 
 for (var party of Q.parties) {
     var party_support = 0;

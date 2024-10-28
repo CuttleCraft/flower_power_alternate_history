@@ -128,36 +128,30 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 (if the election were to be held now):
 
-SPD: [+ dove_votes +]%
+Peace and Freedom: [+ dove_popular_vote +]%
 
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
+Democratic: [+ democrat_popular_vote +]%
 
-Z + BVP: [+ z_votes +]%
+Republican: [+ republican_popular_vote +]%
 
-KPD: [+ kpd_votes +]%
+American Independent: [+ independent_popular_vote +]%
 
-DDP: [+ democrat_votes +]%
 
-DVP: [+ republican_votes +]%
-
-DNVP: [+ dnvp_votes +]%
-
-NSDAP: [+ independent_votes +]%
-
-Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_dove_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, DDP: [+ workers_democrat_normalized +]%, DVP: [+ workers_republican_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_independent_normalized +]%, Others: [+ workers_other_normalized +]% [? if sapd_formed: SAPD: [+ workers_sapd_normalized +]% ?]
+Workers: Peace and Freedom: [+ workers_dove_normalized +]%, Democratic: [+ workers_democrat_normalized +]%, Republican: [+ workers_republican_normalized +]%, American Independent: [+ workers_independent_normalized +]%
 
-New Middle Class: SPD: [+ consumer_dove_normalized +]%, Z: [+ consumer_z_normalized +]%, KPD: [+ consumer_kpd_normalized +]%, DDP: [+ consumer_democrat_normalized +]%, DVP: [+ consumer_republican_normalized +]%; DNVP: [+ consumer_dnvp_normalized +]%, NSDAP: [+ consumer_independent_normalized +]%, Others: [+ consumer_other_normalized +]% [? if sapd_formed: SAPD: [+ consumer_sapd_normalized +]% ?]
+Consumers: Peace and Freedom: [+ consumer_dove_normalized +]%, Democratic: [+ consumer_democrat_normalized +]%, Republican: [+ consumer_republican_normalized +]%, American Independent: [+ consumer_independent_normalized +]%
 
-Old Middle Class: SPD: [+ youth_dove_normalized +]%, Z: [+ youth_z_normalized +]%, KPD: [+ youth_kpd_normalized +]%, DDP: [+ youth_democrat_normalized +]%, DVP: [+ youth_republican_normalized +]%; DNVP: [+ youth_dnvp_normalized +]%, NSDAP: [+ youth_independent_normalized +]%, Others: [+ youth_other_normalized +]% [? if sapd_formed: SAPD: [+ youth_sapd_normalized +]% ?]
+Youth: Peace and Freedom: [+ youth_dove_normalized +]%, Democratic: [+ youth_democrat_normalized +]%, Republican: [+ youth_republican_normalized +]%, American Independent: [+ youth_independent_normalized +]%
 
-Rural: SPD: [+ rural_dove_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, DDP: [+ rural_democrat_normalized +]%, DVP: [+ rural_republican_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_independent_normalized +]%, Others: [+ rural_other_normalized +]% [? if sapd_formed: SAPD: [+ rural_sapd_normalized +]% ?]
+Rural: Peace and Freedom: [+ rural_dove_normalized +]%, Democratic: [+ rural_democrat_normalized +]%, Republican: [+ rural_republican_normalized +]%, American Independent: [+ rural_independent_normalized +]%
 
-Unemployed: SPD: [+ unemployed_dove_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, DDP: [+ unemployed_democrat_normalized +]%, DVP: [+ unemployed_republican_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_independent_normalized +]%, Others: [+ unemployed_other_normalized +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_normalized +]% ?]
+Unemployed: Peace and Freedom: [+ unemployed_dove_normalized +]%, Democratic: [+ unemployed_democrat_normalized +]%, Republican: [+ unemployed_republican_normalized +]%, American Independent: [+ unemployed_independent_normalized +]%
 
-black: SPD: [+ black_dove_normalized +]%, Z: [+ black_z_normalized +]%, KPD: [+ black_kpd_normalized +]%, DDP: [+ black_democrat_normalized +]%, DVP: [+ black_republican_normalized +]%; DNVP: [+ black_dnvp_normalized +]%, NSDAP: [+ black_independent_normalized +]%, Others: [+ black_other_normalized +]% [? if sapd_formed: SAPD: [+ black_sapd_normalized +]% ?]
+Southerner: Peace and Freedom: [+ southern_dove_normalized +]%, Democratic: [+ southern_democrat_normalized +]%, Republican: [+ southern_republican_normalized +]%, American Independent: [+ southern_independent_normalized +]%
+
+Black: Peace and Freedom: [+ black_dove_normalized +]%, Democratic: [+ black_democrat_normalized +]%, Republican: [+ black_republican_normalized +]%, American Independent: [+ black_independent_normalized +]%
 
 Support for the Republic: [+ pro_republic +]%
