@@ -51,9 +51,16 @@ for (var party of Q.parties) {
         
         // Calculate support from each demographic in the state
         for (var c of Q.classes) {
+            var class_votes = 0;
+            for (var party of Q.parties) {
+                if (Q[c + '_' + party] < 0) {
+                    Q[c + '_' + party] = 0;
+                }
+            class_votes += Q[c + '_' + party];
+            }
             
             // Support contribution from this demographic in this state
-            var demographic_support = (Q[c + '_' + party + '_normalized'] * (Q[c + '_' + state + '_normalized'] / 100) * (Q[state + '_electoral'] / 538));
+            var demographic_support = ((Q[c + '_' + party] / class_votes) * (Q[c + '_' + state + '_normalized'] / 100) * (Q[state + '_electoral'] / 538));
             console.log(`Demographic support for class ${c}, state ${party}, party ${party}:`, demographic_support);
 
             // Add to the party's support from this state
