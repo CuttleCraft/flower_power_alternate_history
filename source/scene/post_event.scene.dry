@@ -35,60 +35,41 @@ for (var c of Q.classes) {
     }
 }
 // calculate popular support for each of the parties
-function calculatePopularVote() {
-  // Initialize popular vote for each party as 0
-  parties.forEach(party => {
-    Q[party + '_popular_vote'] = 0;
-  });
-
-  // Loop through each state
-  states.forEach(state => {
-    // Calculate state weight based on electoral votes
-    let stateWeight = Q[state + '_electoral'] / 538;
-
-    // Loop through each demographic
-    demographics.forEach(demographic => {
-      // Retrieve demographic weight in the state
-      let demographicStateWeight = Q[demographic + '_' + state + '_normalized'] / 100;
-
-      // Loop through each party to calculate weighted support
-      parties.forEach(party => {
-        // Retrieve demographic support for the party
-        let demographicPartySupport = Q[demographic + '_' + party + '_normalized'];
-
-        // Calculate weighted contribution to the party's popular vote
-        let weightedSupport = demographicPartySupport * demographicStateWeight * stateWeight;
-
-        // Add to the party's popular vote total
-        Q[party + '_popular_vote'] += weightedSupport;
-      });
-    });
-  });
-
-  // Optional: Convert to percentage format if needed (multiply by 100)
-  parties.forEach(party => {
-    Q[party + '_popular_vote'] *= 100;
-  });
-}
 
 
-var total_support = 0; 
+
+
+// Initialize total support for normalization
+var total_support = 0;
+
+// Calculate popular vote for each party
 for (var party of Q.parties) {
     var party_support = 0;
-    for (var c of Q.classes) {
-        if (Q.old_demographics) { 
-            party_support += Q[c]*Q[c+'_'+party];
-        } else  { 
-            party_support += Q[c]*Q[c+'_'+party+'_normalized'];
-        } 
+
+    // Loop through each state
+    for (var state of Q.states) {
+        
+        // Calculate support from each demographic in the state
+        for (var c of Q.classes) {
+            
+            // Support contribution from this demographic in this state
+            var demographic_support = Q[c + '_' + party + '_normalized'] *
+                                      (Q[c + '_' + state + '_normalized'] / 100) *
+                                      (Q[state + '_electoral'] / 538);
+                                      
+            // Add to the party's support from this state
+            party_support += demographic_support;
+        }
     }
-    Q[party + '_support'] = party_support;
-    total_support += party_support; 
+
+    // Store the calculated support for the party in popular vote terms
+    Q[party + '_popular_vote'] = party_support;
+    total_support += party_support;
 }
-// 2. normalize support (fraction)
+
+// Normalize support to get percentages
 for (var party of Q.parties) {
-    Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*100);
+    Q[party + '_popular_vote'] = (Q[party + '_popular_vote'] / total_support) * 100;
 }
 
 
