@@ -2,7 +2,7 @@ title: Presidential Election
 new-page: true
 tags: event
 priority: -1
-view-if: year = 1928
+view-if: month = 1 or month = 2
 on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48;
 on-arrival: {!
 Q.dove_electoral = 0;
@@ -112,26 +112,31 @@ George Wallace (American Independent): [+ independent_electoral +]
 - @no_majority_president: No candidate wins a majority, and the election goes to the House of Representatives.
 
 @dove_win
+view-if: dove_electoral >= 270
 on-arrival: president = "Eugene McCarthy"
 
 By some miracle, we have won! Under the Peace and Freedom Party, we have successfully carried Eugene McCarthy to office.
 
 @democrat_win
+view-if: democrat_electoral >= 270
 on-arrival: president = "Hubert Humphrey"
 
 Despite expectations for a Nixon victory with such vote splitting on the Democratic side, Hubert Humphrey has managed to win the presidency. Let us hope he breaks from LBJ and ends the war in Vietnam.
 
 @republican_win
+view-if: republican_electoral >= 270
 on-arrival: president = "Richard Nixon"
 
 As expected, the Republican candidate Richard Nixon has won. We will build our forces so that when 1972 comes, we are a strong enough force to end the war in Vietnam whether it be cooperation with the Democrats or forging our own path.
 
 @independent_win
+view-if: independent_electoral >= 270
 on-arrival: president = "George Wallace"
 
 Somehow, the worst has happened and George Wallace has been elected as president. This is a devastating day for Civil Rights in America, and we must lead the fight against him.
 
 @no_majority_president
+view-if: dove_electoral < 270 and democrat_electoral < 270 and republican_electoral < 270 and independent_electoral < 270
 
 The Electoral College has tied, and the election goes to the House of Representatives.
 
