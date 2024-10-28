@@ -686,7 +686,7 @@ Q.oregon_rural = 10;
 Q.oregon_southern = 5;
 Q.oregon_black = 4;
 Q.oregon_dem_bonus = 0;
-Q.oregona_rep_bonus = 0;
+Q.oregon_rep_bonus = 0;
 Q.oregon_dove_bonus = 0;
 Q.oregon_ind_bonus = 0;
 
