@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Flower Power: An Alternate History
 
 @start_menu_2
 
@@ -21,8 +21,8 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.year = 1968;
+Q.month = 8;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -1139,10 +1139,6 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 1968
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
-
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
-
-
+Despite stronger popular support and showing at the convention than Hubert Humphrey, Eugene McCarthy has lost the nomination. Violence plagues the streets as Mayor Daley heavy-handedly suppresses anti-war protestors. Despite initial reluctance, however, Eugene McCarthy has been pursuaded to run on the ticket of the Peace and Freedom Party for the presidency. It is unlikely that we will be anything more than a protest vote for now, but we may as well try, and who is to say we will not sweep the election by 1972?
