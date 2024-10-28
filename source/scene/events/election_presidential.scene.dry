@@ -104,3 +104,41 @@ Eugene McCarthy (Peace and Freedom): [+ dove_electoral +]
 Hubert Humphrey (Democrat): [+ democrat_electoral +]
 Richard Nixon (Republican): [+ republican_electoral +]
 George Wallace (American Independent): [+ independent_electoral +]
+
+- @dove_win: Eugene McCarthy wins the election.
+- @democrat_win: Hubert Humphrey wins the election.
+- @republican_win: Richard Nixon wins the election.
+- @independent_win: George Wallace wins the election.
+- @no_majority_president: No candidate wins a majority, and the election goes to the House of Representatives.
+
+@dove_win
+on-arrival: president = "Eugene McCarthy"
+
+By some miracle, we have won! Under the Peace and Freedom Party, we have successfully carried Eugene McCarthy to office.
+
+@democrat_win
+on-arrival: president = "Hubert Humphrey"
+
+Despite expectations for a Nixon victory with such vote splitting on the Democratic side, Hubert Humphrey has managed to win the presidency. Let us hope he breaks from LBJ and ends the war in Vietnam.
+
+@republican_win
+on-arrival: president = "Richard Nixon"
+
+As expected, the Republican candidate Richard Nixon has won. We will build our forces so that when 1972 comes, we are a strong enough force to end the war in Vietnam whether it be cooperation with the Democrats or forging our own path.
+
+@independent_win
+on-arrival: president = "George Wallace"
+
+Somehow, the worst has happened and George Wallace has been elected as president. This is a devastating day for Civil Rights in America, and we must lead the fight against him.
+
+@no_majority_president
+
+The Electoral College has tied, and the election goes to the House of Representatives.
+
+- @nixon_wins_wallace: Richard Nixon wins with the AIP's support.
+
+@nixon_wins_wallace
+on-arrival: president = "Richard Nixon"
+
+Richard Nixon has been elected President in return for ending desegregation efforts. We must work tirelessly to champion the cause to continue these efforts.
+
