@@ -205,7 +205,7 @@ Q.unemployed_qol = 100;
 Q.youth_qol = 100;
 Q.consumer_qol = 100;
 
-Q.classes = ['workers', 'youth', 'consumer', 'rural', 'southern', 'black', 'unemployed'];
+Q.classes = ['workers', 'youth', 'consumer', 'rural', 'southern', 'black', 'unemployed', 'dem_bonus', 'rep_bonus', 'dove_bonus', 'ind_bonus'];
 Q.parties = ['dove', 'democrat', 'republican', 'independent'];
 Q.states = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'dc', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'new_hampshire', 'new_jersey', 'new_mexico', 'new_york', 'north_carolina', 'north_dakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhode_island', 'south_carolina', 'south_dakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'west_virginia', 'wisconsin', 'wyoming']
 
@@ -251,6 +251,26 @@ Q.unemployed_democrat = 50;
 Q.unemployed_republican = 20;
 Q.unemployed_independent = 5;
 
+Q.dem_bonus_dove = 0;
+Q.dem_bonus_democrat = 100;
+Q.dem_bonus_republican = 0;
+Q.dem_bonus_independent = 0;
+
+Q.rep_bonus_dove = 0;
+Q.rep_bonus_democrat = 0;
+Q.rep_bonus_republican = 100;
+Q.rep_bonus_independent = 0;
+
+Q.dove_bonus_dove = 100;
+Q.dove_bonus_democrat = 0;
+Q.dove_bonus_republican = 0;
+Q.dove_bonus_independent = 0;
+
+Q.ind_bonus_dove = 0;
+Q.ind_bonus_democrat = 0;
+Q.ind_bonus_republican = 0;
+Q.ind_bonus_independent = 100;
+
 // state demographics
 Q.alabama_workers =  20;
 Q.alabama_youth = 18;
@@ -258,6 +278,10 @@ Q.alabama_consumer = 25;
 Q.alabama_rural = 30;
 Q.alabama_southern = 40;
 Q.alabama_black = 25;
+Q.alabama_dem_bonus = 0;
+Q.alabama_rep_bonus = 0;
+Q.alabama_dove_bonus = 0;
+Q.alabama_ind_bonus = 10;
 
 Q.alaska_workers = 10;
 Q.alaska_youth = 20;
@@ -265,6 +289,10 @@ Q.alaska_consumer = 30;
 Q.alaska_rural = 20;
 Q.alaska_southern = 5;
 Q.alaska_black = 1;
+Q.alaska_dem_bonus = 0;
+Q.alaska_rep_bonus = 0;
+Q.alaska_dove_bonus = 0;
+Q.alaska_ind_bonus = 0;
 
 Q.arizona_workers = 15;
 Q.arizona_youth = 22;
@@ -272,6 +300,10 @@ Q.arizona_consumer = 28;
 Q.arizona_rural = 18;
 Q.arizona_southern = 10;
 Q.arizona_black = 3;
+Q.arizona_dem_bonus = 0;
+Q.arizona_rep_bonus = 0;
+Q.arizona_dove_bonus = 0;
+Q.arizona_ind_bonus = 0;
 
 Q.arkansas_workers = 20;
 Q.arkansas_youth = 15;
@@ -279,6 +311,10 @@ Q.arkansas_consumer = 20;
 Q.arkansas_rural = 35;
 Q.arkansas_southern = 35;
 Q.arkansas_black = 15;
+Q.arkansas_dem_bonus = 0;
+Q.arkansas_rep_bonus = 0;
+Q.arkansas_dove_bonus = 0;
+Q.arkansas_ind_bonus = 5;
 
 Q.california_workers = 25;
 Q.california_youth = 35;
@@ -286,6 +322,10 @@ Q.california_consumer = 40;
 Q.california_rural = 10;
 Q.california_southern = 5;
 Q.california_black = 7;
+Q.california_dem_bonus = 0;
+Q.california_rep_bonus = 0;
+Q.california_dove_bonus = 0;
+Q.california_ind_bonus = 0;
 
 Q.colorado_workers = 20;
 Q.colorado_youth = 25;
@@ -293,6 +333,10 @@ Q.colorado_consumer = 35;
 Q.colorado_rural = 20;
 Q.colorado_southern = 5;
 Q.colorado_black = 4;
+Q.colorado_dem_bonus = 0;
+Q.colorado_rep_bonus = 0;
+Q.colorado_dove_bonus = 0;
+Q.colorado_ind_bonus = 0;
 
 Q.connecticut_workers = 25;
 Q.connecticut_youth = 15;
@@ -300,6 +344,10 @@ Q.connecticut_consumer = 40;
 Q.connecticut_rural = 10;
 Q.connecticut_southern = 5;
 Q.connecticut_black = 4;
+Q.connecticut_dem_bonus = 0;
+Q.connecticut_rep_bonus = 0;
+Q.connecticut_dove_bonus = 0;
+Q.connecticut_ind_bonus = 0;
 
 Q.dc_workers = 20;
 Q.dc_youth = 25;
@@ -307,6 +355,10 @@ Q.dc_consumer = 40;
 Q.dc_rural = 5;
 Q.dc_southern = 3;
 Q.dc_black = 50;
+Q.dc_dem_bonus = 0;
+Q.dc_rep_bonus = 0;
+Q.dc_dove_bonus = 0;
+Q.dc_ind_bonus = 0;
 
 Q.delaware_workers = 20;
 Q.delaware_youth = 15;
@@ -314,6 +366,10 @@ Q.delaware_consumer = 35;
 Q.delaware_rural = 15;
 Q.delaware_southern = 5;
 Q.delaware_black = 10;
+Q.delaware_dem_bonus = 0;
+Q.delaware_rep_bonus = 0;
+Q.delaware_dove_bonus = 0;
+Q.delaware_ind_bonus = 0;
 
 Q.florida_workers = 20;
 Q.florida_youth = 25;
@@ -321,6 +377,10 @@ Q.florida_consumer = 35;
 Q.florida_rural = 10;
 Q.florida_southern = 15;
 Q.florida_black = 15;
+Q.florida_dem_bonus = 0;
+Q.florida_rep_bonus = 0;
+Q.florida_dove_bonus = 0;
+Q.florida_ind_bonus = 5;
 
 Q.georgia_workers = 20;
 Q.georgia_youth = 15;
@@ -328,6 +388,10 @@ Q.georgia_consumer = 25;
 Q.georgia_rural = 30;
 Q.georgia_southern = 50;
 Q.georgia_black = 30;
+Q.georgia_dem_bonus = 0;
+Q.georgia_rep_bonus = 0;
+Q.georgia_dove_bonus = 0;
+Q.georgia_ind_bonus = 10;
 
 Q.hawaii_workers = 15;
 Q.hawaii_youth = 30;
@@ -335,6 +399,10 @@ Q.hawaii_consumer = 35;
 Q.hawaii_rural = 10;
 Q.hawaii_southern = 5;
 Q.hawaii_black = 1;
+Q.hawaii_dem_bonus = 0;
+Q.hawaii_rep_bonus = 0;
+Q.hawaii_dove_bonus = 0;
+Q.hawaii_ind_bonus = 0;
 
 Q.idaho_workers = 25;
 Q.idaho_youth = 10;
@@ -342,6 +410,10 @@ Q.idaho_consumer = 25;
 Q.idaho_rural = 30;
 Q.idaho_southern = 5;
 Q.idaho_black = 1;
+Q.idaho_dem_bonus = 0;
+Q.idaho_rep_bonus = 0;
+Q.idaho_dove_bonus = 0;
+Q.idaho_ind_bonus = 0;
 
 Q.illinois_workers = 30;
 Q.illinois_youth = 20;
@@ -349,6 +421,10 @@ Q.illinois_consumer = 35;
 Q.illinois_rural = 15;
 Q.illinois_southern = 5;
 Q.illinois_black = 15;
+Q.illinois_dem_bonus = 0;
+Q.illinois_rep_bonus = 0;
+Q.illinois_dove_bonus = 0;
+Q.illinois_ind_bonus = 0;
 
 Q.indiana_workers = 30;
 Q.indiana_youth = 15;
@@ -356,6 +432,10 @@ Q.indiana_consumer = 30;
 Q.indiana_rural = 20;
 Q.indiana_southern = 5;
 Q.indiana_black = 5;
+Q.indiana_dem_bonus = 0;
+Q.indiana_rep_bonus = 0;
+Q.indiana_dove_bonus = 0;
+Q.indiana_ind_bonus = 0;
 
 Q.iowa_workers = 25;
 Q.iowa_youth = 10;
@@ -363,6 +443,10 @@ Q.iowa_consumer = 30;
 Q.iowa_rural = 25;
 Q.iowa_southern = 5;
 Q.iowa_black = 2;
+Q.iowa_dem_bonus = 0;
+Q.iowa_rep_bonus = 0;
+Q.iowa_dove_bonus = 0;
+Q.iowa_ind_bonus = 0;
 
 Q.kansas_workers = 25;
 Q.kansas_youth = 10;
@@ -370,6 +454,10 @@ Q.kansas_consumer = 30;
 Q.kansas_rural = 30;
 Q.kansas_southern = 5;
 Q.kansas_black = 2;
+Q.kansas_dem_bonus = 0;
+Q.kansas_rep_bonus = 0;
+Q.kansas_dove_bonus = 0;
+Q.kansas_ind_bonus = 0;
 
 Q.kentucky_workers = 25;
 Q.kentucky_youth = 12;
@@ -377,6 +465,10 @@ Q.kentucky_consumer = 30;
 Q.kentucky_rural = 25;
 Q.kentucky_southern = 20;
 Q.kentucky_black = 5;
+Q.kentucky_dem_bonus = 0;
+Q.kentucky_rep_bonus = 0;
+Q.kentucky_dove_bonus = 0;
+Q.kentucky_ind_bonus = 2;
 
 Q.louisiana_workers = 25;
 Q.louisiana_youth = 15;
@@ -384,6 +476,10 @@ Q.louisiana_consumer = 25;
 Q.louisiana_rural = 35;
 Q.louisiana_southern = 50;
 Q.louisiana_black = 30;
+Q.louisiana_dem_bonus = 0;
+Q.louisiana_rep_bonus = 0;
+Q.louisiana_dove_bonus = 0;
+Q.louisiana_ind_bonus = 10;
 
 Q.maine_workers = 20;
 Q.maine_youth = 10;
@@ -391,6 +487,10 @@ Q.maine_consumer = 30;
 Q.maine_rural = 35;
 Q.maine_southern = 5;
 Q.maine_black = 1;
+Q.maine_dem_bonus = 0;
+Q.maine_rep_bonus = 0;
+Q.maine_dove_bonus = 0;
+Q.maine_ind_bonus = 0;
 
 Q.maryland_workers = 25;
 Q.maryland_youth = 18;
@@ -398,6 +498,10 @@ Q.maryland_consumer = 35;
 Q.maryland_rural = 15;
 Q.maryland_southern = 5;
 Q.maryland_black = 25;
+Q.maryland_dem_bonus = 0;
+Q.maryland_rep_bonus = 0;
+Q.maryland_dove_bonus = 0;
+Q.maryland_ind_bonus = 0;
 
 Q.massachusetts_workers = 30;
 Q.massachusetts_youth = 25;
@@ -405,6 +509,10 @@ Q.massachusetts_consumer = 40;
 Q.massachusetts_rural = 5;
 Q.massachusetts_southern = 5;
 Q.massachusetts_black = 5;
+Q.massachusetts_dem_bonus = 0;
+Q.massachusetts_rep_bonus = 0;
+Q.massachusetts_dove_bonus = 0;
+Q.massachusetts_ind_bonus = 0;
 
 Q.michigan_workers = 35;
 Q.michigan_youth = 20;
@@ -412,6 +520,10 @@ Q.michigan_consumer = 30;
 Q.michigan_rural = 10;
 Q.michigan_southern = 5;
 Q.michigan_black = 15;
+Q.michigan_dem_bonus = 0;
+Q.michigan_rep_bonus = 0;
+Q.michigan_dove_bonus = 0;
+Q.michigan_ind_bonus = 0;
 
 Q.minnesota_workers = 30;
 Q.minnesota_youth = 20;
@@ -419,6 +531,10 @@ Q.minnesota_consumer = 30;
 Q.minnesota_rural = 15;
 Q.minnesota_southern = 5;
 Q.minnesota_black = 5;
+Q.minnesota_dem_bonus = 0;
+Q.minnesota_rep_bonus = 0;
+Q.minnesota_dove_bonus = 0;
+Q.minnesota_ind_bonus = 0;
 
 Q.mississippi_workers = 20;
 Q.mississippi_youth = 10;
@@ -426,6 +542,10 @@ Q.mississippi_consumer = 20;
 Q.mississippi_rural = 40;
 Q.mississippi_southern = 60;
 Q.mississippi_black = 40;
+Q.mississippi_dem_bonus = 0;
+Q.mississippi_rep_bonus = 0;
+Q.mississippi_dove_bonus = 0;
+Q.mississippi_ind_bonus = 0;
 
 Q.missouri_workers = 25;
 Q.missouri_youth = 15;
@@ -433,6 +553,10 @@ Q.missouri_consumer = 30;
 Q.missouri_rural = 30;
 Q.missouri_southern = 10;
 Q.missouri_black = 10;
+Q.missouri_dem_bonus = 0;
+Q.missouri_rep_bonus = 0;
+Q.missouri_dove_bonus = 0;
+Q.missouri_ind_bonus = 0;
 
 Q.montana_workers = 20;
 Q.montana_youth = 10;
@@ -440,6 +564,10 @@ Q.montana_consumer = 25;
 Q.montana_rural = 40;
 Q.montana_southern = 5;
 Q.montana_black = 1;
+Q.montana_dem_bonus = 0;
+Q.montana_rep_bonus = 0;
+Q.montana_dove_bonus = 0;
+Q.montana_ind_bonus = 0;
 
 Q.nebraska_workers = 25;
 Q.nebraska_youth = 10;
@@ -447,6 +575,10 @@ Q.nebraska_consumer = 30;
 Q.nebraska_rural = 35;
 Q.nebraska_southern = 5;
 Q.nebraska_black = 2;
+Q.nebraska_dem_bonus = 0;
+Q.nebraska_rep_bonus = 0;
+Q.nebraska_dove_bonus = 0;
+Q.nebraska_ind_bonus = 0;
 
 Q.nevada_workers = 15;
 Q.nevada_youth = 25;
@@ -454,6 +586,10 @@ Q.nevada_consumer = 35;
 Q.nevada_rural = 15;
 Q.nevada_southern = 5;
 Q.nevada_black = 5;
+Q.nevada_dem_bonus = 0;
+Q.nevada_rep_bonus = 0;
+Q.nevada_dove_bonus = 0;
+Q.nevada_ind_bonus = 0;
 
 Q.new_hampshire_workers = 20;
 Q.new_hampshire_youth = 15;
@@ -461,6 +597,10 @@ Q.new_hampshire_consumer = 35;
 Q.new_hampshire_rural = 30;
 Q.new_hampshire_southern = 5;
 Q.new_hampshire_black = 1;
+Q.new_hampshire_dem_bonus = 0;
+Q.new_hampshire_rep_bonus = 0;
+Q.new_hampshire_dove_bonus = 0;
+Q.new_hampshire_ind_bonus = 0;
 
 Q.new_jersey_workers = 30;
 Q.new_jersey_youth = 20;
@@ -468,6 +608,10 @@ Q.new_jersey_consumer = 40;
 Q.new_jersey_rural = 10;
 Q.new_jersey_southern = 5;
 Q.new_jersey_black = 15;
+Q.new_jersey_dem_bonus = 0;
+Q.new_jersey_rep_bonus = 0;
+Q.new_jersey_dove_bonus = 0;
+Q.new_jersey_ind_bonus = 0;
 
 Q.new_mexico_workers = 20;
 Q.new_mexico_youth = 25;
@@ -475,6 +619,10 @@ Q.new_mexico_consumer = 30;
 Q.new_mexico_rural = 20;
 Q.new_mexico_southern = 10;
 Q.new_mexico_black = 10;
+Q.new_mexico_dem_bonus = 0;
+Q.new_mexico_rep_bonus = 0;
+Q.new_mexico_dove_bonus = 0;
+Q.new_mexico_ind_bonus = 0;
 
 Q.new_york_workers = 30;
 Q.new_york_youth = 30;
@@ -482,6 +630,10 @@ Q.new_york_consumer = 40;
 Q.new_york_rural = 5;
 Q.new_york_southern = 5;
 Q.new_york_black = 15;
+Q.new_york_dem_bonus = 0;
+Q.new_york_rep_bonus = 0;
+Q.new_york_dove_bonus = 0;
+Q.new_york_ind_bonus = 0;
 
 Q.north_carolina_workers = 25;
 Q.north_carolina_youth = 20;
@@ -489,6 +641,10 @@ Q.north_carolina_consumer = 30;
 Q.north_carolina_rural = 25;
 Q.north_carolina_southern = 50;
 Q.north_carolina_black = 30;
+Q.north_carolina_dem_bonus = 0;
+Q.north_carolina_rep_bonus = 0;
+Q.north_carolina_dove_bonus = 0;
+Q.north_carolina_ind_bonus = 5;
 
 Q.north_dakota_workers = 25;
 Q.north_dakota_youth = 8;
@@ -496,6 +652,10 @@ Q.north_dakota_consumer = 30;
 Q.north_dakota_rural = 35;
 Q.north_dakota_southern = 5;
 Q.north_dakota_black = 2;
+Q.north_dakota_dem_bonus = 0;
+Q.north_dakota_rep_bonus = 0;
+Q.north_dakota_dove_bonus = 0;
+Q.north_dakota_ind_bonus = 0;
 
 Q.ohio_workers = 30;
 Q.ohio_youth = 20;
@@ -503,6 +663,10 @@ Q.ohio_consumer = 35;
 Q.ohio_rural = 15;
 Q.ohio_southern = 5;
 Q.ohio_black = 10;
+Q.ohio_dem_bonus = 0;
+Q.ohio_rep_bonus = 0;
+Q.ohio_dove_bonus = 0;
+Q.ohio_ind_bonus = 0;
 
 Q.oklahoma_workers = 20;
 Q.oklahoma_youth = 10;
@@ -510,6 +674,10 @@ Q.oklahoma_consumer = 25;
 Q.oklahoma_rural = 35;
 Q.oklahoma_southern = 15;
 Q.oklahoma_black = 7;
+Q.oklahoma_dem_bonus = 0;
+Q.oklahoma_rep_bonus = 0;
+Q.oklahoma_dove_bonus = 0;
+Q.oklahoma_ind_bonus = 5;
 
 Q.oregon_workers = 25;
 Q.oregon_youth = 25;
@@ -517,6 +685,10 @@ Q.oregon_consumer = 30;
 Q.oregon_rural = 10;
 Q.oregon_southern = 5;
 Q.oregon_black = 4;
+Q.oregon_dem_bonus = 0;
+Q.oregona_rep_bonus = 0;
+Q.oregon_dove_bonus = 0;
+Q.oregon_ind_bonus = 0;
 
 Q.pennsylvania_workers = 30;
 Q.pennsylvania_youth = 15;
@@ -524,6 +696,10 @@ Q.pennsylvania_consumer = 35;
 Q.pennsylvania_rural = 20;
 Q.pennsylvania_southern = 5;
 Q.pennsylvania_black = 15;
+Q.pennsylvania_dem_bonus = 0;
+Q.pennsylvania_rep_bonus = 0;
+Q.pennsylvania_dove_bonus = 0;
+Q.pennsylvania_ind_bonus = 0;
 
 Q.rhode_island_workers = 30;
 Q.rhode_island_youth = 20;
@@ -531,6 +707,10 @@ Q.rhode_island_consumer = 40;
 Q.rhode_island_rural = 5;
 Q.rhode_island_southern = 5;
 Q.rhode_island_black = 10;
+Q.rhode_island_dem_bonus = 0;
+Q.rhode_island_rep_bonus = 0;
+Q.rhode_island_dove_bonus = 0;
+Q.rhode_island_ind_bonus = 0;
 
 Q.south_carolina_workers = 25;
 Q.south_carolina_youth = 15;
@@ -538,6 +718,10 @@ Q.south_carolina_consumer = 25;
 Q.south_carolina_rural = 35;
 Q.south_carolina_southern = 60;
 Q.south_carolina_black = 30;
+Q.south_carolina_dem_bonus = 0;
+Q.south_carolina_rep_bonus = 0;
+Q.south_carolina_dove_bonus = 0;
+Q.south_carolina_ind_bonus = 10;
 
 Q.south_dakota_workers = 25;
 Q.south_dakota_youth = 8;
@@ -545,6 +729,10 @@ Q.south_dakota_consumer = 30;
 Q.south_dakota_rural = 35;
 Q.south_dakota_southern = 5;
 Q.south_dakota_black = 2;
+Q.south_dakota_dem_bonus = 0;
+Q.south_dakota_rep_bonus = 0;
+Q.south_dakota_dove_bonus = 0;
+Q.south_dakota_ind_bonus = 0;
 
 Q.tennessee_workers = 25;
 Q.tennessee_youth = 20;
@@ -552,6 +740,10 @@ Q.tennessee_consumer = 30;
 Q.tennessee_rural = 25;
 Q.tennessee_southern = 40;
 Q.tennessee_black = 20;
+Q.tennessee_dem_bonus = 0;
+Q.tennessee_rep_bonus = 0;
+Q.tennessee_dove_bonus = 0;
+Q.tennessee_ind_bonus = 5;
 
 Q.texas_workers = 30;
 Q.texas_youth = 20;
@@ -559,6 +751,10 @@ Q.texas_consumer = 30;
 Q.texas_rural = 20;
 Q.texas_southern = 30;
 Q.texas_black = 20;
+Q.texas_dem_bonus = 0;
+Q.texas_rep_bonus = 0;
+Q.texas_dove_bonus = 0;
+Q.texas_ind_bonus = 5;
 
 Q.utah_workers = 20;
 Q.utah_youth = 25;
@@ -566,6 +762,10 @@ Q.utah_consumer = 30;
 Q.utah_rural = 20;
 Q.utah_southern = 5;
 Q.utah_black = 1;
+Q.utah_dem_bonus = 0;
+Q.utah_rep_bonus = 0;
+Q.utah_dove_bonus = 0;
+Q.utah_ind_bonus = 0;
 
 Q.vermont_workers = 25;
 Q.vermont_youth = 12;
@@ -573,6 +773,10 @@ Q.vermont_consumer = 35;
 Q.vermont_rural = 20;
 Q.vermont_southern = 5;
 Q.vermont_black = 1;
+Q.vermont_dem_bonus = 0;
+Q.vermont_rep_bonus = 0;
+Q.vermont_dove_bonus = 0;
+Q.vermont_ind_bonus = 0;
 
 Q.virginia_workers = 25;
 Q.virginia_youth = 15;
@@ -580,6 +784,10 @@ Q.virginia_consumer = 30;
 Q.virginia_rural = 25;
 Q.virginia_southern = 25;
 Q.virginia_black = 20;
+Q.virginia_dem_bonus = 0;
+Q.virginia_rep_bonus = 0;
+Q.virginia_dove_bonus = 0;
+Q.virginia_ind_bonus = 2;
 
 Q.washington_workers = 30;
 Q.washington_youth = 30;
@@ -587,6 +795,10 @@ Q.washington_consumer = 40;
 Q.washington_rural = 10;
 Q.washington_southern = 5;
 Q.washington_black = 5;
+Q.washington_dem_bonus = 0;
+Q.washington_rep_bonus = 0;
+Q.washington_dove_bonus = 0;
+Q.washington_ind_bonus = 0;
 
 Q.west_virginia_workers = 20;
 Q.west_virginia_youth = 10;
@@ -594,6 +806,10 @@ Q.west_virginia_consumer = 25;
 Q.west_virginia_rural = 45;
 Q.west_virginia_southern = 15;
 Q.west_virginia_black = 10;
+Q.west_virginia_dem_bonus = 0;
+Q.west_virginia_rep_bonus = 0;
+Q.west_virginia_dove_bonus = 0;
+Q.west_virginia_ind_bonus = 0;
 
 Q.wisconsin_workers = 30;
 Q.wisconsin_youth = 15;
@@ -601,6 +817,10 @@ Q.wisconsin_consumer = 30;
 Q.wisconsin_rural = 25;
 Q.wisconsin_southern = 5;
 Q.wisconsin_black = 4;
+Q.wisconsin_dem_bonus = 0;
+Q.wisconsin_rep_bonus = 0;
+Q.wisconsin_dove_bonus = 0;
+Q.wisconsin_ind_bonus = 0;
 
 Q.wyoming_workers = 20;
 Q.wyoming_youth = 10;
@@ -608,6 +828,10 @@ Q.wyoming_consumer = 25;
 Q.wyoming_rural = 45;
 Q.wyoming_southern = 5;
 Q.wyoming_black = 1;
+Q.wyoming_dem_bonus = 0;
+Q.wyoming_rep_bonus = 0;
+Q.wyoming_dove_bonus = 0;
+Q.wyoming_ind_bonus = 0;
 
 // electoral votes
 
