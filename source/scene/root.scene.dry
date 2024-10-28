@@ -219,27 +219,27 @@ Q.unemployed = 3.7;
 Q.workers_dove = 0;
 Q.workers_democrat = 45;
 Q.workers_republican = 40;
-Q.workers_independent = 5;
+Q.workers_independent = 2;
 
 Q.youth_dove = 0;
-Q.youth_democrat = 30;
+Q.youth_democrat = 25;
 Q.youth_republican = 20;
 Q.youth_independent = 0;
 
 Q.consumer_dove = 0;
-Q.consumer_democrat = 42;
-Q.consumer_republican = 44;
-Q.consumer_independent = 4;
+Q.consumer_democrat = 56;
+Q.consumer_republican = 54;
+Q.consumer_independent = 0;
 
 Q.rural_dove = 0;
-Q.rural_democrat = 25;
-Q.rural_republican = 60;
-Q.rural_independent = 10;
+Q.rural_democrat = 20;
+Q.rural_republican = 75;
+Q.rural_independent = 5;
 
 Q.southern_dove = 0;
-Q.southern_democrat = 10;
-Q.southern_republican = 20;
-Q.southern_independent = 80;
+Q.southern_democrat = 5;
+Q.southern_republican = 25;
+Q.southern_independent = 100;
 
 Q.black_dove = 0;
 Q.black_democrat = 40;
@@ -247,9 +247,9 @@ Q.black_republican = 30;
 Q.black_independent = 0;
 
 Q.unemployed_dove = 0;
-Q.unemployed_democrat = 60;
+Q.unemployed_democrat = 40;
 Q.unemployed_republican = 20;
-Q.unemployed_independent = 5;
+Q.unemployed_independent = 0;
 
 Q.dem_bonus_dove = 0;
 Q.dem_bonus_democrat = 100;
@@ -324,7 +324,7 @@ Q.california_southern = 5;
 Q.california_black = 7;
 Q.california_dem_bonus = 0;
 Q.california_rep_bonus = 0;
-Q.california_dove_bonus = 0;
+Q.california_dove_bonus = 2;
 Q.california_ind_bonus = 0;
 
 Q.colorado_workers = 20;
