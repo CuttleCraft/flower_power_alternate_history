@@ -42,6 +42,7 @@ for (var c of Q.classes) {
     }
     Q['national_'+c] = class_national;
 }
+Q.national_unemployed = unemployed;
 
 var total_support = 0; 
 for (var party of Q.parties) {
