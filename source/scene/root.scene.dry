@@ -219,6 +219,12 @@ Q.independent_popular_vote = 0;
 
 // Support for party by social group
 Q.unemployed = 3.7;
+Q.workers = 
+Q.youth
+Q.consumer
+Q.rural
+Q.southern
+Q.black
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 
 Q.workers_dove = 0;
@@ -891,6 +897,60 @@ Q.washington_electoral = 9;
 Q.west_virginia_electoral = 7;
 Q.wisconsin_electoral = 12;
 Q.wyoming_electoral = 3;
+
+// population percents
+
+Q.alabama_percent = 0.0173;
+Q.alaska_percent = 0.0015;
+Q.arizona_percent = 0.0122;
+Q.arkansas_percent = 0.0097;
+Q.california_percent = 0.1001;
+Q.colorado_percent = 0.0128;
+Q.connecticut_percent = 0.0152;
+Q.delaware_percent = 0.0028;
+Q.dc_percent = 0.0038;
+Q.florida_percent = 0.0341;
+Q.georgia_percent = 0.0230;
+Q.hawaii_percent = 0.0039;
+Q.idaho_percent = 0.0036;
+Q.illinois_percent = 0.0559;
+Q.indiana_percent = 0.0261;
+Q.iowa_percent = 0.0142;
+Q.kansas_percent = 0.0113;
+Q.kentucky_percent = 0.0162;
+Q.louisiana_percent = 0.0183;
+Q.maine_percent = 0.0050;
+Q.maryland_percent = 0.0197;
+Q.massachusetts_percent = 0.0286;
+Q.michigan_percent = 0.0445;
+Q.minnesota_percent = 0.0191;
+Q.mississippi_percent = 0.0109;
+Q.missouri_percent = 0.0235;
+Q.montana_percent = 0.0035;
+Q.nebraska_percent = 0.0074;
+Q.nevada_percent = 0.0025;
+Q.new_hampshire_percent = 0.0037;
+Q.new_jersey_percent = 0.0360;
+Q.new_mexico_percent = 0.0051;
+Q.new_york_percent = 0.0915;
+Q.north_carolina_percent = 0.0255;
+Q.north_dakota_percent = 0.0031;
+Q.ohio_percent = 0.0535;
+Q.oklahoma_percent = 0.0128;
+Q.oregon_percent = 0.0105;
+Q.pennsylvania_percent = 0.0592;
+Q.rhode_island_percent = 0.0048;
+Q.south_carolina_percent = 0.0130;
+Q.south_dakota_percent = 0.0033;
+Q.tennessee_percent = 0.0197;
+Q.texas_percent = 0.0562;
+Q.utah_percent = 0.0053;
+Q.vermont_percent = 0.0022;
+Q.virginia_percent = 0.0235;
+Q.washington_percent = 0.0170;
+Q.west_virginia_percent = 0.0088;
+Q.wisconsin_percent = 0.0222;
+Q.wyoming_percent = 0.0017;
 
 
 // array of objects of the form {date: Date(), dove: 10, kpd: 12, ...} for each election

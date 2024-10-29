@@ -34,51 +34,28 @@ for (var c of Q.classes) {
         Q[c + '_' + party + '_normalized'] = Math.round(100*Q[c+'_'+party]/class_votes);
     }
 }
-// calculate popular support for each of the parties
-
-
-
-
-// Initialize total support for normalization
-var total_support = 0;
-
-// Calculate popular vote for each party
-for (var party of Q.parties) {
-    var party_support = 0;
-
-    // Loop through each state
+// calculate support for each of the parties
+for (var c of Q.classes) {
+    var class_national = 0;
     for (var state of Q.states) {
-        
-        // Calculate support from each demographic in the state
-        for (var c of Q.classes) {
-            var class_votes = 0;
-            for (var party of Q.parties) {
-                if (Q[c + '_' + party] < 0) {
-                    Q[c + '_' + party] = 0;
-                }
-            class_votes += Q[c + '_' + party];
-            }
-            
-            // Support contribution from this demographic in this state
-            var demographic_support = ((Q[c + '_' + party] / class_votes) * (Q[c + '_' + state + '_normalized'] / 100) * (Q[state + '_electoral'] / 538));
-            console.log(`Demographic support for class ${c}, state ${party}, party ${party}:`, demographic_support);
-
-            // Add to the party's support from this state
-            party_support += demographic_support;
-            console.log(`Added support for party ${party}:`, party_support);
-
-        }
+        class_national += (Q[state+'_'+c]*Q[state+'_percent']);
     }
-
-    // Store the calculated support for the party in popular vote terms
-    Q[party + '_popular_vote'] = party_support;
-    total_support += party_support;
+    Q['national_'+c] = class_national;
 }
 
-// Normalize support to get percentages
+var total_support = 0; 
 for (var party of Q.parties) {
-    Q[party + '_popular_vote'] = (Q[party + '_popular_vote'] / total_support) * 100;
-    console.log(`Popular vote for ${party}:`, party_support);
+    var party_support = 0;
+    for (var c of Q.classes) {
+        party_support += Q['national_'c]*Q[c+'_'+party+'_normalized'];
+    }
+    Q[party + '_support'] = party_support;
+    total_support += party_support; 
+}
+// 2. normalize support (fraction)
+for (var party of Q.parties) {
+    Q[party+'_popular_normalized'] = Q[party + '_support']/total_support;
+    Q[party+'_popular_vote'] = Math.round(Q[party+'_normalized']*100);
 }
 
 
