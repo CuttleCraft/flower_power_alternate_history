@@ -47,7 +47,7 @@ var total_support = 0;
 for (var party of Q.parties) {
     var party_support = 0;
     for (var c of Q.classes) {
-        party_support += Q['national_'c]*Q[c+'_'+party+'_normalized'];
+        party_support += Q['national_'+c]*Q[c+'_'+party+'_normalized'];
     }
     Q[party + '_support'] = party_support;
     total_support += party_support; 
