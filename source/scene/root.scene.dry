@@ -219,12 +219,6 @@ Q.independent_popular_vote = 0;
 
 // Support for party by social group
 Q.unemployed = 3.7;
-Q.workers = 
-Q.youth
-Q.consumer
-Q.rural
-Q.southern
-Q.black
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 
 Q.workers_dove = 0;
