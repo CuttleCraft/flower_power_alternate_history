@@ -1174,7 +1174,7 @@ on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformi
 go-to: 1928_main
 
 @1928_historical
-subtitle: Saving and loading will be disabled.
+subtitle: The revolutionary path will be significantly harder, and third party gameplay more difficult.
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
@@ -1196,8 +1196,73 @@ go-to: 1928_main
 @1928_main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/LiedDerPompadour.mp3
 new-page: true
+
+= August 1968
+
+After a long and tumultuous campaign, it is finally time for the Democratic National Convention in Chicago under the watchful eye of Mayor Daley. Eugene McCarthy has emerged as the strongest antiwar candidate with the highest chance of ousting the establishment and pro-war pick, Hubert Humphrey, after McGovern failed to effectively continue Robert Kennedy's own bid. He drives towards the Conrad Hilton hotel, cheered on by thousands. When Hubert Humphrey follows, the streets turn silent.
+
+- @convention_begins: The convention begins.
+- @mccarthy_convention: Skip intro.
+
+@convention_begins
+
+The International Ampitheatre fills quickly, oblivious to the Yippie "Festival of Life" outside, and soon convention proceedings begin. Quickly, the split of the party on anti-war and pro-war lines becomes blatantly clear as Hubert Humphrey puts forward his proposal for a party platform, written under pressure from LBJ. The proposal is debated for three hours as the anti-war democrats oppose the platform, before finally being voted on.
+
+- @plank_passes: The platform passes.
+
+@plank_passes
+
+Despite the virulent opposition of the anti-war faction of the Democratic party, the platform passes with the support of 60% of delegates, and a peace plank proposed by anti-war democrats is defeated. In protest, New York's delegates put on black armbands and begin singing "We Shall Overcome" while meanwhile the situation in the streets continues to deteriorate as the police aggressively suppress the growing anti-war protests.
+
+- @watching_world: The whole world is watching.
+
+@watching_world
+
+After an exhausting August 27th, anti-war and pro-war convention delegates alike retired to Conrad Hilton hotel for rest. Later that night, now the early hours of August 28th, 5,000 protestors assembled outside the Conrad Hilton hotel and around Grant Park. Worried for the safety of the hotel and authoritarian as ever, Mayor Daley chose to deploy the national guard, geared for battle, to Michigan Avenue, which was between the Conrad Hilton hotel and Grant Park. A standoff ensues, before eventually the police are ordered to clear the streets. The ensuing violence becomes known as the "Battle of Michigan Avenue"; a 17-minute melee where police beat, club and arrest protestors, bystanders and journalists indiscriminately, even chasing them into the Conrad Hilton hotel itself. Tear gas is fired and batons fly through the air as war is waged in the streets. Senator Ribicoff denounces Daley's gestapo tactics, and when the convention is adjourned for the day many anti-war delegates go straight to Grant Park to join the protestors. But most importantly, voting for the Democratic nominee concludes.
+
+- @humphrey: Hubert Humphrey wins on the first ballot.
+
+@humphrey
+
+Despite little to no popular support to his name, the Democratic establishment is powerful enough to force the issue. Hubert Humphrey is nominated, and Eugene McCarthy gives a speech to the protestors of the night before in Grant Park.
+
+- @third_party_run: Eugene McCarthy is asked to run as a candidate for the Peace and Freedom Party.
+
+@third_party_run
+on-arrival: intro_seen = 1
+
+It takes a lot of convincing to sway a reluctant senator McCarthy, but after being assured the support of many of his close advisors and allies, and being encouraged by the Mobe and many anti-war groups, Eugene McCarthy is swayed.
+
+- @mccarthy_convention: The Peace and Freedom Party chooses where to hold its convention.
+
+@mccarthy_convention
+choose-if: intro_seen = 1
+unavailable-subtitle: The intro has not yet been seen.
+
+Now, the Peace and Freedom Party must choose where to hold its convention and how to organize it. We have a multitude of options at our disposal.
+
+- @chicago: We will nominate Eugene McCarthy in Chicago, in defiance of Daley's crackdowns.
+- @detroit: We will nominate Eugene McCarthy in Detroit, in solidarity with ongoing strikes there.
+- @san_francisco: We will nominate Eugene McCarthy in San Francisco, the home of the Summer of Love.
+- @berkeley: We will nominate Eugene McCarthy in Berkeley, the heart of the radical student movement.
+- @new_york: We will nominate Eugene McCarthy in New York.
+
+@chicago
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+subtitle: The Yippies may take an active role in organizing the convention.
 
-= 1968
+@detroit
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+subtitle: This will help improve our ties with organized labor.
 
-Despite stronger popular support and showing at the convention than Hubert Humphrey, Eugene McCarthy has lost the nomination. Violence plagues the streets as Mayor Daley heavy-handedly suppresses anti-war protestors. Despite initial reluctance, however, Eugene McCarthy has been pursuaded to run on the ticket of the Peace and Freedom Party for the presidency. It is unlikely that we will be anything more than a protest vote for now, but we may as well try, and who is to say we will not sweep the election by 1972?
+@san_francisco
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+subtitle: It will be easier to organize in California due to our established infrastructure there.
+
+@berkeley
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+subtitle: This will help our image amongst the mainstream New Left, though they have been declining.
+
+@new_york
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+subtitle: I'll think of something.
