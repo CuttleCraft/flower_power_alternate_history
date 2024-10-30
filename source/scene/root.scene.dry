@@ -1233,7 +1233,6 @@ Despite little to no popular support to his name, the Democratic establishment i
 - @third_party_run: Eugene McCarthy is asked to run as a candidate for the Peace and Freedom Party.
 
 @third_party_run
-on-arrival: youth_democrat -= 5; youth_dove += 15; black_dove += 10; consumer_dove += 3; consumer_democrat -= 3; workers_democrat -= 3; workers_dove += 2; california_dove_bonus += 3; texas_dem_bonus -= 5; west_virginia_dem_bonus -= 2
 
 It takes a lot of convincing to sway a reluctant senator McCarthy, but after being assured the support of many of his close advisors and allies, and being encouraged by the Mobe and many anti-war groups, Eugene McCarthy is swayed.
 
@@ -1241,6 +1240,7 @@ It takes a lot of convincing to sway a reluctant senator McCarthy, but after bei
 
 @mccarthy_convention
 new-page: true
+on-arrival: youth_democrat -= 5; youth_dove += 15; black_dove += 10; consumer_dove += 3; consumer_democrat -= 3; workers_democrat -= 3; workers_dove += 2; california_dove_bonus += 3; texas_dem_bonus -= 5; west_virginia_dem_bonus -= 2
 
 Now, the Peace and Freedom Party must choose where to hold its convention and how to organize it. We have a multitude of options at our disposal.
 
@@ -1258,7 +1258,7 @@ on-arrival: youth_dove += 3; consumer_democrat -= 2; consumer_dove += 2
 @detroit
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 subtitle: This will help improve our ties with organized labor.
-on-arrival: workers_dove += 3; workers_democrat -= 2; workers_independent -= 1; consumer_dove -= 1
+on-arrival: workers_dove += 4; workers_democrat -= 2; workers_independent -= 1; consumer_dove -= 1
 
 @san_francisco
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
