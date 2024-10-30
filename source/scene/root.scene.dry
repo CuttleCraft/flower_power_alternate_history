@@ -1205,39 +1205,41 @@ After a long and tumultuous campaign, it is finally time for the Democratic Nati
 - @mccarthy_convention: Skip intro.
 
 @convention_begins
+new-page: true
 
 The International Ampitheatre fills quickly, oblivious to the Yippie "Festival of Life" outside, and soon convention proceedings begin. Quickly, the split of the party on anti-war and pro-war lines becomes blatantly clear as Hubert Humphrey puts forward his proposal for a party platform, written under pressure from LBJ. The proposal is debated for three hours as the anti-war democrats oppose the platform, before finally being voted on.
 
 - @plank_passes: The platform passes.
 
 @plank_passes
+new-page: true
 
 Despite the virulent opposition of the anti-war faction of the Democratic party, the platform passes with the support of 60% of delegates, and a peace plank proposed by anti-war democrats is defeated. In protest, New York's delegates put on black armbands and begin singing "We Shall Overcome" while meanwhile the situation in the streets continues to deteriorate as the police aggressively suppress the growing anti-war protests.
 
 - @watching_world: The whole world is watching.
 
 @watching_world
+new-page: true
 
 After an exhausting August 27th, anti-war and pro-war convention delegates alike retired to Conrad Hilton hotel for rest. Later that night, now the early hours of August 28th, 5,000 protestors assembled outside the Conrad Hilton hotel and around Grant Park. Worried for the safety of the hotel and authoritarian as ever, Mayor Daley chose to deploy the national guard, geared for battle, to Michigan Avenue, which was between the Conrad Hilton hotel and Grant Park. A standoff ensues, before eventually the police are ordered to clear the streets. The ensuing violence becomes known as the "Battle of Michigan Avenue"; a 17-minute melee where police beat, club and arrest protestors, bystanders and journalists indiscriminately, even chasing them into the Conrad Hilton hotel itself. Tear gas is fired and batons fly through the air as war is waged in the streets. Senator Ribicoff denounces Daley's gestapo tactics, and when the convention is adjourned for the day many anti-war delegates go straight to Grant Park to join the protestors. But most importantly, voting for the Democratic nominee concludes.
 
 - @humphrey: Hubert Humphrey wins on the first ballot.
 
 @humphrey
+new-page: true
 
 Despite little to no popular support to his name, the Democratic establishment is powerful enough to force the issue. Hubert Humphrey is nominated, and Eugene McCarthy gives a speech to the protestors of the night before in Grant Park.
 
 - @third_party_run: Eugene McCarthy is asked to run as a candidate for the Peace and Freedom Party.
 
 @third_party_run
-on-arrival: intro_seen = 1
 
 It takes a lot of convincing to sway a reluctant senator McCarthy, but after being assured the support of many of his close advisors and allies, and being encouraged by the Mobe and many anti-war groups, Eugene McCarthy is swayed.
 
 - @mccarthy_convention: The Peace and Freedom Party chooses where to hold its convention.
 
 @mccarthy_convention
-choose-if: intro_seen = 1
-unavailable-subtitle: The intro has not yet been seen.
+new-page: true
 
 Now, the Peace and Freedom Party must choose where to hold its convention and how to organize it. We have a multitude of options at our disposal.
 
