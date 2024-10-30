@@ -54,7 +54,7 @@ We have provided financial support to Phil Ochs' music career, helping him in hi
 @bridge_divide
 title: Bridge the divide between Yippies and the party mainstream.
 subtitle: Phil Ochs is a Yippie, but one supportive of Eugene McCarthy. He may be able to convince his radical counterparts to moderate.
-choose-if: advisor_action_timer <= 0 ochs_career >= 2
+choose-if: advisor_action_timer <= 0 and ochs_career >= 2
 unavailable-subtitle: [? if ochs_career < 2 : Phil Ochs is not influential enough. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if nationalization_adopted > 0 : We have already adopted the Left plan. ?]
 on-arrival: advisor_action_timer = 6
 
