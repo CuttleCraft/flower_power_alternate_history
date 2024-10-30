@@ -49,7 +49,7 @@ choose-if: advisor_action_timer <= 0 and resources >= 1
 unavailable-subtitle: [? if resources < 1 : We don't have the resources. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: resources -= 1; advisor_action_timer = 6; ochs_career += 1; ochs_exhaustion -= 3
 
-We have provided financial support to Phil Ochs' music career, helping him in his break from traditional folk music towards more mainstream pop tunes. [? if ochs_career < 2 : The help is appreciated by Phil Ochs greatly, though for the time being his career does not see much more success. Perhaps this venture isn't worth it. ][? if ochs_career >= 2 and ochs_career < 4 : Our support of Phil Ochs' career is seemingly paying off, somewhat. His reach has broadened, and more people are discovering his songs. ?][? if ochs_career >= 5 : BINGO! Todo. ?]
+We have provided financial support to Phil Ochs' music career, helping him in his break from traditional folk music towards more mainstream pop tunes. [? if ochs_career < 2 : The help is appreciated by Phil Ochs greatly, though for the time being his career does not see much more success. Perhaps this venture isn't worth it. ?][? if ochs_career >= 2 and ochs_career < 4 : Our support of Phil Ochs' career is seemingly paying off, somewhat. His reach has broadened, and more people are discovering his songs. ?][? if ochs_career >= 5 : BINGO! Todo. ?]
 
 @bridge_divide
 title: Bridge the divide between Yippies and the party mainstream.
