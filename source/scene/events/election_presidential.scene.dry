@@ -2,7 +2,7 @@ title: Presidential Election
 new-page: true
 tags: event
 priority: -1
-view-if: month = 1 or month = 2
+view-if: month = 11 and (year = 1968 or year = 1972 or year = 1976)
 on-departure: month_actions += 1; in_election = 0; next_election_year = next_election_year + 4; n_elections += 1; next_election_time = time + 48;
 on-arrival: {!
 Q.dove_electoral = 0;

@@ -121,14 +121,14 @@ go-to: rm_main
 
 Leipart has been removed as an advisor. The Labor faction disapproves.
 
-@remove_aufhauser
-title: Remove Aufhäuser
-view-if: aufhauser_advisor = 1
+@remove_ochs
+title: Remove Ochs
+view-if: ochs_advisor = 1
 tags: remove_advisor
-on-arrival: aufhauser_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: ochs_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Aufhäuser has been removed as an advisor. The Labor faction disapproves.
+Ochs has been removed as an advisor.
 
 @remove_woytinsky
 title: Remove Woytinsky
@@ -475,17 +475,17 @@ go-to: advisor_menu
 
 Theodor Leipart is now an advisor.
 
-@add_aufhauser
-title: Siegfried Aufhäuser
-subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation.
+@add_ochs
+title: Phil Ochs
+subtitle: Phil Ochs is a topical singer-songwriter and moderate Yippie.
 is-card: true
-card-image: img/portraits/AufhäuserSiegfried.jpg
-tags: labor_advisor
-view-if: aufhauser_advisor = 0 and n_advisors < 3
-on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5
+card-image: img/portraits/PhilOchs.jpg
+tags: nonfactional_advisor
+view-if: ochs_advisor = 0 and n_advisors < 3
+on-arrival: ochs_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Siegfried Aufhäuser is now an advisor.
+Phil Ochs is now an advisor.
 
 @add_woytinsky
 title: Wladimir Woytinsky

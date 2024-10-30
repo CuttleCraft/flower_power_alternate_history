@@ -1,0 +1,62 @@
+title: Phil Ochs
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/PhilOchs.jpg
+view-if: ochs_advisor = 1
+new-page: true 
+
+= Phil Ochs
+
+Phil Ochs is a topical singer-songwriter and moderate Yippie.
+
+- @musical_campaign
+- @support_career
+- @bridge_divide
+- @root: Return to main
+
+@musical_campaign
+title: Help our campaign by writing and singing songs across the nation.
+subtitle: Improve our standing among the new middle class.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; ochs_exhaustion += 1
+
+Of course, topical songwriting and singing is what Phil Ochs has always been doing. However, what theme should he campaign on?
+
+- @pro_labor: Labor focused songs, such as "Links on the Chain" and "That's What I Wanna Hear".
+- @peace: Anti-war songs, such as "Is There Anybody Here" and "I Ain't Marching Anymore".
+- @general: General songs with no specific focus.
+
+@pro_labor
+on-arrival: workers_dove += 3*(1-dissent); unemployed_dove += 2*(1-dissent); workers_dove -= 1*(1-dissent) if afl_cio != 1; youth_dove += 2*(1-dissent); workers_dove += 2*(1-dissent) if ochs_career >= 2; youth_dove += 2*(1-dissent) if ochs_career >= 2; consumer_dove += 1*(1-dissent) if ochs_career >= 3
+
+Phil Ochs focuses on labor struggles and economic issues, helping to broaden our support base. [? if ochs_career >= 2 : Due to our consistent support of Phil Ochs' career, his campaign is bolstered [? if ochs_career >= 3 :, with even consumers being reached by our messaging. ?]. ?]
+
+@peace
+on-arrival: youth_dove += 4*(1-dissent); unemployed_dove += 2*(1-dissent); youth_dove += 2*(1-dissent) if ochs_career >= 2; youth_dove += 2 if antiwar_wave; consumer_dove += ochs_career*(1-dissent) if antiwar_wave; unemployed_dove += 3*(1-dissent) if antiwar_wave; unemployed_dove += 2 if ochs_career >= 2
+
+Phil Ochs focuses on anti-war messaging, enthusing our base and helping rally behind opposition to continued involvement in Vietnam. [? if ochs_career >= 2 : Due to our consistent support of Phil Ochs' career, his campaign is bolstered. ?] [? if antiwar_wave : With mounting pressure on the government to end the war, the campaign strikes a chord with the nation. ?]
+
+@general
+on-arrival: youth_dove += 3*(1-dissent); unemployed_dove += 1*(1-dissent); workers_dove += 1*(1-dissent); consumer_dove += 1*(1-dissent); rural_dove += 1*(1-dissent); consumer_dove += 1*(1-dissent) if ochs_career >= 2; workers_dove += 2*(1-dissent) if ochs_career >= 2; youth_dove += 2*(1-dissent) if ochs_career >= 2; black_dove += 1*(1-dissent) if ochs_career >= 1
+
+[? if ochs_career >= 2 : Due to our consistent support of Phil Ochs' career, his campaign is bolstered. ?]
+
+@support_career
+title: Provide financial support to Phil Ochs' career.
+subtitle: With more money, Phil Ochs may be able to hit it big.
+choose-if: advisor_action_timer <= 0 and resources >= 1
+unavailable-subtitle: [? if resources < 1 : We don't have the resources. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: resources -= 1; advisor_action_timer = 6; ochs_career += 1; ochs_exhaustion -= 3
+
+We have provided financial support to Phil Ochs' music career, helping him in his break from traditional folk music towards more mainstream pop tunes. [? if ochs_career < 2 : The help is appreciated by Phil Ochs greatly, though for the time being his career does not see much more success. Perhaps this venture isn't worth it. ][? if ochs_career >= 2 and ochs_career < 4 : Our support of Phil Ochs' career is seemingly paying off, somewhat. His reach has broadened, and more people are discovering his songs. ?][? if ochs_career >= 5 : BINGO! Todo. ?]
+
+@bridge_divide
+title: Bridge the divide between Yippies and the party mainstream.
+subtitle: Phil Ochs is a Yippie, but one supportive of Eugene McCarthy. He may be able to convince his radical counterparts to moderate.
+choose-if: advisor_action_timer <= 0 ochs_career >= 2
+unavailable-subtitle: [? if ochs_career < 2 : Phil Ochs is not influential enough. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if nationalization_adopted > 0 : We have already adopted the Left plan. ?]
+on-arrival: advisor_action_timer = 6
+
+// todo: factions
+
