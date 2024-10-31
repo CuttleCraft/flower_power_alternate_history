@@ -18,7 +18,7 @@ max-cards: 3
 
 - @party
 - @govt
-- @issues_deck
+#- @issues_deck
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -42,7 +42,7 @@ max-cards: 4
 
 - @party
 - @govt
-- @issues_deck
+#- @issues_deck
 - #advisor
 - @shuffle_leadership_pinned
 
