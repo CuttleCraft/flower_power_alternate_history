@@ -1,0 +1,14 @@
+title: Issues
+new-page: true
+
+= Issues
+
+We may address a variety of issues in this month, or proceed to the next if there is nothing to address. What should we do
+
+#- @address: Let's address an issue.
+- @next_month: Proceed to the next month.
+- @main: Return to menu
+
+@next_month
+on-arrival: month_actions += 1 if month_actions = 1; month_actions += 2 if month_actions = 0
+go-to: main

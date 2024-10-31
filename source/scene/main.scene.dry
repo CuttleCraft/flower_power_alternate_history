@@ -41,6 +41,7 @@ max-cards: 4
 
 - @party
 - @govt
+- @issues_deck
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -59,3 +60,12 @@ card-image: img/reichstag_2.jpg
 is-deck: true
 
 - #govt_affairs
+
+@issues_deck
+title: Issues
+card-image: img/hadenough.jpg
+go-to: issues
+is-deck: true
+
+- #issues
+
