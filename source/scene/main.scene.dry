@@ -65,7 +65,6 @@ is-deck: true
 @issues_deck
 title: Issues
 card-image: img/register_now.jpg
-is-deck: true
 go-to: issues
 
 - #issues
