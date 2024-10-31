@@ -44,7 +44,7 @@ on-arrival: youth_dove += 3*(1-dissent); unemployed_dove += 1*(1-dissent); worke
 
 @support_career
 title: Provide financial support to Phil Ochs' career.
-subtitle: With more money, Phil Ochs may be able to hit it big.
+subtitle: -1 resource. With more money, Phil Ochs may be able to hit it big.
 choose-if: advisor_action_timer <= 0 and resources >= 1
 unavailable-subtitle: [? if resources < 1 : We don't have the resources. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: resources -= 1; advisor_action_timer = 6; ochs_career += 1; ochs_exhaustion -= 3

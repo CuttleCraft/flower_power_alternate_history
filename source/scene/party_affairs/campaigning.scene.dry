@@ -64,7 +64,6 @@ We have increased our campaigning among the unemployed, including Vietnam War ve
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-view-if: peoples_party == 1
 on-arrival: black_dove += 6*(1-dissent); black_dove -= 2 if panther_support != 1; resources -= 1
 
 We have increased our campaigning among Afro-Americans, promising to them desegregation and civil rights.
