@@ -213,14 +213,14 @@ Schumacher has been removed as an advisor. The Neorevisionist faction disapprove
 
 # tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
 
-@remove_baade
-title: Remove Baade
-view-if: baade_advisor = 1
+@remove_leary
+title: Remove Leary
+view-if: leary_advisor = 1
 tags: remove_advisor
-on-arrival: baade_advisor = 0; n_advisors -= 1
+on-arrival: leary_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Baade has been removed as an advisor.
+Leary has been removed as an advisor.
 
 #The Reformist faction disapproves.
 
@@ -540,17 +540,17 @@ Julius Leber is now an advisor.
 
 # Nonfactional advisors
 
-@add_baade
-title: Fritz Baade
-subtitle: Fritz Baade is one of the few agricultural policy experts in the SPD.
+@add_leary
+title: Timothy Leary
+subtitle: Timothy Leary is a major innovator in the psychedelic field.
 is-card: true
-card-image: img/portraits/BaadeFritz.jpg
-view-if: baade_advisor = 0 and n_advisors < 3
-on-arrival: baade_advisor = 1; n_advisors += 1
+card-image: img/portraits/TimothyLeary.jpg
+view-if: leary_advisor = 0 and n_advisors < 3
+on-arrival: leary_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Fritz Baade is now an advisor.
+Timothy Leary is now an advisor.
 
 
 @add_hirschfeld
