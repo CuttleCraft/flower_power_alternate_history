@@ -17,9 +17,8 @@ max-cards: 3
 [? if year = 1928 and month = 2 : The current bourgeois-right government has fallen. The next elections are slated for May of this year. ?]
 
 - @party
-- @issues
 - @govt
-#- @issues_deck
+- @issues_deck
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -43,7 +42,7 @@ max-cards: 4
 
 - @party
 - @govt
-#- @issues_deck
+- @issues_deck
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -66,7 +65,7 @@ is-deck: true
 @issues_deck
 title: Issues
 card-image: img/register_now.jpg
-go-to: issues
+is-deck: true
 
 - #issues
 
