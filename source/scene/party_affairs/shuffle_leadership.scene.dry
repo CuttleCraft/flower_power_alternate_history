@@ -82,11 +82,11 @@ go-to: rm_main
 
 Severing has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_braun
-title: Remove Braun
-view-if: braun_advisor = 1
+@remove_lennon
+title: Remove Lennon
+view-if: lennon_advisor = 1
 tags: remove_advisor
-on-arrival: braun_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: lennon_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
 Braun has been removed as an advisor. The Reformist faction disapproves.
@@ -372,17 +372,19 @@ go-to: advisor_menu
 
 Carl Severing is now an advisor.
 
-@add_braun
-title: Otto Braun
-subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders.
+@add_lennon
+title: John Lennon
+subtitle: John Lennon is an internationally renound Beatle and New Left activist.
 is-card: true
-card-image: img/portraits/BraunOtto.jpg
-tags: reformist_advisor
-view-if: braun_advisor = 0 and n_advisors < 3
-on-arrival: braun_advisor = 1; n_advisors += 1; reformist_strength += 5
+card-image: img/portraits/JohnLennon.jpg
+tags: nonfactional_advisor
+view-if: lennon_advisor = 0 and n_advisors < 3
+on-arrival: lennon_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Otto Braun is now an advisor.
+John Lennon is now an advisor.
+
+// todo: lennon requires either beatles endorsement or him joining after the beatles disband
 
 @add_juchacz
 title: Marie Juchacz
