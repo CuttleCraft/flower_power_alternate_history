@@ -1,15 +1,28 @@
 title: Campaigning
 new-page: true
 on-arrival: month_actions += 1
-max-visits: 36
+max-visits: 60
 is-card: true
-card-image: img/flags.jpg
+card-image: img/withdrawal.jpg
 frequency: 100
 tags: party_affairs
 
 = Campaigning
 
-Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
+Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Should we focus our campaign on specific states, or broadening our base nationally?
+
+- @demographic: We will focus on the national campaign.
+- @states: We will focus on state specific campaigns.
+- @root: We either don't want to or cannot campaign right now.
+- @easy_discard
+
+@demographic
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1
+
+Who should we focus our campaign efforts on?
 
 - @youth: The student youth on campuses nationwide, who typically incline towards the New Left.
 - @workers: The unionized working class, who typically incline towards the Old Left.
@@ -17,53 +30,116 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 - @rural: Rural workers and small farmers, who largely detest us.
 - @unemployed: The unemployed, including war veterans.
 - @black: Afro-Americans, who are the focus of the civil rights movement.
-- @root: We either don't want to or cannot campaign right now.
-- @easy_discard
 
 @youth
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; youth_dove += 6*(1-dissent); youth_dove -= 2*(1-dissent) if dove_electoral < 1; youth_democrat -= 2 if year < 1969
+on-arrival: youth_dove += 6*(1-dissent); youth_dove -= 2*(1-dissent) if dove_electoral < 1; youth_democrat -= 2 if year < 1969
 
 We focus our campaign through the student youth, organizing on campuses and increasing our presence in universities nationwide.
 
 @workers
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; workers_dove += 6*(1-dissent); workers_dove -= 3*(1-dissent) if afl_cio != 1; workers_dove -= 1*(1-dissent) if left_economics != 1; workers_dove -= 1 if dove_electoral < 1;
+on-arrival: workers_dove += 6*(1-dissent); workers_dove -= 3*(1-dissent) if afl_cio != 1; workers_dove -= 1*(1-dissent) if left_economics != 1; workers_dove -= 1 if dove_electoral < 1;
 
 We campaign in union halls and workplaces, emphasizing our economic plans as well as our general anti-war stance. [? if afl_cio != 1 : Our lack of connections in organized labor has made the campaign harder, however, and our gains are limited. ?][? if afl_cio == 1 : The AFL-CIO has helped in our campaign greatly, organizing workers under our campaign. ?][? if left_economics != 1 : Our party is seen as a single-issue one, so our campaign has difficulty appealing to workers who are more focused with economic concerns than ending the war. ?]
 
 @consumer
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; consumer_dove += 4*(1-dissent); consumer_dove -= 2 if dove_electoral < 1; consumer_dove -= 1 if antiwar_wave != 1; consumer_dove += 1 if mccarthy_confidence >= 60; principled_party += 1;
+on-arrival: consumer_dove += 4*(1-dissent); consumer_dove -= 2 if dove_electoral < 1; consumer_dove -= 1 if antiwar_wave != 1; consumer_dove += 1 if mccarthy_confidence >= 60; principled_party += 1;
 
 We have increased our campaigning among the suburban middle class, attempting to cement our image as a principled progressive and anti-war party, and not radical communists and anarchists who want to destroy the nation. 
 
 @rural
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; rural_dove += 3*(1-dissent); rural_dove -= 2 if dove_electoral < 1; rural_dove -= 1 if antiwar_wave != 1; rural_dove += 1 if mccarthy_confidence >= 70; principled_party += 1;
+on-arrival: rural_dove += 3*(1-dissent); rural_dove -= 2 if dove_electoral < 1; rural_dove -= 1 if antiwar_wave != 1; rural_dove += 1 if mccarthy_confidence >= 70; principled_party += 1;
 
 We have increased our campaigning among farmers by attempting to appear as a principled progressive party, despite their intense hostility towards our "un-American" ideals. Perhaps with time, they can be won over.
 
 @unemployed
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; unemployed_dove += 6*(1-dissent); unemployed_dove -= 2 if left_economics != 1 and not antiwar_wave; unemployed_dove += 3*(1-dissent) if antiwar_wave = 1; unemployed_dove -= 1 if veteran_support != 1;
+on-arrival: unemployed_dove += 6*(1-dissent); unemployed_dove -= 2 if left_economics != 1 and not antiwar_wave; unemployed_dove += 3*(1-dissent) if antiwar_wave = 1; unemployed_dove -= 1 if veteran_support != 1;
 
 We have increased our campaigning among the unemployed, including Vietnam War veterans. [? if antiwar_wave : With the hugely mounting opposition to the war, veterans flock to our party. ?]
 
 @black
+on-arrival: black_dove += 6*(1-dissent); black_dove -= 2 if panther_support != 1
+
+We have increased our campaigning among Afro-Americans, promising to them desegregation and civil rights.
+
+@states
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: black_dove += 6*(1-dissent); black_dove -= 2 if panther_support != 1; resources -= 1
+on-arrival: resources -= 1
 
-We have increased our campaigning among Afro-Americans, promising to them desegregation and civil rights.
+Which states should we focus our campaign on?
+
+@west_coast: We will focus our campaign on the West Coast, the heart of student activism.
+@new_england: New England, including New York, has a strong untapped liberal base which we can win over to progressivism.
+@midatlantic: The Midatlantic, from Pennsylvania and New Jersey down to Virginia, is key to our success.
+@midwest: We should campaign in the industrial Midwest[?if afl_cio != 1 : . ?] [? if afl_cio : with the AFL-CIO. ?]
+@deep_south: We must campaign with the Black Panthers to combat George Wallace's hold over the south.
+@swing_states: We need to campaign in the swing states that we are the closest to winning.
+
+@west_coast
+on-arrival: california_dove_bonus += 3*(1-dissent); washington_dove_bonus += 3*(1-dissent); oregon_dove_bonus += 2*(1-dissent); youth_dove += 1*(1-dissent)
+
+The West Coast is a safe choice for our campaign, with existing party infrastructure in the region and a radical, unruly youth base to tap into. Where should we focus?
+
+- @california: California has been the heart of the progressive movement and is our safest bet.
+- @washington: The campaign must focus north, on Washington and Oregon!
+
+@california
+on-arrival: california_dove_bonus += 2*(1-dissent); washington_dove_bonus -= 1*(1-dissent); youth_dove += 1*(1-dissent)
+
+We increase our campaigning along California's coast, organizing on campuses from Berkeley to San Francisco in support of Eugene McCarthy and our party. 
+
+@washington
+on-arrival: washington_dove_bonus += 3*(1-dissent); oregon_dove_bonus += 1*(1-dissent); california_dove_bonus -= 1*(1-dissent)
+
+California, though radical in its urban coast, has a significant rural base that detest us, and unfortunately outnumbers the urban heartland. It is a safer bet to campaign in Washington, despite a lack of party infrastructure in the state, as its progressive current is stronger in the state as a whole.
+
+@new_england
+on-arrival: consumer_dove += 1*(1-dissent); new_york_dove_bonus += 3*(1-dissent); vermont_dove_bonus += 2*(1-dissent); new_hampshire_dove_bonus += 2*(1-dissent); massachusetts_dove_bonus += 2*(1-dissent); rhode_island_dove_bonus += 2*(1-dissent); connecticut_dove_bonus += 2*(1-dissent)
+
+New England is perhaps the heart of mainstream Democratic liberalism, but that shouldn't stop us from bolstering progressive presence in the region. New York especially has a limited radical undercurrent that we can channel.
+
+- @new_york: We must focus on New York, and channeling its progressivism toward success for Peace and Freedom.
+- @new_england_2: New York is too middle class. Instead, we should focus on the smaller states with a greater youth base, such as Massachusetts.
+
+@new_york
+on-arrival: new_york_dove_bonus += 1*(1-dissent); consumer_dove += 1*(1-dissent); consumer_democrat -= 1*(1-dissent)
+
+We focus our campaign in the state of New York, splitting off Democratic support in the state towards the Peace and Freedom Party.
+
+@new_england_2
+on-arrival: new_york_dove_bonus -= 1*(1-dissent); massachusetts_dove_bonus += 2*(1-dissent); rhode_island_dove_bonus += 2*(1-dissent); connecticut_dove_bonus += 2*(1-dissent)
+
+We focus our campaign on the smaller states with larger youth populations.
+
+@midatlantic
+on-arrival: pennsylvania_dove_bonus += 1*(1-dissent); new_jersey_dove_bonus += 2*(1-dissent); delaware_dove_bonus += 3*(1-dissent); dc_dove_bonus += 3*(1-dissent); maryland_dove_bonus += 2*(1-dissent); virginia_dove_bonus += 1*(1-dissent); west_virginia_dove_bonus += 1*(1-dissent); consumer_dove += 2*(1-dissent); consumer_democrat -= 1*(1-dissent)
+
+The Midatlantic is not of extreme interest to us, but it is a generally establishmentarian region, ranging from moderate liberals to moderate conservatives.
+
+- @dc: We must focus our campaign on the District of Columbia, the radical heart of the nation.
+- @general: We will stick to a general campaign to win over moderates.
+
+@dc
+on-arrival: dc_dove_bonus += 3*(1-dissent); black_dove += 1*(1-dissent); new_jersey_dove_bonus -= 1*(1-dissent); consumer_dove -= 1*(1-dissent); consumer_democrat += 1*(1-dissent)
+
+The District of Columbia may be small, but that also improves our chances of winning it. If we can win it, it would be a large symbolic victory, and not to mention with a large black population it is a good chance to increase our ties with the African-American movement.
+
+@general
+on-arrival: consumer_dove += 1*(1-dissent)
+
+Above all, we must appeal to moderate liberals and convince them of progressivism and its merits.
+
+@midwest
+on-arrival: workers_dove += 1*(1-dissent)
+
+Placeholder
+
+@deep_south
+view-if: panther_support
+
+Placeholder
+
+@swing_states
+
+Placeholder
