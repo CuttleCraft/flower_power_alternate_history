@@ -69,12 +69,12 @@ on-arrival: resources -= 1
 
 Which states should we focus our campaign on?
 
-@west_coast: We will focus our campaign on the West Coast, the heart of student activism.
-@new_england: New England, including New York, has a strong untapped liberal base which we can win over to progressivism.
-@midatlantic: The Midatlantic, from Pennsylvania and New Jersey down to Virginia, is key to our success.
-@midwest: We should campaign in the industrial Midwest[?if afl_cio != 1 : . ?] [? if afl_cio : with the AFL-CIO. ?]
-@deep_south: We must campaign with the Black Panthers to combat George Wallace's hold over the south.
-@swing_states: We need to campaign in the swing states that we are the closest to winning.
+- @west_coast: We will focus our campaign on the West Coast, the heart of student activism.
+- @new_england: New England, including New York, has a strong untapped liberal base which we can win over to progressivism.
+- @midatlantic: The Midatlantic, from Pennsylvania and New Jersey down to Virginia, is key to our success.
+- @midwest: We should campaign in the industrial Midwest[?if afl_cio != 1 : . ?] [? if afl_cio : with the AFL-CIO. ?]
+- @deep_south: We must campaign with the Black Panthers to combat George Wallace's hold over the south.
+- @swing_states: We need to campaign in the swing states that we are the closest to winning.
 
 @west_coast
 on-arrival: california_dove_bonus += 3*(1-dissent); washington_dove_bonus += 3*(1-dissent); oregon_dove_bonus += 2*(1-dissent); youth_dove += 1*(1-dissent)
