@@ -121,6 +121,7 @@ for (var state of Q.states) {
         }
         else if (Q[state + '_' + party + '_normalized'] < highest_support && Q[state + '_' + party + '_normalized'] > second_highest) {
             second_highest = Q[state + '_' + party + '_normalized'];
+            Q['projected_second_' + state] = party;
         }
     }
     if (highest_support / second_highest < 1.05) {
