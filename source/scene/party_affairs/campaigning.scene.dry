@@ -142,4 +142,360 @@ Placeholder
 
 @swing_states
 
-Placeholder
+- @alabama_swing: Alabama.
+- @alaska_swing: Alaska.
+- @arizona_swing: Arizona.
+- @arkansas_swing: Arkansas.
+- @california_swing: California.
+- @colorado_swing: Colorado.
+- @connecticut_swing: Connecticut.
+- @delaware_swing: Delaware.
+- @dc_swing: District of Columbia.
+- @florida_swing: Florida.
+- @georgia_swing: Georgia.
+- @hawaii_swing: Hawaii.
+- @idaho_swing: Idaho.
+- @illinois_swing: Illinois.
+- @indiana_swing: Indiana.
+- @iowa_swing: Iowa.
+- @kansas_swing: Kansas.
+- @kentucky_swing: Kentucky.
+- @louisiana_swing: Louisiana.
+- @maine_swing: Maine.
+- @maryland_swing: Maryland.
+- @massachusetts_swing: Massachusetts.
+- @michigan_swing: Michigan.
+- @minnesota_swing: Minnesota.
+- @mississippi_swing: Mississippi.
+- @missouri_swing: Missouri.
+- @montana_swing: Montana.
+- @nebraska_swing: Nebraska.
+- @nevada_swing: Nevada.
+- @new_hampshire_swing: New Hampshire.
+- @new_jersey_swing: New Jersey.
+- @new_mexico_swing: New Mexico.
+- @new_york_swing: New York.
+- @north_carolina_swing: North Carolina.
+- @north_dakota_swing: North Dakota.
+- @ohio_swing: Ohio.
+- @oklahoma_swing: Oklahoma.
+- @oregon_swing: Oregon.
+- @pennsylvania_swing: Pennsylvania.
+- @rhode_island_swing: Rhode Island.
+- @south_carolina_swing: South Carolina.
+- @south_dakota_swing: South Dakota.
+- @tennessee_swing: Tennessee.
+- @texas_swing: Texas.
+- @utah_swing: Utah.
+- @vermont_swing: Vermont.
+- @virginia_swing: Virginia.
+- @washington_swing: Washington.
+- @west_virginia_swing: West Virginia.
+- @wisconsin_swing: Wisconsin.
+- @wyoming_swing: Wyoming.
+
+@alabama
+view-if: alabama_swing = 1 and (projected_second_alabama = "dove" or projected_winning_party_alabama = "dove")
+on-arrival: dove_bonus_alabama += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Alabama.
+
+@alaska
+view-if: alaska_swing = 1 and (projected_second_alaska = "dove" or projected_winning_party_alaska = "dove")
+on-arrival: dove_bonus_alaska += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Alaska.
+
+@arizona
+view-if: arizona_swing = 1 and (projected_second_arizona = "dove" or projected_winning_party_arizona = "dove")
+on-arrival: dove_bonus_arizona += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Arizona.
+
+@arkansas
+view-if: arkansas_swing = 1 and (projected_second_arkansas = "dove" or projected_winning_party_arkansas = "dove")
+on-arrival: dove_bonus_arkansas += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Arkansas.
+
+@california
+view-if: california_swing = 1 and (projected_second_california = "dove" or projected_winning_party_california = "dove")
+on-arrival: dove_bonus_california += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of California.
+
+@colorado
+view-if: colorado_swing = 1 and (projected_second_colorado = "dove" or projected_winning_party_colorado = "dove")
+on-arrival: dove_bonus_colorado += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Colorado.
+
+@connecticut
+view-if: connecticut_swing = 1 and (projected_second_connecticut = "dove" or projected_winning_party_connecticut = "dove")
+on-arrival: dove_bonus_connecticut += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Connecticut.
+
+@delaware
+view-if: delaware_swing = 1 and (projected_second_delaware = "dove" or projected_winning_party_delaware = "dove")
+on-arrival: dove_bonus_delaware += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Delaware.
+
+@dc
+view-if: dc_swing = 1 and (projected_second_dc = "dove" or projected_winning_party_dc = "dove")
+on-arrival: dove_bonus_dc += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Washington, D.C.
+
+@florida
+view-if: florida_swing = 1 and (projected_second_florida = "dove" or projected_winning_party_florida = "dove")
+on-arrival: dove_bonus_florida += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Florida.
+
+@georgia
+view-if: georgia_swing = 1 and (projected_second_georgia = "dove" or projected_winning_party_georgia = "dove")
+on-arrival: dove_bonus_georgia += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Georgia.
+
+@hawaii
+view-if: hawaii_swing = 1 and (projected_second_hawaii = "dove" or projected_winning_party_hawaii = "dove")
+on-arrival: dove_bonus_hawaii += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Hawaii.
+
+@idaho
+view-if: idaho_swing = 1 and (projected_second_idaho = "dove" or projected_winning_party_idaho = "dove")
+on-arrival: dove_bonus_idaho += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Idaho.
+
+@illinois
+view-if: illinois_swing = 1 and (projected_second_illinois = "dove" or projected_winning_party_illinois = "dove")
+on-arrival: dove_bonus_illinois += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Illinois.
+
+@indiana
+view-if: indiana_swing = 1 and (projected_second_indiana = "dove" or projected_winning_party_indiana = "dove")
+on-arrival: dove_bonus_indiana += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Indiana.
+
+@iowa
+view-if: iowa_swing = 1 and (projected_second_iowa = "dove" or projected_winning_party_iowa = "dove")
+on-arrival: dove_bonus_iowa += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Iowa.
+
+@kansas
+view-if: kansas_swing = 1 and (projected_second_kansas = "dove" or projected_winning_party_kansas = "dove")
+on-arrival: dove_bonus_kansas += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Kansas.
+
+@kentucky
+view-if: kentucky_swing = 1 and (projected_second_kentucky = "dove" or projected_winning_party_kentucky = "dove")
+on-arrival: dove_bonus_kentucky += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Kentucky.
+
+@louisiana
+view-if: louisiana_swing = 1 and (projected_second_louisiana = "dove" or projected_winning_party_louisiana = "dove")
+on-arrival: dove_bonus_louisiana += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Louisiana.
+
+@maine
+view-if: maine_swing = 1 and (projected_second_maine = "dove" or projected_winning_party_maine = "dove")
+on-arrival: dove_bonus_maine += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Maine.
+
+@maryland
+view-if: maryland_swing = 1 and (projected_second_maryland = "dove" or projected_winning_party_maryland = "dove")
+on-arrival: dove_bonus_maryland += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Maryland.
+
+@massachusetts
+view-if: massachusetts_swing = 1 and (projected_second_massachusetts = "dove" or projected_winning_party_massachusetts = "dove")
+on-arrival: dove_bonus_massachusetts += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Massachusetts.
+
+@michigan
+view-if: michigan_swing = 1 and (projected_second_michigan = "dove" or projected_winning_party_michigan = "dove")
+on-arrival: dove_bonus_michigan += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Michigan.
+
+@minnesota
+view-if: minnesota_swing = 1 and (projected_second_minnesota = "dove" or projected_winning_party_minnesota = "dove")
+on-arrival: dove_bonus_minnesota += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Minnesota.
+
+@mississippi
+view-if: mississippi_swing = 1 and (projected_second_mississippi = "dove" or projected_winning_party_mississippi = "dove")
+on-arrival: dove_bonus_mississippi += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Mississippi.
+
+@missouri
+view-if: missouri_swing = 1 and (projected_second_missouri = "dove" or projected_winning_party_missouri = "dove")
+on-arrival: dove_bonus_missouri += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Missouri.
+
+@montana
+view-if: montana_swing = 1 and (projected_second_montana = "dove" or projected_winning_party_montana = "dove")
+on-arrival: dove_bonus_montana += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Montana.
+
+@nebraska
+view-if: nebraska_swing = 1 and (projected_second_nebraska = "dove" or projected_winning_party_nebraska = "dove")
+on-arrival: dove_bonus_nebraska += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Nebraska.
+
+@nevada
+view-if: nevada_swing = 1 and (projected_second_nevada = "dove" or projected_winning_party_nevada = "dove")
+on-arrival: dove_bonus_nevada += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Nevada.
+
+@new_hampshire
+view-if: new_hampshire_swing = 1 and (projected_second_new_hampshire = "dove" or projected_winning_party_new_hampshire = "dove")
+on-arrival: dove_bonus_new_hampshire += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of New Hampshire.
+
+@new_jersey
+view-if: new_jersey_swing = 1 and (projected_second_new_jersey = "dove" or projected_winning_party_new_jersey = "dove")
+on-arrival: dove_bonus_new_jersey += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of New Jersey.
+
+@new_mexico
+view-if: new_mexico_swing = 1 and (projected_second_new_mexico = "dove" or projected_winning_party_new_mexico = "dove")
+on-arrival: dove_bonus_new_mexico += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of New Mexico.
+
+@new_york
+view-if: new_york_swing = 1 and (projected_second_new_york = "dove" or projected_winning_party_new_york = "dove")
+on-arrival: dove_bonus_new_york += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of New York.
+
+@north_carolina
+view-if: north_carolina_swing = 1 and (projected_second_north_carolina = "dove" or projected_winning_party_north_carolina = "dove")
+on-arrival: dove_bonus_north_carolina += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of North Carolina.
+
+@north_dakota
+view-if: north_dakota_swing = 1 and (projected_second_north_dakota = "dove" or projected_winning_party_north_dakota = "dove")
+on-arrival: dove_bonus_north_dakota += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of North Dakota.
+
+@ohio
+view-if: ohio_swing = 1 and (projected_second_ohio = "dove" or projected_winning_party_ohio = "dove")
+on-arrival: dove_bonus_ohio += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Ohio.
+
+@oklahoma
+view-if: oklahoma_swing = 1 and (projected_second_oklahoma = "dove" or projected_winning_party_oklahoma = "dove")
+on-arrival: dove_bonus_oklahoma += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Oklahoma.
+
+@oregon
+view-if: oregon_swing = 1 and (projected_second_oregon = "dove" or projected_winning_party_oregon = "dove")
+on-arrival: dove_bonus_oregon += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Oregon.
+
+@pennsylvania
+view-if: pennsylvania_swing = 1 and (projected_second_pennsylvania = "dove" or projected_winning_party_pennsylvania = "dove")
+on-arrival: dove_bonus_pennsylvania += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Pennsylvania.
+
+@rhode_island
+view-if: rhode_island_swing = 1 and (projected_second_rhode_island = "dove" or projected_winning_party_rhode_island = "dove")
+on-arrival: dove_bonus_rhode_island += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Rhode Island.
+
+@south_carolina
+view-if: south_carolina_swing = 1 and (projected_second_south_carolina = "dove" or projected_winning_party_south_carolina = "dove")
+on-arrival: dove_bonus_south_carolina += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of South Carolina.
+
+@south_dakota
+view-if: south_dakota_swing = 1 and (projected_second_south_dakota = "dove" or projected_winning_party_south_dakota = "dove")
+on-arrival: dove_bonus_south_dakota += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of South Dakota.
+
+@tennessee
+view-if: tennessee_swing = 1 and (projected_second_tennessee = "dove" or projected_winning_party_tennessee = "dove")
+on-arrival: dove_bonus_tennessee += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Tennessee.
+
+@texas
+view-if: texas_swing = 1 and (projected_second_texas = "dove" or projected_winning_party_texas = "dove")
+on-arrival: dove_bonus_texas += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Texas.
+
+@utah
+view-if: utah_swing = 1 and (projected_second_utah = "dove" or projected_winning_party_utah = "dove")
+on-arrival: dove_bonus_utah += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Utah.
+
+@vermont
+view-if: vermont_swing = 1 and (projected_second_vermont = "dove" or projected_winning_party_vermont = "dove")
+on-arrival: dove_bonus_vermont += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Vermont.
+
+@virginia
+view-if: virginia_swing = 1 and (projected_second_virginia = "dove" or projected_winning_party_virginia = "dove")
+on-arrival: dove_bonus_virginia += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Virginia.
+
+@washington
+view-if: washington_swing = 1 and (projected_second_washington = "dove" or projected_winning_party_washington = "dove")
+on-arrival: dove_bonus_washington += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Washington.
+
+@west_virginia
+view-if: west_virginia_swing = 1 and (projected_second_west_virginia = "dove" or projected_winning_party_west_virginia = "dove")
+on-arrival: dove_bonus_west_virginia += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of West Virginia.
+
+@wisconsin
+view-if: wisconsin_swing = 1 and (projected_second_wisconsin = "dove" or projected_winning_party_wisconsin = "dove")
+on-arrival: dove_bonus_wisconsin += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Wisconsin.
+
+@wyoming
+view-if: wyoming_swing = 1 and (projected_second_wyoming = "dove" or projected_winning_party_wyoming = "dove")
+on-arrival: dove_bonus_wyoming += 3*(1-dissent);
+
+We direct our campaigning towards the swing state of Wyoming.
