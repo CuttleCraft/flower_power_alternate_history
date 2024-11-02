@@ -60,8 +60,14 @@ for (var party of Q.parties) {
 }
 
 // electoral college polling
+Q.dove_projected_electoral = 0;
+Q.democrat_projected_electoral = 0;
+Q.republican_projected_electoral = 0;
+Q.independent_projected_electoral = 0;
+Q.tossup_projected_electoral = 0;
 
 // Loop to initialize unemployed for each state
+
 for (var state of Q.states) {
     Q[state + '_unemployed'] = Q.unemployed;
 }
