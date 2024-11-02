@@ -124,7 +124,7 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 @polls
 
-= Projected election results
+= Projected popular vote
 
 (if the election were to be held now):
 
@@ -135,6 +135,19 @@ Democratic: [+ democrat_popular_vote +]%
 Republican: [+ republican_popular_vote +]%
 
 American Independent: [+ independent_popular_vote +]%
+
+= Projected electoral college vote
+
+Peace and Freedom: [+ dove_projected_electoral +]
+
+Democratic: [+ democrat_projected_electoral +]
+
+Republican: [+ republican_projected_electoral +]
+
+American Independent: [+ independent_projected_electoral +]
+
+Tossup: [+ tossup_projected_electoral +]
+
 
 
 

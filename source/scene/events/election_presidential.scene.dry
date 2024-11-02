@@ -75,8 +75,8 @@ for (var state of Q.states) {
     var highest_support = 0;
     Q['winning_party_' + state] = null;
     for (var party of Q.parties) {
-        if (Q[state + '_' + party + '_votes'] > highest_support) {
-            highest_support = Q[state + '_' + party + '_votes'];
+        if (Q[state + '_' + party + '_normalized'] > highest_support) {
+            highest_support = Q[state + '_' + party + '_normalized'];
             Q['winning_party_' + state] = party;
         }
     }

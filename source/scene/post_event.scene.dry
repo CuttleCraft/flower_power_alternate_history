@@ -59,6 +59,77 @@ for (var party of Q.parties) {
     Q[party+'_popular_vote'] = Math.round(Q[party+'_popular_normalized']*100);
 }
 
+// electoral college polling
+
+// Loop to initialize unemployed for each state
+for (var state of Q.states) {
+    Q[state + '_unemployed'] = Q.unemployed;
+}
+
+// Loop through classes and parties to calculate class votes and normalized values
+for (var c of Q.classes) {
+    var class_votes = 0;
+    for (var party of Q.parties) {
+        if (Q[c + '_' + party] < 0) {
+            Q[c + '_' + party] = 0;
+        }
+        class_votes += Q[c + '_' + party];
+    }
+
+    // Normalize class votes for each party
+    for (var party of Q.parties) {
+        Q[c + '_' + party + '_normalized'] = Math.round(100 * Q[c + '_' + party] / class_votes);
+    }
+}
+
+// Loop through states to calculate support for each party
+for (var state of Q.states) {
+    var total_support = 0;
+
+    for (var party of Q.parties) {
+        var party_support = 0;
+        
+        for (var c of Q.classes) {
+            party_support += Q[state + '_' + c] * Q[c + '_' + party + '_normalized'];
+        }
+
+        Q[state + '_' + party + '_support'] = party_support;
+        total_support += party_support;
+    }
+
+    // Normalize support for each party and calculate votes
+    for (var party of Q.parties) {
+        Q[state + '_' + party + '_normalized'] = Q[state + '_' + party + '_support'] / total_support;
+        Q[state + '_' + party + '_votes_dec'] = Math.round(Q[state + '_' + party + '_normalized'] * 1000) / 10;
+        Q[state + '_' + party + '_votes'] = Math.round(Q[state + '_' + party + '_normalized'] * 100);
+    }
+
+    // Determine the winning party for each state
+    var highest_support = 0;
+    var second_highest = 0;
+    Q['projected_winning_party_' + state] = null;
+    for (var party of Q.parties) {
+        if (Q[state + '_' + party + '_normalized'] > highest_support) {
+            highest_support = Q[state + '_' + party + '_normalized'];
+            Q['projected_winning_party_' + state] = party;
+        }
+        else if (Q[state + '_' + party + '_normalized'] < highest_support && Q[state + '_' + party + '_normalized'] > second_highest) {
+            second_highest = Q[state + '_' + party + '_normalized'];
+            if (highest_support / second_highest < 1.05) {
+                Q[state + '_swing'] = 1;
+                Q['projected_winning_party_' + state] = "tossup";
+            }
+        }
+    }
+}
+
+// Add electoral votes for each winning party
+for (var state of Q.states) {
+    var winning_party = Q['projected_winning_party_' + state];
+    Q[winning_party + '_projected_electoral'] += Q[state + '_electoral'];
+}
+
+// electoral college polling
 
 // set faction strength/dissent to 0
 for (var c of Q.factions) {
