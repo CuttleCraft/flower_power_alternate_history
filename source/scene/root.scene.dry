@@ -223,8 +223,8 @@ Q.unemployed = 3.4;
 
 Q.workers_dove = 0;
 Q.workers_democrat = 60;
-Q.workers_republican = 35;
-Q.workers_independent = 5;
+Q.workers_republican = 30;
+Q.workers_independent = 10;
 
 Q.youth_dove = 0;
 Q.youth_democrat = 40;
@@ -232,13 +232,13 @@ Q.youth_republican = 30;
 Q.youth_independent = 0;
 
 Q.consumer_dove = 0;
-Q.consumer_democrat = 47;
-Q.consumer_republican = 48;
-Q.consumer_independent = 6;
+Q.consumer_democrat = 48;
+Q.consumer_republican = 50;
+Q.consumer_independent = 3;
 
 Q.rural_dove = 0;
-Q.rural_democrat = 20;
-Q.rural_republican = 75;
+Q.rural_democrat = 25;
+Q.rural_republican = 70;
 Q.rural_independent = 5;
 
 Q.southern_dove = 0;
@@ -247,8 +247,8 @@ Q.southern_republican = 15;
 Q.southern_independent = 90;
 
 Q.black_dove = 0;
-Q.black_democrat = 50;
-Q.black_republican = 36;
+Q.black_democrat = 60;
+Q.black_republican = 25;
 Q.black_independent = 0;
 
 Q.unemployed_dove = 0;
