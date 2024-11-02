@@ -113,7 +113,7 @@ for (var state of Q.states) {
             highest_support = Q[state + '_' + party + '_normalized'];
             Q['projected_winning_party_' + state] = party;
         }
-        else if (Q[state + '_' + party + '_normalized'] < highest_support && Q[state + '_' + party + '_normalized'] > second_highest) {
+        if (Q[state + '_' + party + '_normalized'] < highest_support && Q[state + '_' + party + '_normalized'] > second_highest) {
             second_highest = Q[state + '_' + party + '_normalized'];
             if (highest_support / second_highest < 1.05) {
                 Q[state + '_swing'] = 1;
