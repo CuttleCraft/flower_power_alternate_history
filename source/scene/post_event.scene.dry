@@ -122,7 +122,7 @@ for (var state of Q.states) {
             Q['projected_winning_party_' + state] = "tossup";
     }
     else if (highest_support / second_highest >= 1.05) {
-            Q[state + '_swing] = 0;
+            Q[state + '_swing'] = 0;
     }
 }
 
