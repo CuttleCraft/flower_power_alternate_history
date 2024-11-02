@@ -32,7 +32,8 @@ We may address a variety of issues in this month, or proceed to the next if ther
 - @main: Return to menu
 
 @next_month
-go-to: post_event
+on-arrival: month_proceeded = 1
+go-to: post_event1
 
 @curr_gov
 go-to: cabinet if dove_in_government; menu if not dove_in_government
