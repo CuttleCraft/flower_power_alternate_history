@@ -59,7 +59,8 @@ for (var party of Q.parties) {
     Q[party+'_popular_vote'] = Math.round(Q[party+'_popular_normalized']*100);
 }
 
-// electoral college polling
+////// electoral college polling below
+
 Q.dove_projected_electoral = 0;
 Q.democrat_projected_electoral = 0;
 Q.republican_projected_electoral = 0;
@@ -140,7 +141,24 @@ for (var state of Q.states) {
     Q[winning_party + '_projected_electoral'] += Q[state + '_electoral'];
 }
 
-// electoral college polling
+////// electoral college polling above
+
+// modifier decay 
+for (var party of Q.parties) {
+    for (var state of Q.states) {
+        if (Q[state + '_' + party + '_bonus'] > 0) {
+            Q[state + '_' + party + '_bonus'] -= 1/6;
+            if (Q[state + '_' + party + '_bonus'] >= 10) {
+                Q[state + '_' + party + '_bonus'] *= 0.98;
+            }
+        }
+        if (Q[state + '_' + party + '_bonus'] < 0) {
+            Q[state + '_' + party + '_bonus'] = 0;
+        }
+    }
+}
+
+
 
 // set faction strength/dissent to 0
 for (var c of Q.factions) {
