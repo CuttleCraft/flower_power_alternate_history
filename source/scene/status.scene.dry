@@ -81,15 +81,15 @@ NSDAP: [+ independent_relation : relationships +]
 
 = Internal Factions of the SPD
 
-Left strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+[ if establishment > 0 : Party Establishment strength: [+ establishment_strength : strength +], dissent: [+ establishment_dissent : dissent +] ?]
 
-Center strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+[ ? if progressive > 0 : Progressive strength: [+ progressive_strength : strength +], dissent: [+ progressive_dissent : dissent +] ?]
 
-Labor strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+[? if mobe > 0 : Mobe strength: [+ mobe_strength : strength +], dissent: [+ mobe_dissent : dissent +] ?]
 
-Reformist strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+[? if mcgovernite > 0 : McGovernite strength: [+ mcgovernite_strength : strength +], dissent: [+ mcgovernite_dissent : dissent +] ?]
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+[? if countercultural > 0 : Countercultural strength: [+ countercultural_strength : strength +], dissent: [+ countercultural_dissent : dissent +] ?]
 
 
 @paramilitaries

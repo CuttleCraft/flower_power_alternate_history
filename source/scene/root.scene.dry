@@ -43,18 +43,22 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['establishment', 'progressive', 'mobe', 'mcgovernite', 'countercultural', 'panther', 'labor'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.establishment_strength = 35
+Q.establishment_dissent = 10;
+Q.progressive_strength = 35;
+Q.progressive_dissent = 10;
+Q.mobe_strength = 20;
+Q.mobe_dissent = 0;
+Q.mcgovernite_strength = 5;
+Q.mcgovernite_dissent = 10;
+Q.countercultural_strength = 0;
+Q.countercultural_dissent = 15;
+Q.panther_strength = 0;
+Q.panther_dissent = 0;
+Q.labor_strength = 0;
+Q.labor_dissent = 0;
 
 // secret events...
 Q.unions_independent = 0;
@@ -62,8 +66,14 @@ Q.centrists_resign = 0;
 Q.left_split = 0;
 Q.reformists_resigned = 0;
 
-// have we discovered neorevisionism?
-Q.neorevisionism = 0;
+// dynamic factions
+Q.establishment = 1;
+Q.progressive = 1;
+Q.mobe = 0;
+Q.mcgovernite = 0;
+Q.countercultural = 0;
+Q.panther = 0;
+Q.labor = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
@@ -98,13 +108,10 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
 Q.democrat_relation = 60;
 Q.republican_relation = 35;
 // DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
+Q.independent_relation = 0;
 
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
@@ -1251,9 +1258,53 @@ Now, the Peace and Freedom Party must choose where to hold its convention and ho
 - @new_york: We will nominate Eugene McCarthy in New York.
 
 @chicago
-go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
-subtitle: The Yippies may take an active role in organizing the convention.
+subtitle: We will need help organizing a convention here.
 on-arrival: youth_dove += 3; consumer_democrat -= 2; consumer_dove += 2
+
+As the dust begins to settle in Chicago, we choose to quickly organize a convention there for the nomination of Eugene McCarthy. However, we have a limited presence in Chicago, and without help organizing the convention from elements already there, we will face difficulty in our aims.
+
+- @yippie: We will invite the Yippies to organize and participate in the convention.
+- @progressive: We will invite the antiwar delegates from the Democratic Convention.
+- @mobe: The Mobe and other antiwar groups active in the protests are our best bet.
+
+@yippie
+subtitle: Perhaps we can bridge the radical-moderate divide and unite the progressive movement.
+on-arrival: consumer_democrat += 2; consumer_dove -= 4; workers_dove -= 1; youth_dove += 1; mccarthy_confidence -= 10
+
+It takes some convincing to get the radical Yippies to agree, seemingly still intent on running a pig for presidency. However, with help convincing from Phil Ochs, a more moderate Yippie, they eventually come around and agree that Eugene McCarthy makes just as fine a pig as Pigasus. They work quickly, rallying the protestors still in the city for the grand event. When Eugene McCarthy arrives at the convention hall the Yippies have prepared, he is taken aback. Posters and slogans line the walls with radical messaging emblazoned, while bedraggled protestors scurry about, some celebrating and some agitating. The floor is lined with editions of underground newspapers, and ahead of him in the main area, the podium he expected appears more of a soapbox. Before Eugene McCarthy can have second thoughts, he is greeted by Abbie Hoffman, who leads him in as he is cheered on by many attendees. The convention begins, and speaker after speaker walks up to the soapbox-podium, some delegates from the Peace and Freedom Party but many Yippies and other radicals, who give speeches which unsettle McCarthy further. Nevertheless, by the end of the day he is nominated, with, for better or worse, the noncommittal backing of the Yippies, whose ideas have been embedded in our party's discourse by the convention. The news is quick to label McCarthy a communist or anarchist, but the event does help in his publicity and enthuses our youth base.
+
+- @continue_yippie: Intriguing.
+
+@continue-yippie
+subtitle: The Yippies join the party.
+on-arrival: yippies = 1; countercultural = 1; countercultural_strength += 5
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+
+@progressive
+subtitle: It is crucial that we secure our ties with the dovish Democrats.
+on-arrival: consumer_dove += 1; worker_dove += 1; establishment_dissent += 2; democrat_relation += 5
+
+It takes some convincing to get the McGovernites to agree to attend, but eventually he is pursuaded, though attends solely as an observer for the time being. An orderly convention is organized, though quite modest due to the haste of preparation and lack of resources. Eugene McCarthy is greeted by modest applause and takes a seat as the convention proceeds. Speeches are made, calling for an end to the Vietnam War, support for Civil Rights, and other such standard progressive promises. By the end of it, McCarthy is officially nominated in a vote by our attending delegates, and ties built with the remaining McGovernites in the Democratic Party, should we attempt to secure a Democratic ally.
+
+- @continue_progressive: Intriguing.
+
+@continue_progressive
+subtitle: Ties have been established with the Democrats.
+on-arrival: mcgovernite = 1; mcgovernite_strength += 5
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+
+@mobe
+subtitle: We cannot forget the other major group behind the Chicago protests.
+on-arrival: unemployed_dove += 5; youth_dove += 2; unemployed_democrat -= 2
+
+The Mobe is happy to help organize and participate in our convention, and quickly organize that of their protestors who remain in the city in support of Eugene McCarthy. When he arrives at the convention he is greeted by a large crowd of protestors who cheer him on. He is greeted by Rennie Davis, one of the leaders of the Chicago office of the Mobe, and led inside into the convention. The convention begins and resounding speeches are made by multiple Mobe speakers as well as our delegates, and by the end of it Eugene McCarthy is officially nominated for president.
+
+- @continue_mobe: Intriguing.
+
+@continue_mobe
+subtitle: The Mobe joins the party.
+on-arrival: mobe = 1; mobe_strength += 10
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 @detroit
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
