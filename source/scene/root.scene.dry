@@ -1275,7 +1275,7 @@ It takes some convincing to get the radical Yippies to agree, seemingly still in
 
 - @continue_yippie: Intriguing.
 
-@continue-yippie
+@continue_yippie
 subtitle: The Yippies join the party.
 on-arrival: yippies = 1; countercultural = 1; countercultural_strength += 5
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
