@@ -1273,7 +1273,7 @@ As the dust begins to settle in Chicago, we choose to quickly organize a convent
 subtitle: Perhaps we can bridge the radical-moderate divide and unite the progressive movement.
 on-arrival: consumer_democrat += 2; consumer_dove -= 4; workers_dove -= 1; youth_dove += 1; mccarthy_confidence -= 10
 
-It takes some convincing to get the radical Yippies to agree, seemingly still intent on running a pig for presidency. However, with help convincing from Phil Ochs, a more moderate Yippie, they eventually come around and agree that Eugene McCarthy makes just as fine a pig as Pigasus. They work quickly, rallying the protestors still in the city for the grand event. When Eugene McCarthy arrives at the convention hall the Yippies have prepared, he is taken aback. Posters and slogans line the walls with radical messaging emblazoned, while bedraggled protestors scurry about, some celebrating and some agitating. The floor is lined with editions of underground newspapers, and ahead of him in the main area, the podium he expected appears more of a soapbox. Before Eugene McCarthy can have second thoughts, he is greeted by Abbie Hoffman, who leads him in as he is cheered on by many attendees. The convention begins, and speaker after speaker walks up to the soapbox-podium, some delegates from the Peace and Freedom Party but many Yippies and other radicals, who give speeches which unsettle McCarthy further. Nevertheless, by the end of the day he is nominated, with, for better or worse, the noncommittal backing of the Yippies, whose ideas have been embedded in our party's discourse by the convention. The news is quick to label McCarthy a communist or anarchist, but the event does help in his publicity and enthuses our youth base.
+It takes some convincing to get the radical Yippies to agree, seemingly still intent on running a pig for office. However, with help convincing from moderate Phil Ochs, they eventually come around and agree that Eugene McCarthy makes just as fine a pig. They work quickly, rallying the protestors still in the city. When Eugene McCarthy arrives at the convention hall the Yippies have prepared, he is taken aback. Bedraggled protestors mill about, while posters line the walls with radical messaging emblazoned. The floor is lined with scattered underground newspapers, and ahead of him, the podium expected appears more of a soapbox. Before McCarthy can have second thoughts, he is greeted by Abbie Hoffman, who leads him in past the cheering attendees. The convention begins, and many speakers walk up to the soapbox, our Peace and Freedom delegates and Yippies alike, unsettling McCarthy further. Nevertheless, by the end of the day he is nominated, with, for better or worse, the noncommittal backing of the Yippies, whose ideas have entered the party discourse.
 
 - @continue_yippie: Intriguing.
 
@@ -1309,21 +1309,46 @@ on-arrival: mobe = 1; mobe_strength += 10
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 @detroit
-go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 subtitle: This will help improve our ties with organized labor.
-on-arrival: workers_dove += 4; workers_democrat -= 2; workers_independent -= 1; consumer_dove -= 1
+on-arrival: left_economics = 1; workers_dove += 4; youth_dove -= 1; workers_democrat -= 2; black_democrat -= 1; black_dove += 1; workers_independent -= 1; consumer_dove -= 1
+
+With our limited presence in Detroit, it is difficult to organize a convention there. However, we manage to rally enough participants that one is possible. Invitations are sent out left and right to labor and union organizers, hoping to gain enough participants, even if observers, that the event can truly be good publicity. Among those to agree is Walter Reuther, though for the time being solely as an observer. Despite initial fears, the convention can go ahead! Eugene McCarthy travels to Detroit from Chicago quickly, and Walter Reuther is impressed by the strong advocacy for worker's rights expressed in the convention, as well, of course, by the commitment to civil rights and ending the war, though such focus on worker's rights disappoints some of McCarthy's core youth base. Eugene McCarthy is nominated, and as the convention ends even meets with representatives of the local black community. All in all, a great success, with talk of a UAW endorsement floating around.
+
+- @continue_uaw: Intriguing.
+
+@continue_uaw
+subtitle: Ties with labor unions have been established.
+on-arrival: labor_strength += 5
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+
+// todo: left economics shouldnt just be detroit, it should require more, also black focus options
+
 
 @san_francisco
-go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 subtitle: It will be easier to organize in California due to our established infrastructure there.
-on-arrival: youth_democrat -= 1; youth_dove += 2; consumer_dove += 2; consumer_democrat -= 1; california_dove_bonus += 5; washington_dove_bonus += 5
+on-arrival: youth_democrat -= 1; youth_dove += 4; consumer_dove += 2; consumer_democrat -= 1; california_dove_bonus += 5; oregon_dove_bonus += 2; washington_dove_bonus += 4
+
+California is by far the state with our strongest presence, especially in the Bohemian capital of America, San Francisco. We are quickly able to organize a grand convention, and plaster posters all throughout the hip world of San Francisco. We exceed even our own expectations in attendees, and Eugene McCarthy is greeted by great applause as he arrives in California from Chicago. Even the remaining Diggers have made an appearance, and in the following convention Eugene McCarthy is in a landslide confirmed as the Peace and Freedom Party's nominee, to more thunderous applause from the attendants.
+
+- @continue_hippies: Intriguing.
+
+@continue_hippies
+subtitle: Hippies join the party.
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
+on-arrival: countercultural_strength += 5; countercultural = 1
+
+// todo: hippie focus option, arrange the convention like a festival not a regular convention
 
 @berkeley
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 subtitle: This will help our image amongst the mainstream New Left, though they have been declining.
 on-arrival: youth_dove += 6; youth_democrat -= 2; youth_republican -= 1; california_dove_bonus += 3
 
+// todo: berkeley, free speech movement rep
+
 @new_york
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 subtitle: I'll think of something.
-on-arrival: consumer_dove += 5
+on-arrival: consumer_dove += 5; consumer_democrat -= 2
+
+// todo: idk
