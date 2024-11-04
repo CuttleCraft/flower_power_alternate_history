@@ -43,7 +43,7 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['establishment', 'progressive', 'mobe', 'mcgovernite', 'countercultural', 'panther', 'labor'];
+Q.factions = ['establishment', 'progressive', 'mobe', 'mcgovernite', 'yippie', 'countercultural', 'panther', 'labor'];
 // should this be normalized to 100%?
 Q.establishment_strength = 35
 Q.establishment_dissent = 10;
@@ -59,6 +59,8 @@ Q.panther_strength = 0;
 Q.panther_dissent = 0;
 Q.labor_strength = 0;
 Q.labor_dissent = 0;
+Q.yippie_strength = 0;
+Q.yippie_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
@@ -239,9 +241,9 @@ Q.youth_republican = 30;
 Q.youth_independent = 0;
 
 Q.consumer_dove = 0;
-Q.consumer_democrat = 48;
-Q.consumer_republican = 50;
-Q.consumer_independent = 3;
+Q.consumer_democrat = 44;
+Q.consumer_republican = 55;
+Q.consumer_independent = 2;
 
 Q.rural_dove = 0;
 Q.rural_democrat = 25;
@@ -1277,7 +1279,7 @@ It takes some convincing to get the radical Yippies to agree, seemingly still in
 
 @continue_yippie
 subtitle: The Yippies join the party.
-on-arrival: yippies = 1; countercultural = 1; countercultural_strength += 5
+on-arrival: yippies = 1; yippie_strength += 5; yippie_dissent -= 5
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 @progressive

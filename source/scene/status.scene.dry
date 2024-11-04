@@ -91,6 +91,7 @@ NSDAP: [+ independent_relation : relationships +]
 
 [? if countercultural > 0 : Countercultural strength: [+ countercultural_strength : strength +], dissent: [+ countercultural_dissent : dissent +] ?]
 
+[? if yippies > 0 and countercultural <= 0 : Yippie strength: [+ yippie_strength : strength +], dissent: [+ yippie_dissent : dissent +] ?]
 
 @paramilitaries
 
