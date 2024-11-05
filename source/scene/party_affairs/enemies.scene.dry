@@ -26,7 +26,7 @@ We rail against the Democrats, which helps cement our position as a competitor t
 
 @rep
 subtitle: We have already split the Democrat vote, so if we want to stop a Republican sweep this may be necessary.
-on-arrival: enemies = "Republicans"; youth_republican -= 1; rural_republican -= 1; consumer_republican -= 3; workers_republican -= 2 if afl_cio
+on-arrival: enemies = "Republicans"; youth_republican -= 1; consumer_republican -= 2; consumer_democrat += 1; workers_republican -= 1 if left_economics; workers_democrat += 1 if left_economics; workers_republican -= 1 if afl_cio
 
 Attacking the Republicans is popular, though much more ineffectual as their supporters dismiss us as hippies, and it creates implicit association with the Democrats while many think we should focus on winning over as much support from the Democrats as possible.
 
