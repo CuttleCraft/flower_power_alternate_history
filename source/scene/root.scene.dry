@@ -1249,7 +1249,7 @@ It takes a lot of convincing to sway a reluctant senator McCarthy, but after bei
 
 @mccarthy_convention
 new-page: true
-on-arrival: youth_democrat -= 5; youth_dove += 15; black_dove += 10; consumer_dove += 3; consumer_democrat -= 3; workers_democrat -= 3; workers_dove += 2; california_dove_bonus += 3; texas_dem_bonus -= 5; west_virginia_dem_bonus -= 2
+on-arrival: youth_democrat -= 5; youth_dove += 15; black_dove += 10; consumer_dove += 3; consumer_democrat -= 3; workers_democrat -= 3; workers_dove += 2; california_dove_bonus += 3; texas_dem_bonus -= 3; west_virginia_dem_bonus -= 2; minnesota_dove_bonus += 5
 
 Now, the Peace and Freedom Party must choose where to hold its convention and how to organize it. We have a multitude of options at our disposal.
 
@@ -1342,7 +1342,7 @@ on-arrival: countercultural_strength += 5; countercultural = 1
 @berkeley
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 subtitle: This will help our image amongst the mainstream New Left, though they have been declining.
-on-arrival: youth_dove += 6; youth_democrat -= 2; youth_republican -= 1; california_dove_bonus += 3
+on-arrival: youth_dove += 6; youth_democrat -= 2; youth_republican -= 1; california_dove_bonus += 4
 
 // todo: berkeley, free speech movement rep
 

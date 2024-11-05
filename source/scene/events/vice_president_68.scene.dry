@@ -1,0 +1,70 @@
+title: Choosing a Running Mate
+subtitle: We must choose a running mate
+new-page: true
+view-if: month = 10
+tags: event
+
+Though Eugene McCarthy has been confirmed as the nominee for the Peace and Freedom Party, his running mate is yet to be confirmed. We need to amend this quickly as the election only draws closer. Who do we pick?
+
+- @options: Let's see the options.
+
+The options are:
+
+- @lowenstein: Allard Lowenstein, loyal supporter of Eugene McCarthy and former Democrat.
+- @hayden: Tom Hayden, a former student leader among the "Chicago Eight".
+- @mcgovern: George McGovern, fellow antiwar candidate in the Democratic Convention.
+- @reuther: Walter Reuther, leader of the UAW union.
+#- @bukchin: Murray Bukchin, an anarchist activist.
+
+@lowenstein
+subtitle: A safe choice, though one that may offend the party establishment.
+on-arrival: establishment_dissent += 10; establishment_strength -= 5; progressive_strength += 10; mccarthy_confidence += 5; youth_dove += 1; youth_democrat -= 1; running_mate = "Lowenstein"
+
+Allard Lowenstein is happy to be running mate for the campaign. Less happy is the Peace and Freedom Party's establishment, who begin to feel more disillusioned by Eugene McCarthy's course as nominee for the party.
+
+@hayden
+subtitle: Currently on trial, he will not be able to be active in the campaign.
+view-if: mobe = 1
+on-arrival: mobe_strength += 5; establishment_strength -= 2; consumer_dove -= 3; consumer_democrat += 2; workers_dove -= 2; youth_dove += 2; unemployed_dove += 4; running_mate = "Hayden";
+
+Tom Hayden isn't the favorite of the party establishment, but an acceptable candidate. Problem? He's on trial. Let's hope this decision won't hurt us longterm.
+
+@mcgovern
+subtitle: McGovern would likely be reluctant, but perhaps we can convince him.
+view-if: mcgovernite = 1
+
+Thanks to the connections we built in our convention in Chicago among the Democrats, we have the opportunity of offering George McGovern be running mate. Eugene McCarthy swallows his pride, bitterly, and offers. Though from our initial outreach, he seems willing, we would need to make an effort to convince him.
+
+The party establishment would likely be upset at such a moderate ticket, and if successful in swaying him, the entire antiwar wing of the Democratic Party would be gone for good. Should we press forward?
+
+- @sway_mcgovern: Yes, let's convince McGovern and unite the dovish democrats behind Peace and Freedom.
+- @options: No, let's see the other options.
+
+@sway_mcgovern
+subtitle: -1 resource.
+on-arrival: mccarthy_confidence -= 2; resources -= 1; youth_democrat -= 5; youth_dove += 3; consumer_democrat -= 2; black_democrat -= 2; black_dove += 2; consumer_dove += 2; south_dakota_dove_bonus += 3; establishment_dissent += 10; countercultural_dissent += 2; yippie_dissent += 3; establishment_strength -= 5; mcgovernite_strength += 5; progressive_strength += 5; running_mate = "McGovern"
+
+It takes some doing, but George McGovern is convinced to run on the Peace and Freedom ticket, uniting the antiwar democrats. Hopefully, the party can stay united, too, despite the protests of the party establishment.
+
+// todo: destroy dovish democrats
+
+@reuther
+subtitle: Perhaps we can gain the UAW's support by running with Reuther.
+view-if: labor = 1
+
+Thanks to our connections with the UAW and organized labor built by our convention in Detroit, we have the opportunity of securing the UAW's support as a gateway into the AFL-CIO and organized labor as a whole, and we can do this by offering Walter Reuther be our running mate. It would take some convincing, however, and a lot of promises.
+
+The party establishment would be ambivalent to such a ticket, but more radical New Left forces may be opposed, and our youth base may be somewhat unenthused if we take a more economic direction. Should we go for it?
+
+- @sway_reuther: Yes, let's convince Reuther to unite the Left, Old and New alike, behind our progressive cause.
+- @options: No, let's see the other options.
+
+@sway_reuther
+subtitle: -1 resource.
+on-arrival: resources -= 1; workers_democrat -= 4; workers_dove += 5; workers_independent -= 1; youth_dove -= 1; labor_strength += 10; uaw = 1; countercultural_dissent += 4; yippie_dissent += 3; establishment_dissent += 1
+
+It takes some doing, but Walter Reuther is convinced and agrees to run for vice president. The UAW throws its weight behind the Peace and Freedom Party, and support amongst workers greatly improved.
+
+@bukchin
+subtitle: A radical and risky choice, one that may be hard for McCarthy to swallow.
+view-if: yippie = 1
