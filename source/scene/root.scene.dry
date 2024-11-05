@@ -1125,6 +1125,11 @@ Q.muller_dead = 0;
 Q.crispien_advisor = 0; // Arthur Crispien
 Q.hilferding_advisor = 0; // Rudolf Hilferding
 
+// yippie advisors
+Q.ochs_advisor = 0;
+Q.hoffman_advisor = 0;
+Q.rubin_advisor = 0;
+
 // left advisors
 Q.sender_advisor = 0; // Toni Sender
 Q.levi_advisor = 0; // Paul Levi
