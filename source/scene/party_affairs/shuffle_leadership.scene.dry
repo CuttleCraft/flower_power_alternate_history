@@ -320,7 +320,7 @@ subtitle: Abbie Hoffman is an economist and one of our chief Marxist theoreticia
 is-card: true
 card-image: img/portraits/AbbieHoffman.jpg
 tags: yippie_advisor
-view-if: hoffman_advisor = 0 and n_advisors < 3 and yippie = 1
+view-if: hoffman_advisor = 0 and n_advisors < 3 and yippies = 1
 on-arrival: hoffman_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
@@ -355,7 +355,7 @@ title: Jerry Rubin
 subtitle: Jerry Rubin comes from a well-educated background and is one of our foreign policy leaders.
 is-card: true
 card-image: img/portraits/BreitscheidRudolf.jpg
-view-if: rubin_advisor = 0 and n_advisors < 3 and yippie = 1
+view-if: rubin_advisor = 0 and n_advisors < 3 and yippies = 1
 on-arrival: rubin_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: yippie_advisor
