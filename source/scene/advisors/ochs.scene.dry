@@ -1,6 +1,6 @@
 title: Phil Ochs
 is-pinned-card: true
-tags: advisor
+tags: advisor, yippie
 card-image: img/portraits/PhilOchs.jpg
 view-if: ochs_advisor = 1
 new-page: true 

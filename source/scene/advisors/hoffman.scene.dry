@@ -1,0 +1,24 @@
+title: Abbie Hoffman
+is-pinned-card: true
+tags: advisor, yippie
+card-image: img/portraits/AbbieHoffman.jpg
+view-if: hoffman_advisor = 1
+new-page: true
+#face-image: img/portraits/HilferdingRudolf.jpg
+
+= Abbie Hoffman
+
+Abbie Hoffman is a Yippie and among the Chicago Eight. He is considered by many the Yippie "leader", though Jerry Rubin comes close to him in level of antics.
+
+// todo: real options rather than meme
+
+- @contempt_of_court: Break court rules.
+- @root: Return to main.
+
+@contempt_of_court
+subtitle: Abbie Hoffman can trample on judges robes, or call the judge a "schande fur di goyim".
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 5; advisor_action_time = time
+
+Abbie Hoffman breaks rules. McCarthy '68!

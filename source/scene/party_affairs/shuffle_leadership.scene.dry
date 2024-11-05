@@ -33,10 +33,10 @@ go-to: root
 tags: remove_advisor
 
 
-@remove_hilferding
-title: Remove Hilferding
-view-if: hilferding_advisor = 1
-on-arrival: hilferding_advisor = 0; center_dissent += 5; n_advisors -= 1
+@remove_hoffman
+title: Remove Hoffman
+view-if: hoffman_advisor = 1
+on-arrival: hoffman_advisor = 0; yippie_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
@@ -61,11 +61,11 @@ go-to: rm_main
 Müller has been removed as an advisor. The Centrist faction disapproves.
 
 
-@remove_breitscheid
+@remove_rubin
 title: Remove Breitscheid
-view-if: breitscheid_advisor = 1
+view-if: rubin_advisor = 1
 tags: remove_advisor
-on-arrival: breitscheid_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: rubin_advisor = 0; yippie_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Breitscheid has been removed as an advisor. The Centrist faction disapproves.
@@ -266,10 +266,11 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
+tags: yippie_advisor, center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
 
+- @yippie: Add Yippies
 - @centrist: Add Centrists
 - @left: Add Leftists
 - @reformist: Add Reformists
@@ -278,6 +279,9 @@ frequency: 1
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
+
+@yippie
+view-if: n_advisors < 3 and yippie = 1
 
 @centrist
 view-if: n_advisors < 3
@@ -309,17 +313,17 @@ view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
-@add_hilferding
-title: Rudolf Hilferding
-subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians.
+@add_hoffman
+title: Abbie Hoffman
+subtitle: Abbie Hoffman is an economist and one of our chief Marxist theoreticians.
 is-card: true
-card-image: img/portraits/HilferdingRudolf.jpg
-tags: center_advisor
-view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: hilferding_advisor = 1; n_advisors += 1
+card-image: img/portraits/AbbieHoffman.jpg
+tags: yippie_advisor
+view-if: hoffman_advisor = 0 and n_advisors < 3 and yippie = 1
+on-arrival: hoffman_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Rudolf Hilferding is now an advisor.
+Abbie Hoffman is now an advisor.
 
 @add_wels
 title: Otto Wels
@@ -345,17 +349,17 @@ go-to: advisor_menu
 
 Hermann Müller is now an advisor.
 
-@add_breitscheid
-title: Rudolf Breitscheid
-subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders.
+@add_rubin
+title: Jerry Rubin
+subtitle: Jerry Rubin comes from a well-educated background and is one of our foreign policy leaders.
 is-card: true
 card-image: img/portraits/BreitscheidRudolf.jpg
-view-if: breitscheid_advisor = 0 and n_advisors < 3
-on-arrival: breitscheid_advisor = 1; n_advisors += 1
+view-if: rubin_advisor = 0 and n_advisors < 3 and yippie = 1
+on-arrival: rubin_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: center_advisor
+tags: yippie_advisor
 
-Rudolf Breitscheid is now an advisor.
+Jerry Rubin is now an advisor.
 
 # reformist
 
@@ -482,9 +486,9 @@ title: Phil Ochs
 subtitle: Phil Ochs is a topical singer-songwriter and moderate Yippie.
 is-card: true
 card-image: img/portraits/PhilOchs.jpg
-tags: nonfactional_advisor
+tags: yippie_advisor
 view-if: ochs_advisor = 0 and n_advisors < 3
-on-arrival: ochs_advisor = 1; n_advisors += 1
+on-arrival: ochs_advisor = 1; n_advisors += 1; yippie_strength += 5
 go-to: advisor_menu
 
 Phil Ochs is now an advisor.

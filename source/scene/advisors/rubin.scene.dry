@@ -1,0 +1,21 @@
+title: Jerry Rubin
+is-pinned-card: true 
+tags: advisor, yippie
+card-image: img/portraits/JerryRubin.jpg
+new-page: true
+view-if: rubin_advisor = 1
+
+= Jerry Rubin
+
+Jerry Rubin is a radical student activist turned Yippie who played a major role in the Chicago protests. 
+
+// todo: actual actions instead of meme option
+
+- @sell_out: Sell out and become a Yuppie.
+- @root: Return to main.
+
+@sell_out
+subtitle: +3 resources.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; resources += 3 
