@@ -205,7 +205,7 @@ if (Q.panther = 1) {
 
 // normalize strength for the different factions
 Q.yippie_strength = 100*Q.yippie_strength/total_strength;
-Q.establishment_strength = 100*Q.establishment_strength/establishment_strength;
+Q.establishment_strength = 100*Q.establishment_strength/total_strength;
 Q.labor_strength = 100*Q.labor_strength/total_strength;
 Q.countercultural_strength = 100*Q.countercultural_strength/total_strength;
 Q.progressive_strength = 100*Q.progressive_strength/total_strength;
