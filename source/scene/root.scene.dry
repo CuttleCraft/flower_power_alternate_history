@@ -1318,7 +1318,7 @@ With our limited presence in Detroit, it is difficult to organize a convention t
 
 @continue_uaw
 subtitle: Ties with labor unions have been established.
-on-arrival: labor_strength += 5
+on-arrival: labor = 1; labor_strength += 5
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 // todo: left economics shouldnt just be detroit, it should require more, also black focus options
