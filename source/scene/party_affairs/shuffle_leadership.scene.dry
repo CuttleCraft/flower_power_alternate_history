@@ -269,7 +269,6 @@ title: Add other advisors.
 tags: yippie_advisor, center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
-
 - @yippie: Add Yippies
 - @centrist: Add Centrists
 - @left: Add Leftists
@@ -282,6 +281,8 @@ frequency: 1
 
 @yippie
 view-if: n_advisors < 3 and yippie = 1
+
+- #yippie_advisor
 
 @centrist
 view-if: n_advisors < 3
