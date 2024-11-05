@@ -131,9 +131,9 @@ on-arrival: consumer_dove += 1*(1-dissent)
 Above all, we must appeal to moderate liberals and convince them of progressivism and its merits.
 
 @midwest
-on-arrival: workers_dove += 1*(1-dissent)
+on-arrival: labor_strength += 2 if labor = 1; michigan_dove_bonus += 2*(1-dissent); wisconsin_dove_bonus += 2*(1-dissent); illinois_dove_bonus += 3*(1-dissent); illinois_dove_bonus += 3*(1-dissent) if afl_cio; illinois_dove_bonus += 2*(1-dissent) if uaw; indiana_dove_bonus += 3*(1-dissent); indiana_dove_bonus += 3*(1-dissent) if afl_cio; indiana_dove_bonus += 2*(1-dissent) if uaw; ohio_dove_bonus += 3*(1-dissent); ohio_dove_bonus += 3*(1-dissent) if afl_cio; ohio_dove_bonus += 2*(1-dissent) if uaw; workers_dove += 1*(1-dissent); workers_dove += 1*(1-dissent) if left_economics
 
-Placeholder
+The midwest is in many ways the home of the Old Left and of blue-collar workers. It is also one of the most important regions in the election, being heavily contested by the parties. If we can establish a foothold here it will not only increase our ties with organized labor but help bring about an electoral victory.
 
 @deep_south
 view-if: panther_support
