@@ -177,17 +177,67 @@ if (Q.unemployed <= 1) {
 }
 
 // re-calculate dissent.
-var total_strength = Q.left_strength + Q.center_strength + Q.labor_strength + Q.reformist_strength + Q.neorevisionist_strength;
+var total_strength = 0;
+if (Q.yippies = 1) {
+    var total_strength += Q.yippie_strength;
+}
+if (Q.establishment = 1) {
+    var total_strength += Q.establishment_strength;
+}
+if (Q.labor = 1) {
+    var total_strength += Q.labor_strength;
+}
+if (Q.countercultural = 1) {
+    var total_strength += Q.countercultural_strength;
+}
+if (Q.progressive = 1) {
+    var total_strength += Q.progressive_strength;
+}
+if (Q.mcgovernites = 1) {
+    var total_strength += Q.mcgovernite_strength;
+}
+if (Q.mobe = 1) {
+    var total_strength += Q.mobe_strength;
+}
+if (Q.panther = 1) {
+    var total_strength += Q.panther_strength;
+}
 
 // normalize strength for the different factions
-Q.left_strength = 100*Q.left_strength/total_strength;
-Q.center_strength = 100*Q.center_strength/total_strength;
+Q.yippie_strength = 100*Q.yippie_strength/total_strength;
+Q.establishment_strength = 100*Q.establishment_strength/establishment_strength;
 Q.labor_strength = 100*Q.labor_strength/total_strength;
-Q.reformist_strength = 100*Q.reformist_strength/total_strength;
-Q.neorevisionist_strength = 100*Q.neorevisionist_strength/total_strength;
+Q.countercultural_strength = 100*Q.countercultural_strength/total_strength;
+Q.progressive_strength = 100*Q.progressive_strength/total_strength;
+Q.mcgovernite_strength = 100*Q.mcgovernite_strength/total_strength;
+Q.mobe_strength = 100*Q.mobe_strength/total_strength;
+Q.panther_strength = 100*Q.panther_strength/total_strength;
 
-var total_dissent = Q.left_strength*Q.left_dissent + Q.center_strength*Q.center_dissent + Q.labor_strength*Q.labor_dissent + Q.reformist_strength*Q.reformist_dissent + Q.neorevisionist_strength*Q.neorevisionist_dissent;
-
+var total_dissent = 0;
+if (Q.yippies = 1) {
+    var total_dissent += (Q.yippie_strength*Q.yippie_dissent);
+}
+if (Q.establishment = 1) {
+    var total_dissent += (Q.establishment_strength*Q.establishment_dissent);
+}
+if (Q.labor = 1) {
+    var total_dissent += (Q.labor_strength*Q.labor_dissent);
+}
+if (Q.countercultural = 1) {
+    var total_dissent += (Q.countercultural_strength*Q.countercultural_dissent);
+}
+if (Q.progressive = 1) {
+    var total_dissent += (Q.progressive_strength*Q.progressive_dissent);
+}
+if (Q.mcgovernites = 1) {
+    var total_dissent += (Q.mcgovernite_strength*Q.mcgovernite_dissent);
+}
+if (Q.mobe = 1) {
+    var total_dissent += (Q.mobe_strength*Q.mobe_dissent);
+}
+if (Q.panther = 1) {
+    var total_dissent += (Q.panther_strength*Q.panther_dissent);
+}
 
 Q.dissent = 0.01*total_dissent/total_strength;
 Q.dissent_percent = Q.dissent*100;
