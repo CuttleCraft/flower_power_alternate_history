@@ -280,7 +280,7 @@ frequency: 1
 - @remove_none: Stop changing advisors.
 
 @yippie
-view-if: n_advisors < 3 and yippie = 1
+view-if: n_advisors < 3 and yippies = 1
 
 - #yippie_advisor
 
