@@ -32,7 +32,6 @@ We may address a variety of issues in this month, or proceed to the next if ther
 - @main: Return to menu
 
 @next_month
-on-arrival: month_proceeded = 1
 go-to: post_event
 
 @curr_gov
