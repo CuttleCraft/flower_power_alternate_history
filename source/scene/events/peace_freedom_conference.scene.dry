@@ -52,7 +52,7 @@ Eugene McCarthy wins with [+ pro_mccarthy_round +]% of delegates supporting him.
 
 @establishment_win
 view-if: anti_mccarthy_votes > 50
-on-arrival: youth_dove *= (1-reliance); consumer_dove *= (1-reliance); black_dove *= (1-reliance); worker_dove *= (1-reliance); rural_dove *= (1-reliance); unemployed_dove *= (1-reliance)
+on-arrival: youth_dove *= (1-reliance); consumer_dove *= (1-reliance); black_dove *= (1-reliance); workers_dove *= (1-reliance); rural_dove *= (1-reliance); unemployed_dove *= (1-reliance)
 
 Eugene McCarthy loses with [+ anti_mccarthy_round +]% of delegates turning on him.
 
