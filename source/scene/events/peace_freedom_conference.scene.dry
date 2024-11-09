@@ -11,26 +11,26 @@ The party establishment, growing ever more disillusioned with the takeover of th
 - @conference: The conference begins and a vote against McCarthy called.
 
 @conference
-on-arrival: pro_mccarthy = progressive_strength; pro_mccarthy += mcgovernite_strength if mcgovernite_dissent < 50 and mcgovernites = 1; anti_mccarthy = establishment_strength; {!
-if (Q.yippies = 1 && Q.yippie_dissent >= 40) {
+on-arrival: pro_mccarthy = progressive_strength; pro_mccarthy += mcgovernite_strength if mcgovernite_dissent < 50 and mcgovernites == 1; anti_mccarthy = establishment_strength; {!
+if (Q.yippies == 1 && Q.yippie_dissent >= 40) {
     Q.anti_mccarthy += Q.yippie_strength;
 } 
-if (Q.countercultural = 1 && Q.countercultural_dissent >= 50) {
+if (Q.countercultural == 1 && Q.countercultural_dissent >= 50) {
     Q.anti_mccarthy += Q.countercultural_strength;
 }
-if (Q.mobe = 1 && Q.mobe_dissent >= 50) {
+if (Q.mobe == 1 && Q.mobe_dissent >= 50) {
     Q.anti_mccarthy += Q.mobe_strength;
 }
-else if (Q.mobe = 1 && Q.mobe_dissent < 20) {
+else if (Q.mobe == 1 && Q.mobe_dissent < 20) {
     Q.pro_mccarthy += Q.mobe_strength;
 }
-if (Q.labor = 1 && Q.labor_dissent >= 55) {
+if (Q.labor == 1 && Q.labor_dissent >= 55) {
     Q.anti_mccarthy += Q.labor_strength;
 }
-else if (Q.labor = 1 && Q.labor_dissent < 45) {
+else if (Q.labor == 1 && Q.labor_dissent < 45) {
     Q.pro_mccarthy += Q.labor_strength;
 }
-if (Q.panther = 1 && Q.panther_dissent >= 30) {
+if (Q.panther == 1 && Q.panther_dissent >= 30) {
     Q.anti_mccarthy += Q.panther_strength;
 }
 var total_votes = (Q.anti_mccarthy+Q.pro_mccarthy);
