@@ -273,7 +273,7 @@ frequency: 1
 - @yippie: Add Yippies
 - @centrist: Add Centrists
 - @left: Add Leftists
-- @reformist: Add Reformists
+- @progressive: Add Progressives
 - @labor: Add Labor
 - @neorev: Add Neorevisionists
 - @nonfactional: Add non-factional advisors
@@ -290,10 +290,10 @@ view-if: n_advisors < 3
 
 - #center_advisor
 
-@reformist
+@progressive
 view-if: n_advisors < 3
 
-- #reformist_advisor
+- #progressive_advisor
 
 @left
 view-if: n_advisors < 3
