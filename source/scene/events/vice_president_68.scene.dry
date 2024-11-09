@@ -14,6 +14,10 @@ Though Eugene McCarthy has been confirmed as the nominee for the Peace and Freed
 The options are:
 
 - @lowenstein: Allard Lowenstein, loyal supporter of Eugene McCarthy and former Democrat.
+#- @spock: Benjamin Spock, doctor and New Left activist.
+#- @king: Coretta Scott King, wife of the deceased Martin Luther King.
+- @dellinger: David Dellinger, longtime pacifist activist among the "Chicago Eight".
+#- @gregory: Dick Gregory, to appease the "Freedom and Peace" faction.
 - @hayden: Tom Hayden, a former student leader among the "Chicago Eight".
 - @mcgovern: George McGovern, fellow antiwar candidate in the Democratic Convention.
 - @reuther: Walter Reuther, leader of the UAW union.
@@ -24,6 +28,12 @@ subtitle: A safe choice, though one that may offend the party establishment.
 on-arrival: establishment_dissent += 10; establishment_strength -= 5; progressive_strength += 10; mccarthy_confidence += 5; youth_dove += 1; youth_democrat -= 1; running_mate = "Lowenstein"
 
 Allard Lowenstein is happy to be running mate for the campaign. Less happy is the Peace and Freedom Party's establishment, who begin to feel more disillusioned by Eugene McCarthy's course as nominee for the party.
+
+@dellinger
+subtitle: Though preferred by the party establishment, he is currently on trial, restricting his ability to campaign.
+on-arrival: establishment_dissent -= 5; progressive_dissent += 5; mcgovernite_dissent += 5; mccarthy_confidence -= 2; unemployed_dove += 5; workers_dove -= 1; consumer_dove -= 2; consumer_democrat += 1; running_mate = "Dellinger";
+
+David Dellinger is surprised by our choice of him but agrees. He is an acceptable compromise to Eugene McCarthy and the Party Establishment, helping bring the party more together. Unfortunately, being currently on trial, his ability to help us campaign is limited.
 
 @hayden
 subtitle: Currently on trial, he will not be able to be active in the campaign.
