@@ -1,0 +1,26 @@
+title: Quest for ballot access
+subtitle: The Peace and Freedom Party has ballot access only in California...
+new-page: true
+tags: event
+on-arrival: ballot_access_seen = 1
+view-if: month = 10
+max-visits: 1
+
+= Ballot access
+
+With us launching a presidential campaign on behalf of Eugene McCarthy, one question that must be considered is that of ballot access. California is guaranteed, and with effective mobilization of Eugene McCarthy's prior campaign in the Democratic primaries, we should be able to get ballot access in many other states. However, unless McCarthy seeks nomination from other parties as well as ours, he is unlikely to be on every state. What should we do?
+
+- @party_loyalty: Ballot access will be through us only.
+- @run_everywhere: All means will be considered.
+
+@party_loyalty
+subtitle: We cannot let Eugene McCarthy sideline the party. 
+on-arrival: establishment_dissent -= 5; dependence -= 10; independence += 5; mccarthy_confidence -= 5; mccarthy_confidence -= 5 if mccarthy_confidence < 50; mcgovernite_dissent += 5; progressive_strength -= 5; consumer_dove -= 3; consumer_democrat += 2
+
+Eugene McCarthy is upset, but concedes under intense pressure from the party establishment. The Peace and Freedom Party is bolstered, but Eugene McCarthy is missing on the ballots of many states for now. Let's hope this doesn't backfire.
+
+@run_everywhere
+subtitle: It may hurt the party, but our mission is to elect Eugene McCarthy.
+on-arrival: establishment_dissent += 10; establishment_strength -= 5; dependence += 10; mccarthy_confidence += 5; consumer_dove += 2; consumer_democrat -= 1
+
+The party establishment is unhappy with Eugene McCarthy's choice, but concedes when McCarthy refuses to back down from his choice. His campaign is bolstered and ballot access secured in every state, but the party itself weakened longterm and more reliant on McCarthy for support. Let's hope this doesn't backfire.
