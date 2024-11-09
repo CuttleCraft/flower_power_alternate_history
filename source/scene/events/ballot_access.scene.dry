@@ -15,12 +15,12 @@ With us launching a presidential campaign on behalf of Eugene McCarthy, one ques
 
 @party_loyalty
 subtitle: We cannot let Eugene McCarthy sideline the party. 
-on-arrival: establishment_dissent -= 5; dependence -= 10; independence += 5; mccarthy_confidence -= 5; mccarthy_confidence -= 5 if mccarthy_confidence < 50; mcgovernite_dissent += 5; progressive_strength -= 5; consumer_dove -= 3; consumer_democrat += 2
+on-arrival: establishment_dissent -= 5; dependence -= 10; independence += 5; mccarthy_confidence -= 5; mccarthy_confidence -= 5 if mccarthy_confidence < 50; mcgovernite_dissent += 5; progressive_strength -= 5; youth_dove += 1*(1-dissent)
 
 Eugene McCarthy is upset, but concedes under intense pressure from the party establishment. The Peace and Freedom Party is bolstered, but Eugene McCarthy is missing on the ballots of many states for now. Let's hope this doesn't backfire.
 
 @run_everywhere
 subtitle: It may hurt the party, but our mission is to elect Eugene McCarthy.
-on-arrival: establishment_dissent += 10; establishment_strength -= 5; dependence += 10; mccarthy_confidence += 5; consumer_dove += 2; consumer_democrat -= 1
+on-arrival: establishment_dissent += 10; establishment_strength -= 5; dependence += 10; mccarthy_confidence += 5; consumer_dove += 3; consumer_democrat -= 2
 
 The party establishment is unhappy with Eugene McCarthy's choice, but concedes when McCarthy refuses to back down from his choice. His campaign is bolstered and ballot access secured in every state, but the party itself weakened longterm and more reliant on McCarthy for support. Let's hope this doesn't backfire.
