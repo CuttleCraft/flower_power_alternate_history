@@ -229,6 +229,8 @@ Q.republican_popular_vote = 0;
 Q.dove_popular_vote = 0;
 Q.independent_popular_vote = 0;
 
+// stuff
+Q.mccarthy_confidence = 60;
 
 // Support for party by social group
 Q.unemployed = 3.4;
