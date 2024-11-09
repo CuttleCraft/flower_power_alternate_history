@@ -1224,6 +1224,7 @@ After a long and tumultuous campaign, it is finally time for the Democratic Nati
 
 - @convention_begins: The convention begins.
 - @mccarthy_convention: Skip intro.
+- @debug_skip: DEBUG: No 1968 run.
 
 @convention_begins
 new-page: true
@@ -1364,3 +1365,6 @@ subtitle: MOSTLY NONFUNCTIONAL
 on-arrival: consumer_dove += 5; consumer_democrat -= 2
 
 // todo: idk
+
+@debug_skip
+go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
