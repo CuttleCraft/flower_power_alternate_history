@@ -34,9 +34,9 @@ if (Q.panther = 1 && Q.panther_dissent >= 30) {
     Q.anti_mccarthy += Q.panther_strength;
 }
 var total_votes = (Q.anti_mccarthy+Q.pro_mccarthy);
-Q.anti_mccarthy_votes = (total_votes*100);
+Q.anti_mccarthy_votes = ((Q.anti_mccarthy/total_votes)*100);
 Q.anti_mccarthy_round = Math.round(Q.anti_mccarthy_votes);
-Q.pro_mccarthy_round = (100-anti_mccarthy_round)
+Q.pro_mccarthy_round = (100-anti_mccarthy_round);
 !}
 
 Despite our attempts to preempt the conference with a compromise, the anti-McCarthy faction pushes through and the conference begins. A vote is called for Eugene McCarthy's removal and after a fierce debate, the winner is determined.
