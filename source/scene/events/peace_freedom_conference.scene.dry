@@ -1,0 +1,60 @@
+title: Party Conference Called!
+new-page: true 
+subtitle: The establishment has turned on Eugene McCarthy...
+tags: event
+view-if: establishment_dissent >= 60
+max-visits: 1
+
+The party establishment, growing ever more disillusioned with the takeover of the party by moderates, have organized an imprompteau party conference to try and oust Eugene McCarthy from the party and return it to its radical routes. This threatens to collapse the party if the crisis cannot be resolved.
+
+#- @resolution: What can we do to try and unite the party?
+- @conference: The conference begins and a vote against McCarthy called.
+
+@conference
+on-arrival: pro_mccarthy = progressive_strength; pro_mccarthy += mcgovernite_strength if mcgovernite_dissent < 50 and mcgovernites = 1; anti_mccarthy = establishment_strength; {!
+if (Q.yippies = 1 && Q.yippie_dissent >= 40) {
+    Q.anti_mccarthy += Q.yippie_strength;
+} 
+if (Q.countercultural = 1 && Q.countercultural_dissent >= 50) {
+    Q.anti_mccarthy += Q.countercultural_strength;
+}
+if (Q.mobe = 1 && Q.mobe_dissent >= 50) {
+    Q.anti_mccarthy += Q.mobe_strength;
+}
+else if (Q.mobe = 1 && Q.mobe_dissent < 20) {
+    Q.pro_mccarthy += Q.mobe_strength;
+}
+if (Q.labor = 1 && Q.labor_dissent >= 55) {
+    Q.anti_mccarthy += Q.labor_strength;
+}
+else if (Q.labor = 1 && Q.labor_dissent < 45) {
+    Q.pro_mccarthy += Q.labor_strength;
+}
+if (Q.panther = 1 && Q.panther_dissent >= 30) {
+    Q.anti_mccarthy += Q.panther_strength;
+}
+var total_votes = (Q.anti_mccarthy+Q.pro_mccarthy);
+Q.anti_mccarthy_votes = (total_votes*100);
+Q.anti_mccarthy_round = Math.round(Q.anti_mccarthy_votes);
+Q.pro_mccarthy_round = (100-anti_mccarthy_round)
+!}
+
+Despite our attempts to preempt the conference with a compromise, the anti-McCarthy faction pushes through and the conference begins. A vote is called for Eugene McCarthy's removal and after a fierce debate, the winner is determined.
+
+- @mccarthy_win: Eugene McCarthy wins.
+- @establishment_win: Eugene McCarthy loses and is deposed.
+
+@mccarthy_win
+view-if: anti_mccarthy_votes <= 50
+on-arrival: establishment = 0; dependence += 2; youth_dove -= 2*(dissent)
+
+Eugene McCarthy wins with [+ pro_mccarthy_round +]% of delegates supporting him.
+
+@establishment_win
+view-if: anti_mccarthy_votes > 50
+on-arrival: youth_dove *= (1-reliance); consumer_dove *= (1-reliance); black_dove *= (1-reliance); worker_dove *= (1-reliance); rural_dove *= (1-reliance); unemployed_dove *= (1-reliance)
+
+Eugene McCarthy loses with [+ anti_mccarthy_round +]% of delegates turning on him.
+
+#todo: on-arrival should remove mccarthy and stuff
+
