@@ -2,7 +2,7 @@ title: Shuffle Leadership
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: shuffle_leadership_timer = 0 and difficulty >= 0
+view-if: shuffle_leadership_timer = 0 and difficulty >= 0 and (year > 1968 or month >= 9)
 on-arrival: month_activities += 1; shuffle_leadership_timer = 8;
 card-image: img/vorwarts_2.jpg
 go-to: rm_main
@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: yippie_advisor, center_advisor, left_advisor, progressive_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -51,24 +51,25 @@ go-to: rm_main
 
 Wels has been removed as an advisor. The Centrist faction disapproves.
 
-@remove_muller
-title: Remove Müller
-view-if: muller_advisor = 1
+@remove_mccarthy
+title: Remove McCarthy
+view-if: mccarthy_advisor = 1
 tags: remove_advisor
-on-arrival: muller_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: mccarthy_advisor = 0; progressive_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Müller has been removed as an advisor. The Centrist faction disapproves.
+McCarthy has been removed as an advisor. The Progressive faction disapproves.
 
+# todo: McCarthy shouldnt be able to be removed willy-nilly
 
 @remove_rubin
-title: Remove Breitscheid
+title: Remove Rubin
 view-if: rubin_advisor = 1
 tags: remove_advisor
 on-arrival: rubin_advisor = 0; yippie_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Breitscheid has been removed as an advisor. The Centrist faction disapproves.
+Rubin has been removed as an advisor. The Centrist faction disapproves.
 
 # reformists
 
@@ -89,7 +90,7 @@ tags: remove_advisor
 on-arrival: lennon_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Braun has been removed as an advisor. The Reformist faction disapproves.
+Lennon has been removed as an advisor.
 
 @remove_juchacz
 title: Remove Juchacz
@@ -112,14 +113,14 @@ Pfülf has been removed as an advisor. The Reformist faction disapproves.
 
 # labor
 
-@remove_leipart
-title: Remove Leipart
-view-if: leipart_advisor = 1
+@remove_reuther
+title: Remove Reuther
+view-if: reuther_advisor = 1
 tags: remove_advisor
-on-arrival: leipart_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: reuther_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Leipart has been removed as an advisor. The Labor faction disapproves.
+Reuther has been removed as an advisor. The Labor faction disapproves.
 
 @remove_ochs
 title: Remove Ochs
@@ -190,14 +191,14 @@ go-to: rm_main
 
 Mierendorff has been removed as an advisor. The Neorevisionist faction disapproves.
 
-@remove_leber
-title: Remove Leber
-view-if: leber_advisor = 1
+@remove_dellinger
+title: Remove Dellinger
+view-if: dellinger_advisor = 1
 tags: remove_advisor
-on-arrival: leber_advisor = 0; neorevisionist_dissent += 3; n_advisors -= 1
+on-arrival: dellinger_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Leber has been removed as an advisor. The Neorevisionist faction disapproves.
+Leber has been removed as an advisor.
 
 @remove_schumacher
 title: Remove Schumacher
@@ -225,14 +226,14 @@ Leary has been removed as an advisor.
 #The Reformist faction disapproves.
 
 
-@remove_hirschfeld
-title: Remove Hirschfeld
-view-if: hirschfeld_advisor = 1
+@remove_lowenstein
+title: Remove Lowenstein
+view-if: lowenstein_advisor = 1
 tags: remove_advisor
-on-arrival: hirschfeld_advisor = 0; n_advisors -= 1
+on-arrival: lowenstein_advisor = 0; n_advisors -= 1; progressive_dissent += 5
 go-to: rm_main
 
-Hirschfeld has been removed as an advisor. 
+Lowenstein has been removed as an advisor. The Progressive faction disapproves.
 
 @remove_stampfer
 title: Remove Stampfer
@@ -266,7 +267,7 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: yippie_advisor, center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
+tags: yippie_advisor, center_advisor, left_advisor, progressive_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
 - @yippie: Add Yippies
@@ -338,21 +339,21 @@ go-to: advisor_menu
 
 Otto Wels is now an advisor.
 
-@add_muller
-title: Hermann Müller
-subtitle: Hermann Müller is the last Social Democratic Chancellor.
+@add_mccarthy
+title: Eugene McCarthy
+subtitle: Eugene McCarthy is our candidate for 1968.
 is-card: true
-card-image: img/portraits/MüllerHermann.jpg
-tags: center_advisor
-view-if: muller_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: muller_advisor = 1; n_advisors += 1
+card-image: img/portraits/EugeneMcCarthy.jpg
+tags: progressive_advisor
+view-if: mccarthy_advisor = 0 and mccarthy_dead = 0 and n_advisors < 3
+on-arrival: mccarthy_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Hermann Müller is now an advisor.
+Eugene McCarthy is now an advisor.
 
 @add_rubin
 title: Jerry Rubin
-subtitle: Jerry Rubin comes from a well-educated background and is one of our foreign policy leaders.
+subtitle: Jerry Rubin is a Yippie troubeadour.
 is-card: true
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: rubin_advisor = 0 and n_advisors < 3 and yippies = 1
@@ -389,7 +390,7 @@ go-to: advisor_menu
 
 John Lennon is now an advisor.
 
-// todo: lennon requires either beatles endorsement or him joining after the beatles disband
+# todo: lennon requires either beatles endorsement or him joining after the beatles disband
 
 @add_juchacz
 title: Marie Juchacz
@@ -470,17 +471,17 @@ Max Seydewitz is now an advisor.
 
 # labor
 
-@add_leipart
-title: Theodor Leipart
-subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation.
+@add_reuther
+title: Walter Reuther
+subtitle: Walter Reuther is the leader of the UAW.
 is-card: true
-card-image: img/portraits/LeipartTheodor.jpg
+card-image: img/portraits/WalterReuther.jpg
 tags: labor_advisor
-view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5
+view-if: reuther_advisor = 0 and n_advisors < 3 and uaw = 1
+on-arrival: reuther_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 
-Theodor Leipart is now an advisor.
+Walter Reuther is now an advisor.
 
 @add_ochs
 title: Phil Ochs
@@ -533,15 +534,15 @@ go-to: advisor_menu
 
 Kurt Schumacher is now an advisor.
 
-@add_leber
-title: Julius Leber
-subtitle: Julius Leber is a former Reichswehr officer who resigned in opposition to the Kapp coup attempt.
+@add_dellinger
+title: David Dellinger
+subtitle: David Dellinger is a longtime pacifist activist.
 is-card: true
-card-image: img/portraits/LeberJulius.jpg
-view-if: leber_advisor = 0 and n_advisors < 3
-on-arrival: leber_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
+card-image: img/portraits/DavidDellinger.jpg
+view-if: dellinger_advisor = 0 and n_advisors < 3
+on-arrival: dellinger_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: neorev_advisor
+tags: nonfactional_advisor
 
 Julius Leber is now an advisor.
 
@@ -560,17 +561,17 @@ tags: nonfactional_advisor
 Timothy Leary is now an advisor.
 
 
-@add_hirschfeld
-title: Magnus Hirschfeld
-subtitle: Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities.
+@add_lowenstein
+title: Allard Lowenstein.
+subtitle: Allard Lowenstein is one of Eugene McCarthy's campaign aides.
 is-card: true
-card-image: img/portraits/HirschfeldMagnus.jpg
-view-if: hirschfeld_advisor = 0 and n_advisors < 3
-on-arrival: hirschfeld_advisor = 1; n_advisors += 1
+card-image: img/portraits/AllardLowenstein.jpg
+view-if: lowenstein_advisor = 0 and n_advisors < 3
+on-arrival: lowenstein_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: nonfactional_advisor
+tags: progressive_advisor
 
-Magnus Hirschfeld is now an advisor.
+Allard Lowenstein is now an advisor.
 
 # TODO: add radbruch, stampfer
 

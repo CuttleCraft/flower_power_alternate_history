@@ -25,13 +25,13 @@ The options are:
 
 @lowenstein
 subtitle: A safe choice, though one that may offend the party establishment.
-on-arrival: establishment_dissent += 10; establishment_strength -= 5; progressive_strength += 10; mccarthy_confidence += 5; youth_dove += 1; youth_democrat -= 1; dependence += 3; running_mate = "Lowenstein"
+on-arrival: lowenstein_advisor = 1; n_advisors += 1; establishment_dissent += 10; establishment_strength -= 5; progressive_strength += 10; mccarthy_confidence += 5; youth_dove += 1; youth_democrat -= 1; dependence += 3; running_mate = "Lowenstein"
 
 Allard Lowenstein is happy to be running mate for the campaign. Less happy is the Peace and Freedom Party's establishment, who begin to feel more disillusioned by Eugene McCarthy's course as nominee for the party.
 
 @dellinger
 subtitle: Though preferred by the party establishment, he is currently on trial, restricting his ability to campaign.
-on-arrival: establishment_dissent -= 5; progressive_dissent += 5; mcgovernite_dissent += 5; mccarthy_confidence -= 2; dependence -= 1; unemployed_dove += 5; workers_dove -= 1; consumer_dove -= 2; consumer_democrat += 1; running_mate = "Dellinger";
+on-arrival: dellinger_advisor = 1; n_advisors += 1; establishment_dissent -= 5; progressive_dissent += 5; mcgovernite_dissent += 5; mccarthy_confidence -= 2; dependence -= 1; unemployed_dove += 5; workers_dove -= 1; consumer_dove -= 2; consumer_democrat += 1; running_mate = "Dellinger";
 
 David Dellinger is surprised by our choice of him but agrees. He is an acceptable compromise to Eugene McCarthy and the Party Establishment, helping bring the party more together. Unfortunately, being currently on trial, his ability to help us campaign is limited.
 
@@ -74,7 +74,7 @@ The party establishment would be ambivalent to such a ticket, but more radical N
 
 @sway_reuther
 subtitle: -1 resource.
-on-arrival: resources -= 1; independence += 3; dependence -= 2; workers_democrat -= 4; workers_dove += 5; workers_independent -= 1; youth_dove -= 1; labor_strength += 10; uaw = 1; countercultural_dissent += 4; yippie_dissent += 3; establishment_dissent += 1
+on-arrival: reuther_advisor = 1; n_advisors += 1; resources -= 1; independence += 3; dependence -= 2; workers_democrat -= 4; workers_dove += 5; workers_independent -= 1; youth_dove -= 1; labor_strength += 10; uaw = 1; countercultural_dissent += 4; yippie_dissent += 3; establishment_dissent += 1
 
 It takes some doing, but Walter Reuther is convinced and agrees to run for vice president. The UAW throws its weight behind the Peace and Freedom Party, and support amongst workers greatly improved.
 

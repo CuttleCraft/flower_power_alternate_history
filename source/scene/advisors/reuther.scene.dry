@@ -1,0 +1,22 @@
+title: Walter Reuther
+is-pinned-card: true
+tags: advisor, labor
+card-image: img/portraits/WalterReuther.jpg
+view-if: reuther_advisor = 1
+new-page: true 
+
+= Walter Reuther
+
+Walter Reuther is the leader of the UAW, one of the most progressive labor unions in the country.
+
+- @organizing
+- @root: Return to main
+
+@organizing
+title: Organizing workers
+subtitle: Improve our standing among the workers.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; workers_dove += 5*(1-dissent); workers_dove += 3*(1-dissent) if afl_cio == 1; labor_strength += 2;
+
+We have increased our organizing among the workers.

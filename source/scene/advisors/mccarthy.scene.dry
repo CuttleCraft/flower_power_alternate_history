@@ -1,0 +1,25 @@
+title: Eugene McCarthy
+is-pinned-card: true 
+tags: advisor, progressive
+card-image: img/portraits/EugeneMcCarthy.jpg
+new-page: true
+view-if: mccarthy_advisor = 1
+
+= Eugene McCarthy
+
+
+Eugene McCarthy is the current nominee of our party for the 1968 presidential election, and former antiwar democrat.
+
+- @campaigning: Campaign for election.
+- @emergency_fundraising
+- @root: Return to main
+
+@emergency_fundraising
+title: Emergency Fundraising
+subtitle: An emergency infusion of resources.
+view-if: difficulty < 1
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; resources += dues
+
+We have gained +[+ dues +] resources.

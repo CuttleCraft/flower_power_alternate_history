@@ -1,0 +1,21 @@
+title: David Dellinger
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/DavidDellinger.jpg
+view-if: dellinger_advisor = 1
+new-page: true 
+
+= David Dellinger
+
+David Dellinger is a longtime pacifist activist who is now on trial for crossing state lines to incite a riot.
+
+- @on_trial: Be on trial like a loser.
+- @root: Return to main
+
+@on_trial
+subtitle: TODO: ACTUAL ADVISOR ACTIONS
+choose-if: advisor_action_timer == 0 
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: consumer_dove -= 1
+
+Woah...

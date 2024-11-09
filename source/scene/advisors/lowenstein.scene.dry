@@ -1,0 +1,42 @@
+title: Allard Lowenstein
+is-pinned-card: true
+tags: advisor, progressive
+card-image: img/portraits/AllardLowenstein.jpg
+view-if: lowenstein_advisor = 1
+new-page: true 
+
+= Allard Lowenstein
+
+[? if running_mate == "Lowenstein": Allard Lowenstein is Eugene McCarthy's running mate and ?][? if running_mate != "Lowenstein": Allard Lowenstein is a fiercely dovish former democrat and ?] longtime supporter of Eugene McCarthy, having started the "Dump Johnson" movement and standing by him even when his initial preference of Robert Kennedy entered the race.
+
+
+- @reassure_mccarthy: Reassure Eugene McCarthy.
+- @reassure_progressives: Reassure the progressive democrats.
+- @support_democrats: Support the dovish Democratic wing.
+- @root: Return to main
+
+
+@reassure_mccarthy
+subtitle: He has been growing doubtful of his decision to run.
+view-if: mccarthy_confidence <= 50 and progressive_dissent < 20
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; mccarthy_confidence += 5
+
+Allard Lowenstein reassures Eugene McCarthy that he made the right choice in running as a third party candidate, arguing that staying in the Democratic Party would have destroyed his youth reputation that he had built up and make him seem a sellout.
+
+@reassure_progressives
+subtitle: They have been growing doubtful of their decision to defect.
+view-if: mccarthy_confidence < 50 and progressive_dissent >= 5 and progressive = 1
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; progressive_dissent -= 5
+
+Allard Lowenstein reassures the moderate wing of the party that this was the right choice as it puts a moderate at the head of an otherwise radical party and allows that radicalism to be channeled towards moderate movements and their own campaign.
+
+@support_democrats
+subtitle: NONFUNCTIONAL
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+
+Wow. That did nothing.
