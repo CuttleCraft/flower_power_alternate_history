@@ -656,8 +656,8 @@ Q.new_york_dove_bonus = 0;
 Q.new_york_ind_bonus = 0;
 
 Q.north_carolina_workers = 25;
-Q.north_carolina_youth = 20;
-Q.north_carolina_consumer = 30;
+Q.north_carolina_youth = 18;
+Q.north_carolina_consumer = 32;
 Q.north_carolina_rural = 30;
 Q.north_carolina_southern = 50;
 Q.north_carolina_black = 25;
