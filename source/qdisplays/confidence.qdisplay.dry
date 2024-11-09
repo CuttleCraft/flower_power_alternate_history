@@ -1,0 +1,8 @@
+
+(..10) very low
+(10..20) low
+(20..40) pessimistic
+(40..50) uneasy
+(50..60) optimistic
+(60..70) high
+(70..) very high

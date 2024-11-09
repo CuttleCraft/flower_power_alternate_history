@@ -81,6 +81,8 @@ NSDAP: [+ independent_relation : relationships +]
 
 = Internal Factions of the SPD
 
+Eugene McCarthy's confidence in the party: [+ mccarthy_confidence  : confidence +]
+
 [? if establishment > 0 : Party Establishment strength: [+ establishment_strength : strength +], dissent: [+ establishment_dissent : dissent +] ?]
 
 [? if progressive > 0 : Progressive strength: [+ progressive_strength : strength +], dissent: [+ progressive_dissent : dissent +] ?]

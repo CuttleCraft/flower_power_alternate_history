@@ -62,6 +62,10 @@ Q.labor_dissent = 0;
 Q.yippie_strength = 0;
 Q.yippie_dissent = 10;
 
+// party independence from mccarthy
+Q.dependence = 100;
+Q.independence = 2;
+
 // secret events...
 Q.unions_independent = 0;
 Q.centrists_resign = 0;
@@ -1276,7 +1280,7 @@ As the dust begins to settle in Chicago, we choose to quickly organize a convent
 
 @yippie
 subtitle: Perhaps we can bridge the radical-moderate divide and unite the progressive movement.
-on-arrival: consumer_democrat += 2; consumer_dove -= 4; workers_dove -= 1; youth_dove += 1; mccarthy_confidence -= 10
+on-arrival: dependence -= 2; independence += 6; consumer_democrat += 2; consumer_dove -= 4; workers_dove -= 1; youth_dove += 1; mccarthy_confidence -= 10
 
 It takes some convincing to get the radical Yippies to agree, seemingly still intent on running a pig for office. However, with help convincing from moderate Phil Ochs, they eventually come around and agree that Eugene McCarthy makes just as fine a pig. They work quickly, rallying the protestors still in the city. When Eugene McCarthy arrives at the convention hall the Yippies have prepared, he is taken aback. Bedraggled protestors mill about, while posters line the walls with radical messaging emblazoned. The floor is lined with scattered underground newspapers, and ahead of him, the podium expected appears more of a soapbox. Before McCarthy can have second thoughts, he is greeted by Abbie Hoffman, who leads him in past the cheering attendees. The convention begins, and many speakers walk up to the soapbox, our Peace and Freedom delegates and Yippies alike, unsettling McCarthy further. Nevertheless, by the end of the day he is nominated, with, for better or worse, the noncommittal backing of the Yippies, whose ideas have entered the party discourse.
 
@@ -1302,7 +1306,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 @mobe
 subtitle: We cannot forget the other major group behind the Chicago protests.
-on-arrival: unemployed_dove += 5; youth_dove += 2; unemployed_democrat -= 2
+on-arrival: dependence -= 2; unemployed_dove += 5; youth_dove += 2; unemployed_democrat -= 2
 
 The Mobe is happy to help organize and participate in our convention, and quickly organize that of their protestors who remain in the city in support of Eugene McCarthy. When he arrives at the convention he is greeted by a large crowd of protestors who cheer him on. He is greeted by Rennie Davis, one of the leaders of the Chicago office of the Mobe, and led inside into the convention. The convention begins and resounding speeches are made by multiple Mobe speakers as well as our delegates, and by the end of it Eugene McCarthy is officially nominated for president.
 
@@ -1315,7 +1319,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 @detroit
 subtitle: This will help improve our ties with organized labor.
-on-arrival: left_economics = 1; workers_dove += 4; youth_dove -= 1; workers_democrat -= 2; black_democrat -= 1; black_dove += 1; workers_independent -= 1; consumer_dove -= 1
+on-arrival: left_economics = 1; dependence -= 2; independence += 1; workers_dove += 4; youth_dove -= 1; workers_democrat -= 2; black_democrat -= 1; black_dove += 1; workers_independent -= 1; consumer_dove -= 1
 
 With our limited presence in Detroit, it is difficult to organize a convention there. However, we manage to rally enough participants that one is possible. Invitations are sent out left and right to labor and union organizers, hoping to gain enough participants, even if observers, that the event can truly be good publicity. Among those to agree is Walter Reuther, though for the time being solely as an observer. Despite initial fears, the convention can go ahead! Eugene McCarthy travels to Detroit from Chicago quickly, and Walter Reuther is impressed by the strong advocacy for worker's rights expressed in the convention, as well, of course, by the commitment to civil rights and ending the war, though such focus on worker's rights disappoints some of McCarthy's core youth base. Eugene McCarthy is nominated, and as the convention ends even meets with representatives of the local black community. All in all, a great success, with talk of a UAW endorsement floating around.
 
@@ -1326,12 +1330,12 @@ subtitle: Ties with labor unions have been established.
 on-arrival: labor = 1; labor_strength += 5
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-// todo: left economics shouldnt just be detroit, it should require more, also black focus options
+# todo: left economics shouldnt just be detroit, it should require more, also black focus options
 
 
 @san_francisco
 subtitle: It will be easier to organize in California due to our established infrastructure there.
-on-arrival: youth_democrat -= 1; youth_dove += 4; consumer_dove += 2; consumer_democrat -= 1; california_dove_bonus += 5; oregon_dove_bonus += 2; washington_dove_bonus += 4
+on-arrival: independence += 5; youth_democrat -= 1; youth_dove += 4; consumer_dove += 2; consumer_democrat -= 1; california_dove_bonus += 5; oregon_dove_bonus += 2; washington_dove_bonus += 4
 
 California is by far the state with our strongest presence, especially in the Bohemian capital of America, San Francisco. We are quickly able to organize a grand convention, and plaster posters all throughout the hip world of San Francisco. We exceed even our own expectations in attendees, and Eugene McCarthy is greeted by great applause as he arrives in California from Chicago. Even the remaining Diggers have made an appearance, and in the following convention Eugene McCarthy is in a landslide confirmed as the Peace and Freedom Party's nominee, to more thunderous applause from the attendants.
 
@@ -1346,14 +1350,14 @@ on-arrival: countercultural_strength += 5; countercultural = 1
 
 @berkeley
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
-subtitle: This will help our image amongst the mainstream New Left, though they have been declining.
-on-arrival: youth_dove += 6; youth_democrat -= 2; youth_republican -= 1; california_dove_bonus += 4
+subtitle: (WIP) This will help our image amongst the mainstream New Left, though they have been declining.
+on-arrival: dependence -= 3; independence += 2; youth_dove += 6; youth_democrat -= 2; youth_republican -= 1; california_dove_bonus += 4
 
 // todo: berkeley, free speech movement rep
 
 @new_york
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
-subtitle: I'll think of something.
+subtitle: MOSTLY NONFUNCTIONAL
 on-arrival: consumer_dove += 5; consumer_democrat -= 2
 
 // todo: idk

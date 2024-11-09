@@ -176,6 +176,10 @@ if (Q.unemployed <= 1) {
     Q.unemployed = 1;
 }
 
+// calculate percentage dependence
+var total_dependence = (Q.independence + Q.dependence);
+Q.reliance = (Q.dependence/total_dependence);
+
 // re-calculate dissent.
 var total_strength = 0;
 if (Q.yippies == 1) {
