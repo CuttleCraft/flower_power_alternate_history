@@ -16,7 +16,7 @@ Eugene McCarthy is the current nominee of our party for the 1968 presidential el
 
 @campaigning_mccarthy
 subtitle: Eugene McCarthy can go campaigning for the election.
-go-to campaigning
+go-to: campaigning
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 
