@@ -1262,7 +1262,7 @@ It takes a lot of convincing to sway a reluctant senator McCarthy, but after bei
 
 @mccarthy_convention
 new-page: true
-on-arrival: youth_democrat -= 5; youth_dove += 15; black_dove += 10; consumer_dove += 3; consumer_democrat -= 3; workers_democrat -= 3; workers_dove += 2; california_dove_bonus += 3; texas_democrat_bonus -= 3; west_virginia_democrat_bonus -= 2; minnesota_dove_bonus += 5
+on-arrival: youth_democrat -= 5; youth_dove += 15; black_dove += 10; black_democrat -= 5; consumer_dove += 3; consumer_democrat -= 3; workers_democrat -= 3; workers_dove += 2; california_dove_bonus += 3; texas_democrat_bonus -= 3; west_virginia_democrat_bonus -= 2; minnesota_dove_bonus += 5
 
 Now, the Peace and Freedom Party must choose where to hold its convention and how to organize it. We have a multitude of options at our disposal.
 
@@ -1323,7 +1323,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 @detroit
 subtitle: This will help improve our ties with organized labor.
-on-arrival: left_economics = 1; dependence -= 2; independence += 1; workers_dove += 4; youth_dove -= 1; workers_democrat -= 2; black_democrat -= 1; black_dove += 1; workers_independent -= 1; consumer_dove -= 1
+on-arrival: left_economics = 1; dependence -= 2; independence += 1; workers_dove += 4; youth_dove -= 1; workers_democrat -= 2; black_democrat -= 1; black_dove += 3; workers_independent -= 1; consumer_dove -= 1
 
 With our limited presence in Detroit, it is difficult to organize a convention there. However, we manage to rally enough participants that one is possible. Invitations are sent out left and right to labor and union organizers, hoping to gain enough participants, even if observers, that the event can truly be good publicity. Among those to agree is Walter Reuther, though for the time being solely as an observer. Despite initial fears, the convention can go ahead! Eugene McCarthy travels to Detroit from Chicago quickly, and Walter Reuther is impressed by the strong advocacy for worker's rights expressed in the convention, as well, of course, by the commitment to civil rights and ending the war, though such focus on worker's rights disappoints some of McCarthy's core youth base. Eugene McCarthy is nominated, and as the convention ends even meets with representatives of the local black community. All in all, a great success, with talk of a UAW endorsement floating around.
 
